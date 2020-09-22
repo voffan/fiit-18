@@ -1383,11 +1383,11 @@ Shadow=0</a:DisplayPreferences>
 </o:Requirement>
 <o:Requirement Id="o69">
 <a:ObjectID>6E3F0E30-0ABF-4805-9684-F3CC68ACDEB8</a:ObjectID>
-<a:Requirement.Title>По дате</a:Requirement.Title>
+<a:Requirement.Title>По году добавления в хранилище</a:Requirement.Title>
 <a:Code>REQ_  77</a:Code>
 <a:CreationDate>1600759657</a:CreationDate>
 <a:Creator>RoberT0</a:Creator>
-<a:ModificationDate>1600759735</a:ModificationDate>
+<a:ModificationDate>1600760888</a:ModificationDate>
 <a:Modifier>RoberT0</a:Modifier>
 <a:Priority>0</a:Priority>
 <a:Status>0</a:Status>
@@ -1450,11 +1450,11 @@ Shadow=0</a:DisplayPreferences>
 </o:Requirement>
 <o:Requirement Id="o74">
 <a:ObjectID>FB694B85-AC50-4214-A268-D9FE9BE86084</a:ObjectID>
-<a:Requirement.Title>По дате</a:Requirement.Title>
+<a:Requirement.Title>По году добавления в хранилище</a:Requirement.Title>
 <a:Code>REQ_  83</a:Code>
 <a:CreationDate>1600759769</a:CreationDate>
 <a:Creator>RoberT0</a:Creator>
-<a:ModificationDate>1600759782</a:ModificationDate>
+<a:ModificationDate>1600760896</a:ModificationDate>
 <a:Modifier>RoberT0</a:Modifier>
 <a:Priority>0</a:Priority>
 <a:Status>0</a:Status>
