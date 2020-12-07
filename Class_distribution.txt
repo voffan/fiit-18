@@ -1,0 +1,17 @@
+===============================================
+============Application class model============
+===============================================
+
+Albert: [Student, Class, Subject]
+Nadya: [School, Employee, Position]
+Nikolay: [Table, Mark, Checkpoint]
+Aytal: [Academic year, Course, Group]
+
+================================================
+================Use case diagram================
+================================================
+
+Albert: [Head teacher]
+Nadya: [Administrator]
+Nikolay: [Teacher, Classroom teacher]
+Aytal: [Student, Director]
