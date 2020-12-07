@@ -1,0 +1,13 @@
+--------Aplication class model---------
+
+Robert: Sell
+Dima: Employe
+Kynnei: painting
+
+---------Use case diagram--------------
+
+Robert:Менеджер по продажам/реставратор 
+Dima: Администратор
+Kynnei: Сотрудник
+
+ 
