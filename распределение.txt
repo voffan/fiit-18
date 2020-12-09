@@ -1,13 +1,24 @@
 --------Aplication class model---------
 
-Robert: Sell
-Dima: Employe
-Kynnei: painting
+Robert: Departament, Employee, position, sempStatus
+Dima: Customer, sell, sellPainting, sellStatus, 
+Kynnei: Painting, genre, journal, artist, exhibition, country, paintnigStatus
 
 ---------Use case diagram--------------
 
-Robert:Менеджер по продажам/реставратор 
-Dima: Администратор
-Kynnei: Сотрудник
+Robert: добавить/удалить сотрудника, отправить на выставку/реставрацию
+Dima: авторизация, переместить картину / изменить статус картины
+Kynnei: добавить/удалить картину, просмотр картин, продать картину
 
- 
+авторизация
+добавить сотрудника
+удалить сотрудника
+просмтор списка картин 
+добавить картину 
+удалить картину
+продать картину
+отправить на выставку
+отправить на реставрацию
+переместить картину / изменить статус картины
+
+
