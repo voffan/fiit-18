@@ -41,8 +41,8 @@ namespace Gallery
     }
     public class Employee:Person
     {
-        public int IdDep { get; set; }
-        [ForeignKey("IdDep")]
+        public int DepId { get; set; }
+        [ForeignKey("DepId")]
         public Departament Departament { get; set; }
         public Status Status { get; set; }
     }
@@ -54,6 +54,8 @@ namespace Gallery
         public long Price { get; set; }
         public DateTime Date { get; set; }
         public StatusSell Status { get; set; }
+
+        public List<SellPainting> Paintings { get; set; }
     }
     public class Exhibition
     {
@@ -92,17 +94,25 @@ namespace Gallery
         public string Middle_Name { get; set; }
         public int BirthYear { get; set; }
         public int DeathYera { get; set; }
+
+        public List<Painting> Paintings {get;set;}
     }
-    public class PaintingCost
+    public class SellPainting
     {
+        SellId
+        []
+        public Sell Sell { get; set; }
+        PaintingId
+        []
+        public Painting Painting { get; set; }
         public int Cost { get; set; }
     }
     public class Painting
     {
         [Key]
         public int Id { get; set; }
-        public int IdGenre { get; set; }
-        [ForeignKey("IdGenre")]
+        public int GenreId { get; set; }
+        [ForeignKey("GenreId")]
         public Genre Genre { get; set; }
         public int IdExhibition { get; set; }
         [ForeignKey("IdExhibition")]
