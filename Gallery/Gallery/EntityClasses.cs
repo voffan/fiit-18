@@ -12,6 +12,8 @@ namespace Gallery
 {
     public enum StatusSell { sold, cancel, progress }
     public enum Status {active, inactive }
+    public enum PaintingStatus { vault, exhibition, restoration}
+    public enum Position { admin, restore, sellManager, employee}
     public class Country
     {
         [Key]
@@ -38,6 +40,7 @@ namespace Gallery
         public int Passport_series { get; set; }
         [StringLength(100)]
         public string Phone { get; set; }
+        public Position Position { get; set; }
     }
     public class Employee:Person
     {
@@ -46,7 +49,6 @@ namespace Gallery
         public Departament Departament { get; set; }
         public Status Status { get; set; }
     }
-
     public class Sell
     {
         [Key]
@@ -69,12 +71,22 @@ namespace Gallery
 
     public class Journal
     {
+        public int EmpId { get; set; }
+        [ForeignKey("EmpId")]
         public Employee Employee { get; set; }
         public DateTime Date { get; set; }
+        public int SrcId { get; set; }
+        [ForeignKey("SrcId")]
         public Departament Source { get; set; }
+        public int DstId { get; set; }
+        [ForeignKey("DstId")]
         public Departament Destination { get; set; }
+        public int ExhId { get; set; }
+        [ForeignKey("ExhId")]
         public Exhibition Exhibition { get; set; }
-
+        public int PaintingId { get; set; }
+        [ForeignKey("PaintingId")]
+        public Painting Painting { get; set; }
     }
     public class Genre
     {
@@ -99,11 +111,11 @@ namespace Gallery
     }
     public class SellPainting
     {
-        SellId
-        []
+        public int SellId { get; set; }
+        [ForeignKey("SellId")]
         public Sell Sell { get; set; }
-        PaintingId
-        []
+        public int PaintingId { get; set; }
+        [ForeignKey("PaintingId")]
         public Painting Painting { get; set; }
         public int Cost { get; set; }
     }
@@ -114,21 +126,21 @@ namespace Gallery
         public int GenreId { get; set; }
         [ForeignKey("GenreId")]
         public Genre Genre { get; set; }
-        public int IdExhibition { get; set; }
-        [ForeignKey("IdExhibition")]
+        public int ExhibitionId { get; set; }
+        [ForeignKey("ExhibitionId")]
         public Exhibition Exhibition { get; set; }
         public string NamePainting { get; set; }
-        public int IdArtist { get; set; }
-        [ForeignKey("IdArtist")]
+        public int ArtistId { get; set; }
+        [ForeignKey("ArtistId")]
         public Artist Artist { get; set; }
+        public PaintingStatus PaintingStatus { get; set; }
 
     }
     public class Customer:Person
     {
-        [Key]
-        public int Id { get; set;  }
-        public int IdSell { get; set; }
-        [ForeignKey("IdSell")]
+        public int SellId { get; set; }
+        [ForeignKey("SellId")]
         public Sell Sell { get; set; }
     }
+
 }
