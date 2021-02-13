@@ -1,0 +1,13 @@
+C:\Users\Den\Desktop\ПО Sport\Sport\Sport\obj\Debug\netcoreapp3.1\Sport.AssemblyInfoInputs.cache
+C:\Users\Den\Desktop\ПО Sport\Sport\Sport\obj\Debug\netcoreapp3.1\Sport.AssemblyInfo.cs
+C:\Users\Den\Desktop\ПО Sport\Sport\Sport\obj\Debug\netcoreapp3.1\Sport.csproj.CoreCompileInputs.cache
+C:\Users\Den\Desktop\ПО Sport\Sport\Sport\bin\Debug\netcoreapp3.1\Sport.exe
+C:\Users\Den\Desktop\ПО Sport\Sport\Sport\bin\Debug\netcoreapp3.1\Sport.deps.json
+C:\Users\Den\Desktop\ПО Sport\Sport\Sport\bin\Debug\netcoreapp3.1\Sport.runtimeconfig.json
+C:\Users\Den\Desktop\ПО Sport\Sport\Sport\bin\Debug\netcoreapp3.1\Sport.runtimeconfig.dev.json
+C:\Users\Den\Desktop\ПО Sport\Sport\Sport\bin\Debug\netcoreapp3.1\Sport.dll
+C:\Users\Den\Desktop\ПО Sport\Sport\Sport\bin\Debug\netcoreapp3.1\Sport.pdb
+C:\Users\Den\Desktop\ПО Sport\Sport\Sport\obj\Debug\netcoreapp3.1\Sport.dll
+C:\Users\Den\Desktop\ПО Sport\Sport\Sport\obj\Debug\netcoreapp3.1\Sport.pdb
+C:\Users\Den\Desktop\ПО Sport\Sport\Sport\obj\Debug\netcoreapp3.1\Sport.genruntimeconfig.cache
+C:\Users\Den\Desktop\ПО Sport\Sport\Sport\obj\Debug\netcoreapp3.1\Sport.csprojAssemblyReference.cache
