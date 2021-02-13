@@ -57,6 +57,9 @@ namespace Gallery
         public DateTime Date { get; set; }
         public StatusSell Status { get; set; }
 
+        public int CustomerId { get; set; }
+        public Customer Customer { get; set; }
+
         public List<SellPainting> Paintings { get; set; }
     }
     public class Exhibition
@@ -75,13 +78,13 @@ namespace Gallery
         [ForeignKey("EmpId")]
         public Employee Employee { get; set; }
         public DateTime Date { get; set; }
-        public int SrcId { get; set; }
+        public int? SrcId { get; set; }
         [ForeignKey("SrcId")]
         public Departament Source { get; set; }
-        public int DstId { get; set; }
+        public int? DstId { get; set; }
         [ForeignKey("DstId")]
         public Departament Destination { get; set; }
-        public int ExhId { get; set; }
+        public int? ExhId { get; set; }
         [ForeignKey("ExhId")]
         public Exhibition Exhibition { get; set; }
         public int PaintingId { get; set; }
@@ -138,9 +141,9 @@ namespace Gallery
     }
     public class Customer:Person
     {
-        public int SellId { get; set; }
-        [ForeignKey("SellId")]
-        public Sell Sell { get; set; }
+        
+
+        public ICollection<Sell> Sells { get; set; }
     }
 
 }
