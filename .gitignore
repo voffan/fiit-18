@@ -1,7 +1,8 @@
 *.rqb
-*.bin
-*.vs
-*.obj
+bin
+vs
+obj
+packages
 *.oob
 *.suo
 *.vs
