@@ -11,16 +11,26 @@ namespace Grades
 {
     public class Student
     {
+        [Key]
+        public int Id { get; set; }
+        [StringLength(150)]
         public string Surname { get; set; }
         public string Name { get; set; }
         public string MiddleName { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Address { get; set; }
         public int Phone { get; set; }
+
+        public int ClassId { get; set; }
+        [ForeignKey("ClassId")]
+        public Class Class { get; set; }
+
+        public ICollection<Group> Groups { get; set; }
     }
 
     public class Class
     {
+        public int Id { get; set; }
         public string Symbol { get; set; }
         public int Year { get; set; }
         public string School { get; set; }
@@ -52,7 +62,20 @@ namespace Grades
 
     public class Group
     {
+        [Key]
+        public int Id { get; set; }
+        [StringLength(255)]
+        public string Name { get; set; }
 
+        public int SubjectId { get; set; }
+        [ForeignKey("SubjectId")]
+        public Subject Subject { get; set; }
+
+        public int ClassId { get; set; }
+        [ForeignKey("ClassId")]
+        public Class Class { get; set; }
+
+        public ICollection<Student> Students { get; set; }
     }
 
     public class AcademicYear
