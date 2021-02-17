@@ -25,39 +25,87 @@ namespace Grades
         [ForeignKey("ClassId")]
         public Class Class { get; set; }
 
+        public int GroupId { get; set; }
+        [ForeignKey("GroupId")]
+        public Group Group { get; set; }
+
+        public int TableId { get; set; }
+        [ForeignKey("TableId")]
+        public Table Table { get; set; }
+
         public ICollection<Group> Groups { get; set; }
+        public ICollection<Class> Classes { get; set; }
+        public ICollection<Table> Tables { get; set; }
     }
 
     public class Class
     {
+        [Key]
+        public int Id { get; set; }
+        [StringLength(150)]
+
         public int Id { get; set; }
         public string Symbol { get; set; }
         public int Year { get; set; }
         public string School { get; set; }
+
+        public ICollection<Student> Students { get; set; }
+        public ICollection<Employee> Employeers { get; set; }
+        public ICollection<School> Schools { get; set; }
     }
 
     public class School
     {
+        [Key]
+        public int Id { get; set; }
+        [StringLength(150)]
+
         public string Name { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
         public int Phone { get; set; }
+
+        public ICollection<Employee> Employeers { get; set; }
+        public ICollection<Class> Classes { get; set; }
     }
 
     public class Employee
     {
+        [Key]
+        public int Id { get; set; }
+        [StringLength(150)]
+
         public string Surname { get; set; }
         public string Name { get; set; }
         public string MiddleName { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Address { get; set; }
         public int Phone { get; set; }
-        //public Position Position { get; set; }
+
+        public int PositionId { get; set; }
+        [ForeignKey("PositionId")]
+        public Position Position { get; set; }
+
+        public ICollection<Course> Course { get; set; }
+        public ICollection<Class> Classes { get; set; }
+        public ICollection<School> School { get; set; }
     }
 
     public class Course
     {
+        public int SubjectId { get; set; }
+        [ForeignKey("SubjectId")]
+        public Subject Subject { get; set; }
 
+        public int ClassId { get; set; }
+        [ForeignKey("ClassId")]
+        public Class Class { get; set; }
+
+        /*public int SubgroupId { get; set; }
+        [ForeignKey("SubgroupId")]
+        public Group Subgroup { get; set; }*/
+
+        public ICollection<Table> Tables { get; set; }
     }
 
     public class Group
@@ -65,6 +113,7 @@ namespace Grades
         [Key]
         public int Id { get; set; }
         [StringLength(255)]
+
         public string Name { get; set; }
 
         public int SubjectId { get; set; }
@@ -82,30 +131,53 @@ namespace Grades
     {
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
+
+        public ICollection<Table> Tables { get; set; }
     }
     
     public class Mark
     {
+        [Key]
+        public int Id { get; set; }
+        [StringLength(255)]
+
         public int Name { get; set; }
     }
 
     public class Position
     {
+        [Key]
+        public int Id { get; set; }
+        [StringLength(255)]
+
         public string Name { get; set; }
     }
 
     public class Subject
     {
+        [Key]
+        public int Id { get; set; }
+        [StringLength(255)]
+
         public string Name { get; set; }
     }
 
     public class CheckPoint
     {
         public string Name { get; set; }
+
+        public ICollection<Table> Tables { get; set; }
     }
 
     public class Table
     {
-        
+        public int MarkId { get; set; }
+        [ForeignKey("MarkId")]
+        public Mark Mark { get; set; }
+
+        public ICollection<CheckPoint> CheckPoints { get; set; }
+        public ICollection<AcademicYear> AcademicYears { get; set; }
+        public ICollection<Student> Students { get; set; }
+        public ICollection<Course> Courses { get; set; }
     }
 }
