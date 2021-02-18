@@ -29,29 +29,25 @@ namespace Grades
         [ForeignKey("GroupId")]
         public Group Group { get; set; }
 
-        public int TableId { get; set; }
-        [ForeignKey("TableId")]
-        public Table Table { get; set; }
-
-        public ICollection<Group> Groups { get; set; }
-        public ICollection<Class> Classes { get; set; }
-        public ICollection<Table> Tables { get; set; }
+        public virtual ICollection<Group> Groups { get; set; }
+        public virtual ICollection<Class> Classes { get; set; }
+        public virtual ICollection<Table> Tables { get; set; }
     }
 
     public class Class
     {
         [Key]
         public int Id { get; set; }
-        [StringLength(150)]
-
-        public int Id { get; set; }
-        public string Symbol { get; set; }
+        public char Symbol { get; set; }
         public int Year { get; set; }
+        //foregin key
         public string School { get; set; }
+        public int EmployeeId { get; set; }
+        [ForeignKey("EmployeeId")]
+        public Employee Curator { get; set; }
+
 
         public ICollection<Student> Students { get; set; }
-        public ICollection<Employee> Employeers { get; set; }
-        public ICollection<School> Schools { get; set; }
     }
 
     public class School
@@ -59,7 +55,6 @@ namespace Grades
         [Key]
         public int Id { get; set; }
         [StringLength(150)]
-
         public string Name { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
@@ -93,6 +88,9 @@ namespace Grades
 
     public class Course
     {
+        [Key]
+        public int Id { get; set; }
+
         public int SubjectId { get; set; }
         [ForeignKey("SubjectId")]
         public Subject Subject { get; set; }
@@ -101,9 +99,9 @@ namespace Grades
         [ForeignKey("ClassId")]
         public Class Class { get; set; }
 
-        /*public int SubgroupId { get; set; }
-        [ForeignKey("SubgroupId")]
-        public Group Subgroup { get; set; }*/
+        public int? GroupId { get; set; }
+        [ForeignKey("GroupId")]
+        public Group Subgroup { get; set; }
 
         public ICollection<Table> Tables { get; set; }
     }
@@ -113,7 +111,6 @@ namespace Grades
         [Key]
         public int Id { get; set; }
         [StringLength(255)]
-
         public string Name { get; set; }
 
         public int SubjectId { get; set; }
@@ -124,7 +121,7 @@ namespace Grades
         [ForeignKey("ClassId")]
         public Class Class { get; set; }
 
-        public ICollection<Student> Students { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
     }
 
     public class AcademicYear
@@ -149,7 +146,6 @@ namespace Grades
         [Key]
         public int Id { get; set; }
         [StringLength(255)]
-
         public string Name { get; set; }
     }
 
