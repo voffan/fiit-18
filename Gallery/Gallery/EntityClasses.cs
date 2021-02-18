@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Spatial;
+using System.Data.Entity;
 
 
 namespace Gallery
@@ -60,7 +61,7 @@ namespace Gallery
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
 
-        public List<SellPainting> Paintings { get; set; }
+        public virtual List<SellPainting> Paintings { get; set; }
     }
     public class Exhibition
     {
@@ -110,7 +111,7 @@ namespace Gallery
         public int BirthYear { get; set; }
         public int DeathYera { get; set; }
 
-        public List<Painting> Paintings {get;set;}
+        public virtual List<Painting> Paintings {get;set;}
     }
     public class SellPainting
     {
