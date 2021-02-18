@@ -71,6 +71,8 @@ namespace Gallery
         public Country Country { get; set; }
         public string City { get; set; }
         public DateTime Date { get; set; }
+
+        public virtual List<Painting> Paintings { get; set; }
     }
 
     public class Journal
@@ -130,7 +132,7 @@ namespace Gallery
         public int GenreId { get; set; }
         [ForeignKey("GenreId")]
         public Genre Genre { get; set; }
-        public int ExhibitionId { get; set; }
+        public int? ExhibitionId { get; set; }
         [ForeignKey("ExhibitionId")]
         public Exhibition Exhibition { get; set; }
         public string NamePainting { get; set; }
