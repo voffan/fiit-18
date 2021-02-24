@@ -40,7 +40,6 @@ namespace Grades
         public int Id { get; set; }
         public char Symbol { get; set; }
         public int Year { get; set; }
-        //foregin key
         public string School { get; set; }
         public int EmployeeId { get; set; }
         [ForeignKey("EmployeeId")]
@@ -173,7 +172,7 @@ namespace Grades
 
         public ICollection<CheckPoint> CheckPoints { get; set; }
         public ICollection<AcademicYear> AcademicYears { get; set; }
-        public ICollection<Student> Students { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
         public ICollection<Course> Courses { get; set; }
     }
 }
