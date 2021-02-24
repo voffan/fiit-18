@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Gallery
 {
@@ -21,7 +22,7 @@ namespace Gallery
         public DbSet<Country> Countries { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }
 }

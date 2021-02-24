@@ -117,6 +117,8 @@ namespace Gallery
     }
     public class SellPainting
     {
+        [Key]
+        public int Id { get; set; }
         public int SellId { get; set; }
         [ForeignKey("SellId")]
         public Sell Sell { get; set; }
