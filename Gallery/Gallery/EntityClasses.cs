@@ -146,8 +146,6 @@ namespace Gallery
     }
     public class Customer:Person
     {
-        
-
         public ICollection<Sell> Sells { get; set; }
     }
 
