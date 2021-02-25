@@ -10,7 +10,7 @@ namespace Gallery
 {
     class Context : DbContext
     {
-        public Context() : base("MyConnStr") { }
+        public Context() : base("GalleryDb") { }
         public DbSet<Person> People { get; set; }
         public DbSet<Painting> Paintings { get; set; }
         public DbSet<Employee> Employees { get; set; }
