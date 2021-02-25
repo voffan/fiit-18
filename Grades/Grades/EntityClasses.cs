@@ -25,7 +25,7 @@ namespace Grades
         public string Address { get; set; }
         public int Phone { get; set; }
 
-        public int ClassId { get; set; }
+        public int? ClassId { get; set; }
         [ForeignKey("ClassId")]
         public Class Class { get; set; }
 
@@ -36,15 +36,15 @@ namespace Grades
     public class Class
     {
         [Key]
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public char Symbol { get; set; }
-        public int Year { get; set; }
-        public int SchoolId { get; set; }
+        public int? Year { get; set; }
+        public int? SchoolId { get; set; }
         [ForeignKey("SchoolId")]
         public School School { get; set; }
-        public int EmployeeId { get; set; }
+        public int? EmployeeId { get; set; }
         [ForeignKey("EmployeeId")]
-        public Employee Curator { get; set; }
+        public Employee Employee { get; set; }
 
 
         public virtual ICollection<Student> Students { get; set; }
@@ -81,11 +81,11 @@ namespace Grades
         public string Address { get; set; }
         public int Phone { get; set; }
 
-        public int PositionId { get; set; }
+        public int? PositionId { get; set; }
         [ForeignKey("PositionId")]
         public Position Position { get; set; }
 
-        public int SchoolId { get; set; }
+        public int? SchoolId { get; set; }
         [ForeignKey("SchoolId")]
         public School School { get; set; }
 
@@ -97,16 +97,16 @@ namespace Grades
     {
         [Key]
         public int Id { get; set; }
-        public int SubjectId { get; set; }
+        public int? SubjectId { get; set; }
         [ForeignKey("SubjectId")]
         public Subject Subject { get; set; }
-        public int ClassId { get; set; }
+        public int? ClassId { get; set; }
         [ForeignKey("ClassId")]
         public Class Class { get; set; }
         public int? GroupId { get; set; }
         [ForeignKey("GroupId")]
         public Group Subgroup { get; set; }
-        public int EmployeeId { get; set; }
+        public int? EmployeeId { get; set; }
         [ForeignKey("EmployeeId")]
         public Employee Employee { get; set; }
 
@@ -119,10 +119,10 @@ namespace Grades
         public int Id { get; set; }
         [StringLength(50)]
         public string Name { get; set; }
-        public int SubjectId { get; set; }
+        public int? SubjectId { get; set; }
         [ForeignKey("SubjectId")]
         public Subject Subject { get; set; }
-        public int ClassId { get; set; }
+        public int? ClassId { get; set; }
         [ForeignKey("ClassId")]
         public Class Class { get; set; }
 
@@ -133,19 +133,19 @@ namespace Grades
     {
         [Key]
         public int Id { get; set; }
-        public int StudentId { get; set; }
+        public int? StudentId { get; set; }
         [ForeignKey("StudentId")]
         public Student Student { get; set; }
-        public int AcademicYearId { get; set; }
+        public int? AcademicYearId { get; set; }
         [ForeignKey("AcademicYearId")]
         public AcademicYear AcademicYear { get; set; }
-        public int CheckPointId { get; set; }
+        public int? CheckPointId { get; set; }
         [ForeignKey("CheckPointId")]
         public CheckPoint CheckPoint { get; set; }
-        public int CourseId { get; set; }
+        public int? CourseId { get; set; }
         [ForeignKey("CourseId")]
         public Course Course { get; set; }
-        public int MarkId { get; set; }
+        public int? MarkId { get; set; }
         [ForeignKey("MarkId")]
         public Mark Mark { get; set; }
     }

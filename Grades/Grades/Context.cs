@@ -1,12 +1,11 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-
 namespace Grades
 {
     class Context : DbContext
     {
-        public Context() : base("MyConnStr") { }
+        public Context() : base("DB") { }
         public DbSet<Student> Students { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Class> Classes { get; set; }
