@@ -14,7 +14,7 @@ namespace Grades
     {
         [Key]
         public int Id { get; set; }
-        [StringLength(150)]
+        [StringLength(50)]
         public string Surname { get; set; }
         [StringLength(50)]
         public string Name { get; set; }
@@ -54,9 +54,9 @@ namespace Grades
     {
         [Key]
         public int Id { get; set; }
-        [StringLength(255)]
+        [StringLength(50)]
         public string Name { get; set; }
-        [StringLength(255)]
+        [StringLength(50)]
         public string Address { get; set; }
         [StringLength(255)]
         public string Email { get; set; }
@@ -70,7 +70,7 @@ namespace Grades
     {
         [Key]
         public int Id { get; set; }
-        [StringLength(150)]
+        [StringLength(50)]
         public string Surname { get; set; }
         [StringLength(50)]
         public string Name { get; set; }
@@ -80,7 +80,7 @@ namespace Grades
         [StringLength(255)]
         public string Address { get; set; }
         public int Phone { get; set; }
-        
+
         public int PositionId { get; set; }
         [ForeignKey("PositionId")]
         public Position Position { get; set; }
@@ -97,7 +97,6 @@ namespace Grades
     {
         [Key]
         public int Id { get; set; }
-        [StringLength(150)]
         public int SubjectId { get; set; }
         [ForeignKey("SubjectId")]
         public Subject Subject { get; set; }
@@ -118,7 +117,7 @@ namespace Grades
     {
         [Key]
         public int Id { get; set; }
-        [StringLength(150)]
+        [StringLength(50)]
         public string Name { get; set; }
         public int SubjectId { get; set; }
         [ForeignKey("SubjectId")]
@@ -158,8 +157,7 @@ namespace Grades
         [Key]
         public int Id { get; set; }
         [StringLength(150)]
-        public int Name { get; set; }
-        [StringLength(50)]
+        public String Name { get; set; }
     }
 
     public class Position
