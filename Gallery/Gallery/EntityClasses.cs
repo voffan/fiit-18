@@ -111,7 +111,7 @@ namespace Gallery
         [StringLength(255)]
         public string Middle_Name { get; set; }
         public int BirthYear { get; set; }
-        public int DeathYera { get; set; }
+        public int DeathYear { get; set; }
 
         public virtual List<Painting> Paintings {get;set;}
     }
