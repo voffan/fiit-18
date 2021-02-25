@@ -16,7 +16,7 @@
                         Name = c.String(maxLength: 255),
                         Middle_Name = c.String(maxLength: 255),
                         BirthYear = c.Int(nullable: false),
-                        DeathYera = c.Int(nullable: false),
+                        DeathYear = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             

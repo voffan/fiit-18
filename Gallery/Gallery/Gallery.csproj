@@ -98,9 +98,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GalleryDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102240343334_first.cs" />
-    <Compile Include="Migrations\202102240343334_first.designer.cs">
-      <DependentUpon>202102240343334_first.cs</DependentUpon>
+    <Compile Include="Migrations\202102250345095_first.cs" />
+    <Compile Include="Migrations\202102250345095_first.designer.cs">
+      <DependentUpon>202102250345095_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -114,8 +114,8 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102240343334_first.resx">
-      <DependentUpon>202102240343334_first.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102250345095_first.resx">
+      <DependentUpon>202102250345095_first.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

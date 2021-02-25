@@ -58,8 +58,6 @@ namespace Gallery
         public long Price { get; set; }
         public DateTime Date { get; set; }
         public StatusSell Status { get; set; }
-        public int EmployeeId { get; set; }
-        public Employee Employee { get; set; }
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
 
