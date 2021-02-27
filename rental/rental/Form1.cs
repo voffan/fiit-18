@@ -17,5 +17,9 @@ namespace Rental
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Context c = new Context(); 
+        }
     }
 }
