@@ -19,6 +19,8 @@ namespace Gallery
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "dBDataSet.Person". При необходимости она может быть перемещена или удалена.
+            this.personTableAdapter.Fill(this.dBDataSet.Person);
 
         }
 
@@ -69,6 +71,14 @@ namespace Gallery
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void personBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.personBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dBDataSet);
 
         }
     }

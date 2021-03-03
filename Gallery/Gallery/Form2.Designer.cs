@@ -29,241 +29,485 @@ namespace Gallery
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.Windows.Forms.Label idLabel;
+            System.Windows.Forms.Label surnameLabel;
+            System.Windows.Forms.Label nameLabel;
+            System.Windows.Forms.Label middle_NameLabel;
+            System.Windows.Forms.Label passport_idLabel;
+            System.Windows.Forms.Label passport_seriesLabel;
+            System.Windows.Forms.Label phoneLabel;
+            System.Windows.Forms.Label positionLabel;
+            System.Windows.Forms.Label depIdLabel;
+            System.Windows.Forms.Label statusLabel;
+            System.Windows.Forms.Label discriminatorLabel;
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.dBDataSet = new Gallery.DBDataSet();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personTableAdapter = new Gallery.DBDataSetTableAdapters.PersonTableAdapter();
+            this.tableAdapterManager = new Gallery.DBDataSetTableAdapters.TableAdapterManager();
+            this.personBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.personBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.surnameTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.middle_NameTextBox = new System.Windows.Forms.TextBox();
+            this.passport_idTextBox = new System.Windows.Forms.TextBox();
+            this.passport_seriesTextBox = new System.Windows.Forms.TextBox();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.positionTextBox = new System.Windows.Forms.TextBox();
+            this.depIdTextBox = new System.Windows.Forms.TextBox();
+            this.statusTextBox = new System.Windows.Forms.TextBox();
+            this.discriminatorTextBox = new System.Windows.Forms.TextBox();
+            idLabel = new System.Windows.Forms.Label();
+            surnameLabel = new System.Windows.Forms.Label();
+            nameLabel = new System.Windows.Forms.Label();
+            middle_NameLabel = new System.Windows.Forms.Label();
+            passport_idLabel = new System.Windows.Forms.Label();
+            passport_seriesLabel = new System.Windows.Forms.Label();
+            phoneLabel = new System.Windows.Forms.Label();
+            positionLabel = new System.Windows.Forms.Label();
+            depIdLabel = new System.Windows.Forms.Label();
+            statusLabel = new System.Windows.Forms.Label();
+            discriminatorLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingNavigator)).BeginInit();
+            this.personBindingNavigator.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(143, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(143, 38);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 0;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(143, 64);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 0;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(143, 90);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 0;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(143, 116);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 0;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(143, 142);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 0;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(143, 168);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 0;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(143, 194);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 0;
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(143, 220);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 0;
-            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(284, 217);
+            this.button1.Location = new System.Drawing.Point(103, 331);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // dBDataSet
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.dBDataSet.DataSetName = "DBDataSet";
+            this.dBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label2
+            // personBindingSource
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.personBindingSource.DataMember = "Person";
+            this.personBindingSource.DataSource = this.dBDataSet;
             // 
-            // label3
+            // personTableAdapter
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 71);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
+            this.personTableAdapter.ClearBeforeFill = true;
             // 
-            // label4
+            // tableAdapterManager
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 149);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "label4";
+            this.tableAdapterManager.@__MigrationHistoryTableAdapter = null;
+            this.tableAdapterManager.ArtistTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CountryTableAdapter = null;
+            this.tableAdapterManager.DepartamentTableAdapter = null;
+            this.tableAdapterManager.ExhibitionTableAdapter = null;
+            this.tableAdapterManager.GenreTableAdapter = null;
+            this.tableAdapterManager.PaintingTableAdapter = null;
+            this.tableAdapterManager.PersonTableAdapter = this.personTableAdapter;
+            this.tableAdapterManager.SellPaintingTableAdapter = null;
+            this.tableAdapterManager.SellTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Gallery.DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // label5
+            // personBindingNavigator
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 123);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "label5";
+            this.personBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.personBindingNavigator.BindingSource = this.personBindingSource;
+            this.personBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.personBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.personBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.personBindingNavigatorSaveItem});
+            this.personBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.personBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.personBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.personBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.personBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.personBindingNavigator.Name = "personBindingNavigator";
+            this.personBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.personBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.personBindingNavigator.TabIndex = 2;
+            this.personBindingNavigator.Text = "bindingNavigator1";
             // 
-            // label6
+            // bindingNavigatorMoveFirstItem
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 97);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
-            // label7
+            // bindingNavigatorMovePreviousItem
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 227);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "label7";
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
-            // label8
+            // bindingNavigatorSeparator
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 201);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "label8";
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
             // 
-            // label9
+            // bindingNavigatorPositionItem
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 175);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "label9";
+            this.bindingNavigatorPositionItem.AccessibleName = "Положение";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
+            // personBindingNavigatorSaveItem
+            // 
+            this.personBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.personBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("personBindingNavigatorSaveItem.Image")));
+            this.personBindingNavigatorSaveItem.Name = "personBindingNavigatorSaveItem";
+            this.personBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.personBindingNavigatorSaveItem.Text = "Сохранить данные";
+            this.personBindingNavigatorSaveItem.Click += new System.EventHandler(this.personBindingNavigatorSaveItem_Click);
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(16, 31);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 2;
+            idLabel.Text = "Id:";
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(103, 28);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(100, 20);
+            this.idTextBox.TabIndex = 3;
+            // 
+            // surnameLabel
+            // 
+            surnameLabel.AutoSize = true;
+            surnameLabel.Location = new System.Drawing.Point(16, 57);
+            surnameLabel.Name = "surnameLabel";
+            surnameLabel.Size = new System.Drawing.Size(52, 13);
+            surnameLabel.TabIndex = 4;
+            surnameLabel.Text = "Surname:";
+            // 
+            // surnameTextBox
+            // 
+            this.surnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Surname", true));
+            this.surnameTextBox.Location = new System.Drawing.Point(103, 54);
+            this.surnameTextBox.Name = "surnameTextBox";
+            this.surnameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.surnameTextBox.TabIndex = 5;
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(16, 83);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(38, 13);
+            nameLabel.TabIndex = 6;
+            nameLabel.Text = "Name:";
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Name", true));
+            this.nameTextBox.Location = new System.Drawing.Point(103, 80);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nameTextBox.TabIndex = 7;
+            // 
+            // middle_NameLabel
+            // 
+            middle_NameLabel.AutoSize = true;
+            middle_NameLabel.Location = new System.Drawing.Point(16, 109);
+            middle_NameLabel.Name = "middle_NameLabel";
+            middle_NameLabel.Size = new System.Drawing.Size(72, 13);
+            middle_NameLabel.TabIndex = 8;
+            middle_NameLabel.Text = "Middle Name:";
+            // 
+            // middle_NameTextBox
+            // 
+            this.middle_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Middle_Name", true));
+            this.middle_NameTextBox.Location = new System.Drawing.Point(103, 106);
+            this.middle_NameTextBox.Name = "middle_NameTextBox";
+            this.middle_NameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.middle_NameTextBox.TabIndex = 9;
+            // 
+            // passport_idLabel
+            // 
+            passport_idLabel.AutoSize = true;
+            passport_idLabel.Location = new System.Drawing.Point(16, 135);
+            passport_idLabel.Name = "passport_idLabel";
+            passport_idLabel.Size = new System.Drawing.Size(62, 13);
+            passport_idLabel.TabIndex = 10;
+            passport_idLabel.Text = "Passport id:";
+            // 
+            // passport_idTextBox
+            // 
+            this.passport_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Passport_id", true));
+            this.passport_idTextBox.Location = new System.Drawing.Point(103, 132);
+            this.passport_idTextBox.Name = "passport_idTextBox";
+            this.passport_idTextBox.Size = new System.Drawing.Size(100, 20);
+            this.passport_idTextBox.TabIndex = 11;
+            // 
+            // passport_seriesLabel
+            // 
+            passport_seriesLabel.AutoSize = true;
+            passport_seriesLabel.Location = new System.Drawing.Point(16, 161);
+            passport_seriesLabel.Name = "passport_seriesLabel";
+            passport_seriesLabel.Size = new System.Drawing.Size(81, 13);
+            passport_seriesLabel.TabIndex = 12;
+            passport_seriesLabel.Text = "Passport series:";
+            // 
+            // passport_seriesTextBox
+            // 
+            this.passport_seriesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Passport_series", true));
+            this.passport_seriesTextBox.Location = new System.Drawing.Point(103, 158);
+            this.passport_seriesTextBox.Name = "passport_seriesTextBox";
+            this.passport_seriesTextBox.Size = new System.Drawing.Size(100, 20);
+            this.passport_seriesTextBox.TabIndex = 13;
+            // 
+            // phoneLabel
+            // 
+            phoneLabel.AutoSize = true;
+            phoneLabel.Location = new System.Drawing.Point(16, 187);
+            phoneLabel.Name = "phoneLabel";
+            phoneLabel.Size = new System.Drawing.Size(41, 13);
+            phoneLabel.TabIndex = 14;
+            phoneLabel.Text = "Phone:";
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Phone", true));
+            this.phoneTextBox.Location = new System.Drawing.Point(103, 184);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(100, 20);
+            this.phoneTextBox.TabIndex = 15;
+            // 
+            // positionLabel
+            // 
+            positionLabel.AutoSize = true;
+            positionLabel.Location = new System.Drawing.Point(16, 213);
+            positionLabel.Name = "positionLabel";
+            positionLabel.Size = new System.Drawing.Size(47, 13);
+            positionLabel.TabIndex = 16;
+            positionLabel.Text = "Position:";
+            // 
+            // positionTextBox
+            // 
+            this.positionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Position", true));
+            this.positionTextBox.Location = new System.Drawing.Point(103, 210);
+            this.positionTextBox.Name = "positionTextBox";
+            this.positionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.positionTextBox.TabIndex = 17;
+            // 
+            // depIdLabel
+            // 
+            depIdLabel.AutoSize = true;
+            depIdLabel.Location = new System.Drawing.Point(16, 239);
+            depIdLabel.Name = "depIdLabel";
+            depIdLabel.Size = new System.Drawing.Size(42, 13);
+            depIdLabel.TabIndex = 18;
+            depIdLabel.Text = "Dep Id:";
+            // 
+            // depIdTextBox
+            // 
+            this.depIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "DepId", true));
+            this.depIdTextBox.Location = new System.Drawing.Point(103, 236);
+            this.depIdTextBox.Name = "depIdTextBox";
+            this.depIdTextBox.Size = new System.Drawing.Size(100, 20);
+            this.depIdTextBox.TabIndex = 19;
+            // 
+            // statusLabel
+            // 
+            statusLabel.AutoSize = true;
+            statusLabel.Location = new System.Drawing.Point(16, 265);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new System.Drawing.Size(40, 13);
+            statusLabel.TabIndex = 20;
+            statusLabel.Text = "Status:";
+            // 
+            // statusTextBox
+            // 
+            this.statusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Status", true));
+            this.statusTextBox.Location = new System.Drawing.Point(103, 262);
+            this.statusTextBox.Name = "statusTextBox";
+            this.statusTextBox.Size = new System.Drawing.Size(100, 20);
+            this.statusTextBox.TabIndex = 21;
+            // 
+            // discriminatorLabel
+            // 
+            discriminatorLabel.AutoSize = true;
+            discriminatorLabel.Location = new System.Drawing.Point(16, 291);
+            discriminatorLabel.Name = "discriminatorLabel";
+            discriminatorLabel.Size = new System.Drawing.Size(70, 13);
+            discriminatorLabel.TabIndex = 22;
+            discriminatorLabel.Text = "Discriminator:";
+            // 
+            // discriminatorTextBox
+            // 
+            this.discriminatorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Discriminator", true));
+            this.discriminatorTextBox.Location = new System.Drawing.Point(103, 288);
+            this.discriminatorTextBox.Name = "discriminatorTextBox";
+            this.discriminatorTextBox.Size = new System.Drawing.Size(100, 20);
+            this.discriminatorTextBox.TabIndex = 23;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(800, 465);
+            this.Controls.Add(idLabel);
+            this.Controls.Add(this.idTextBox);
+            this.Controls.Add(surnameLabel);
+            this.Controls.Add(this.surnameTextBox);
+            this.Controls.Add(nameLabel);
+            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(middle_NameLabel);
+            this.Controls.Add(this.middle_NameTextBox);
+            this.Controls.Add(passport_idLabel);
+            this.Controls.Add(this.passport_idTextBox);
+            this.Controls.Add(passport_seriesLabel);
+            this.Controls.Add(this.passport_seriesTextBox);
+            this.Controls.Add(phoneLabel);
+            this.Controls.Add(this.phoneTextBox);
+            this.Controls.Add(positionLabel);
+            this.Controls.Add(this.positionTextBox);
+            this.Controls.Add(depIdLabel);
+            this.Controls.Add(this.depIdTextBox);
+            this.Controls.Add(statusLabel);
+            this.Controls.Add(this.statusTextBox);
+            this.Controls.Add(discriminatorLabel);
+            this.Controls.Add(this.discriminatorTextBox);
+            this.Controls.Add(this.personBindingNavigator);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingNavigator)).EndInit();
+            this.personBindingNavigator.ResumeLayout(false);
+            this.personBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private DBDataSet dBDataSet;
+        private System.Windows.Forms.BindingSource personBindingSource;
+        private DBDataSetTableAdapters.PersonTableAdapter personTableAdapter;
+        private DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator personBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton personBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox surnameTextBox;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.TextBox middle_NameTextBox;
+        private System.Windows.Forms.TextBox passport_idTextBox;
+        private System.Windows.Forms.TextBox passport_seriesTextBox;
+        private System.Windows.Forms.TextBox phoneTextBox;
+        private System.Windows.Forms.TextBox positionTextBox;
+        private System.Windows.Forms.TextBox depIdTextBox;
+        private System.Windows.Forms.TextBox statusTextBox;
+        private System.Windows.Forms.TextBox discriminatorTextBox;
     }
 }
