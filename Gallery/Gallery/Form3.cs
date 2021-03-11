@@ -17,5 +17,15 @@ namespace Gallery
             InitializeComponent();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form8 form = new Form8();
+            form.ShowDialog();
+        }
     }
 }
