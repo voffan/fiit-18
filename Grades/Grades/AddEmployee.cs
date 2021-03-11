@@ -58,6 +58,13 @@ namespace Grades
                 textBox8.Text = "";
                 textBox1.Text = "";
             }
+            try
+            {
+                EmployeeLogic.AddEmployee(textBox1.Text, textBox2.Text,...);
+            }catch(Exception e)
+            {
+                ShowMessage("....");
+            }
         }
     }
 }
