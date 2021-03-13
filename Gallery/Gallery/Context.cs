@@ -8,7 +8,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Gallery
 {
-    class Context : DbContext
+    public class Context : DbContext
     {
         public Context() : base("DB") { }
         public DbSet<Person> People { get; set; }

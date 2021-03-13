@@ -27,11 +27,11 @@ namespace Gallery
         {
             try
             {
-                ExhibitionLogic.AddEx(textBox1.Text, textBox2.Text, textBox3.Text, Convert.ToDateTime(textBox4.Text));
+                ExhibitionLogic.AddEx(textBox1.Text, Convert.ToInt32(textBox2.Text), textBox3.Text, DateTime.Parse(textBox4.Text));
             }
             catch(Exception er)
             {
-                MessageBox.Show("Запись не выполнена: " + er);
+                MessageBox.Show("Запись не выполнена: \n" + er.ToString());
             }
             Close();
         }

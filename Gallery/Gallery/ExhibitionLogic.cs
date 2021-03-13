@@ -8,22 +8,17 @@ namespace Gallery
 {
     public class ExhibitionLogic
     {
-        public static void AddEx(string name, string country, string city, DateTime date)
+        public static void AddEx(string name, int country, string city, DateTime date)
         {
             Context Con = new Context();
-            Country country_name = new Country
-            {
-                Name = country
-            };
-            Con.Countries.Add(country_name);
-            Con.SaveChanges();
-            int id = country_name.Id;
+            
 
             Exhibition ex = new Exhibition
             {
                 NameExhibition = name, 
                 Date = date,
-                City = city  
+                City = city,
+                CountryId = country
             };
 
             Con.Exhibitions.Add(ex);

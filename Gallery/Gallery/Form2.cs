@@ -20,7 +20,7 @@ namespace Gallery
         private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "dBDataSet.Person". При необходимости она может быть перемещена или удалена.
-            this.personTableAdapter.Fill(this.dBDataSet.Person);
+   
 
         }
 
@@ -78,7 +78,7 @@ namespace Gallery
         {
             this.Validate();
             this.personBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dBDataSet);
+        
 
         }
     }

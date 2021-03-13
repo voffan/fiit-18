@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class DB : DbMigration
+    public partial class first : DbMigration
     {
         public override void Up()
         {
@@ -45,13 +45,13 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         NameExhibition = c.String(),
+                        CountryId = c.Int(nullable: false),
                         City = c.String(),
                         Date = c.DateTime(nullable: false),
-                        Country_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Country", t => t.Country_Id)
-                .Index(t => t.Country_Id);
+                .ForeignKey("dbo.Country", t => t.CountryId, cascadeDelete: true)
+                .Index(t => t.CountryId);
             
             CreateTable(
                 "dbo.Country",
@@ -139,13 +139,13 @@
             DropForeignKey("dbo.Sell", "CustomerId", "dbo.Person");
             DropForeignKey("dbo.Painting", "GenreId", "dbo.Genre");
             DropForeignKey("dbo.Painting", "ExhibitionId", "dbo.Exhibition");
-            DropForeignKey("dbo.Exhibition", "Country_Id", "dbo.Country");
+            DropForeignKey("dbo.Exhibition", "CountryId", "dbo.Country");
             DropForeignKey("dbo.Painting", "ArtistId", "dbo.Artist");
             DropIndex("dbo.SellPainting", new[] { "PaintingId" });
             DropIndex("dbo.SellPainting", new[] { "SellId" });
             DropIndex("dbo.Sell", new[] { "CustomerId" });
             DropIndex("dbo.Person", new[] { "DepId" });
-            DropIndex("dbo.Exhibition", new[] { "Country_Id" });
+            DropIndex("dbo.Exhibition", new[] { "CountryId" });
             DropIndex("dbo.Painting", new[] { "ArtistId" });
             DropIndex("dbo.Painting", new[] { "ExhibitionId" });
             DropIndex("dbo.Painting", new[] { "GenreId" });

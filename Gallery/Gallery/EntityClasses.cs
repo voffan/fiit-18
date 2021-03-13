@@ -68,6 +68,8 @@ namespace Gallery
         [Key]
         public int Id { get; set; }
         public string NameExhibition { get; set; }
+        public int CountryId { get; set; }
+        [ForeignKey("CountryId")]
         public Country Country { get; set; }
         public string City { get; set; }
         public DateTime Date { get; set; }

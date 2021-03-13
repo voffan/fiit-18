@@ -43,10 +43,9 @@ namespace Gallery
             System.Windows.Forms.Label statusLabel;
             System.Windows.Forms.Label discriminatorLabel;
             this.button1 = new System.Windows.Forms.Button();
-            this.dBDataSet = new Gallery.DBDataSet();
+            
             this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personTableAdapter = new Gallery.DBDataSetTableAdapters.PersonTableAdapter();
-            this.tableAdapterManager = new Gallery.DBDataSetTableAdapters.TableAdapterManager();
+      
             this.personBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -82,7 +81,7 @@ namespace Gallery
             depIdLabel = new System.Windows.Forms.Label();
             statusLabel = new System.Windows.Forms.Label();
             discriminatorLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).BeginInit();
+           
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingNavigator)).BeginInit();
             this.personBindingNavigator.SuspendLayout();
@@ -99,32 +98,20 @@ namespace Gallery
             // 
             // dBDataSet
             // 
-            this.dBDataSet.DataSetName = "DBDataSet";
-            this.dBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
             // 
             // personBindingSource
             // 
             this.personBindingSource.DataMember = "Person";
-            this.personBindingSource.DataSource = this.dBDataSet;
+       
             // 
             // personTableAdapter
             // 
-            this.personTableAdapter.ClearBeforeFill = true;
+            
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.@__MigrationHistoryTableAdapter = null;
-            this.tableAdapterManager.ArtistTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CountryTableAdapter = null;
-            this.tableAdapterManager.DepartamentTableAdapter = null;
-            this.tableAdapterManager.ExhibitionTableAdapter = null;
-            this.tableAdapterManager.GenreTableAdapter = null;
-            this.tableAdapterManager.PaintingTableAdapter = null;
-            this.tableAdapterManager.PersonTableAdapter = this.personTableAdapter;
-            this.tableAdapterManager.SellPaintingTableAdapter = null;
-            this.tableAdapterManager.SellTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Gallery.DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+           
             // 
             // personBindingNavigator
             // 
@@ -469,7 +456,7 @@ namespace Gallery
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).EndInit();
+         
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingNavigator)).EndInit();
             this.personBindingNavigator.ResumeLayout(false);
@@ -481,10 +468,7 @@ namespace Gallery
 
         #endregion
         private System.Windows.Forms.Button button1;
-        private DBDataSet dBDataSet;
         private System.Windows.Forms.BindingSource personBindingSource;
-        private DBDataSetTableAdapters.PersonTableAdapter personTableAdapter;
-        private DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator personBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;

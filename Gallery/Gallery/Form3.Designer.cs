@@ -34,20 +34,17 @@ namespace Gallery
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.exhibitionTableAdapter1 = new Gallery.DBDataSetTableAdapters.ExhibitionTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dBDataSet = new Gallery.DBDataSet();
-            this.dBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.exhibitionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameExhibitionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exhibitionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exhibitionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -92,10 +89,6 @@ namespace Gallery
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // exhibitionTableAdapter1
-            // 
-            this.exhibitionTableAdapter1.ClearBeforeFill = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
@@ -112,21 +105,7 @@ namespace Gallery
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(545, 426);
             this.dataGridView1.TabIndex = 17;
-            // 
-            // dBDataSet
-            // 
-            this.dBDataSet.DataSetName = "DBDataSet";
-            this.dBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dBDataSetBindingSource
-            // 
-            this.dBDataSetBindingSource.DataSource = this.dBDataSet;
-            this.dBDataSetBindingSource.Position = 0;
-            // 
-            // exhibitionBindingSource
-            // 
-            this.exhibitionBindingSource.DataMember = "Exhibition";
-            this.exhibitionBindingSource.DataSource = this.dBDataSetBindingSource;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -159,6 +138,11 @@ namespace Gallery
             this.countryIdDataGridViewTextBoxColumn.HeaderText = "Country_Id";
             this.countryIdDataGridViewTextBoxColumn.Name = "countryIdDataGridViewTextBoxColumn";
             // 
+            // exhibitionBindingSource
+            // 
+            this.exhibitionBindingSource.DataMember = "Exhibition";
+            this.exhibitionBindingSource.DataSource = this.dBDataSetBindingSource;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,10 +155,8 @@ namespace Gallery
             this.Controls.Add(this.button1);
             this.Name = "Form3";
             this.Text = "Form3";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exhibitionBindingSource)).EndInit();
+            this.Load += new System.EventHandler(this.Form3_Load);
+            
             this.ResumeLayout(false);
 
         }
@@ -185,7 +167,6 @@ namespace Gallery
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private DBDataSetTableAdapters.ExhibitionTableAdapter exhibitionTableAdapter1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameExhibitionDataGridViewTextBoxColumn;
@@ -194,6 +175,5 @@ namespace Gallery
         private System.Windows.Forms.DataGridViewTextBoxColumn countryIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource exhibitionBindingSource;
         private System.Windows.Forms.BindingSource dBDataSetBindingSource;
-        private DBDataSet dBDataSet;
     }
 }

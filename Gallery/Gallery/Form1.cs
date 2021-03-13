@@ -11,8 +11,10 @@ using System.Data.SqlClient;
 
 namespace Gallery
 {
+
     public partial class Form1 : Form
     {
+        private Context db = new Context();
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace Gallery
         {
             Form3 form3 = new Form3();
             this.Hide();
+            form3.Db = db;
             form3.ShowDialog();
             this.Show();
         }

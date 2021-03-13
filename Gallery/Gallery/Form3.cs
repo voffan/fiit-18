@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace Gallery
 {
+
     public partial class Form3 : Form
     {
+        public Context Db { get; set; } 
         public Form3()
         {
             InitializeComponent();
@@ -26,6 +28,16 @@ namespace Gallery
         {
             Form8 form = new Form8();
             form.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Db.Exhibitions.ToList();
         }
     }
 }
