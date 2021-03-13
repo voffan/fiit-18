@@ -33,7 +33,14 @@ namespace Grades
 
         private void button4_Click(object sender, EventArgs e)
         {
-            employeeTableAdapter.Update(this.dBDataSet.Employee);
+            try
+            {
+                EmployeeLogic.SaveСhanges();
+            }
+            catch (Exception)
+            {
+                //ShowMessage("....");
+            }
         }
 
         private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
