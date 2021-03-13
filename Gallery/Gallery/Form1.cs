@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Gallery
 {
@@ -27,7 +28,14 @@ namespace Gallery
         private void button3_Click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3();
+            this.Hide();
             form3.ShowDialog();
+            this.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

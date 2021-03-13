@@ -80,6 +80,7 @@
       <DependentUpon>DBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="EntityClasses.cs" />
+    <Compile Include="ExhibitionLogic.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
