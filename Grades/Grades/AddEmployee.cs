@@ -12,6 +12,7 @@ namespace Grades
 {
     public partial class AddEmployee : Form
     {
+        private Context DB = new Context();
         public AddEmployee()
         {
             InitializeComponent();
@@ -33,10 +34,11 @@ namespace Grades
         {
             try
             {
-                EmployeeLogic.AddEmployee(TextBox3.Text, TextBox4.Text);
-            }catch(Exception )
+                EmployeeLogic.AddEmployee(TextBox2.Text, TextBox3.Text,TextBox4.Text,DateTime.Parse(TextBox5.Text),
+                    TextBox6.Text,Convert.ToInt32(TextBox7.Text), Convert.ToInt32(TextBox8.Text), Convert.ToInt32(TextBox1.Text));
+            }catch(Exception  er)
             {
-                //ShowMessage("....");
+                MessageBox.Show(er.ToString());
             }
         }
     }

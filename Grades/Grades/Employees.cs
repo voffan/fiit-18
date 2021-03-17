@@ -12,7 +12,7 @@ namespace Grades
 {
     public partial class Employees : Form
     {
-
+        public Context Db { get; set; }
         public Employees()
         {
             InitializeComponent();
@@ -20,28 +20,15 @@ namespace Grades
 
         private void Employees_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "dBDataSet.Employee". При необходимости она может быть перемещена или удалена.
-            this.employeeTableAdapter.Fill(this.dBDataSet.Employee);
-
+            dataGridView1.DataSource = Db.Employees.ToList();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form frm = new AddEmployee();
-            frm.Show();
+            Form AddEmployee = new AddEmployee();
+            AddEmployee.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                EmployeeLogic.SaveСhanges();
-            }
-            catch (Exception)
-            {
-                //ShowMessage("....");
-            }
-        }
 
         private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {

@@ -12,18 +12,19 @@ namespace Grades
 {
     public class EmployeeLogic
     {
-        public static void AddEmployee(string TextBox2, string TextBox3, string TextBox4,
-            DateTime TextBox5, string TextBox6, int TextBox7, int? TextBox8, int? TextBox1)
+
+        public static void AddEmployee(string Surname, string Name, string MiddleName,
+            DateTime DateOfBirth, string Address, int Phone, int PositionId, int SchoolId)
     	{
     		Employee epl = new Employee();
-            epl.Surname = TextBox2;
-            epl.Name = TextBox3;
-            epl.MiddleName = TextBox4;
-            epl.DateOfBirth = TextBox5;
-            epl.Address = TextBox6;
-            epl.Phone = TextBox7;
-            epl.PositionId = TextBox8;
-            epl.SchoolId = TextBox1;
+            epl.Surname = Surname;
+            epl.Name = Name;
+            epl.MiddleName = MiddleName;
+            epl.DateOfBirth = DateOfBirth;
+            epl.Address = Address;
+            epl.Phone = Phone;
+            epl.PositionId = PositionId;
+            epl.SchoolId = SchoolId;
             Context db = new Context();
             db.Employees.Add(epl);
             db.SaveChanges();
@@ -31,13 +32,10 @@ namespace Grades
 
         public static void Save—hanges()
         {
-            Context db = new Context();
-            db.SaveChanges();
+            Context DB = new Context();
+            DB.SaveChanges();
         }
 
-        internal static void AddEmployee(string text1, string text2)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
