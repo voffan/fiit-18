@@ -21,11 +21,10 @@ namespace Grades
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            Form Employees = new Employees();
+            Employees employees = new Employees();
             this.Hide();
-            Employees.Db = db;
-            Employees.ShowDialog();
+            employees.Db = db;
+            employees.ShowDialog();
             this.Show();
         }
 

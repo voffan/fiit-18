@@ -26,17 +26,8 @@ namespace Grades
         private void button1_Click(object sender, EventArgs e)
         {
             Form AddEmployee = new AddEmployee();
-            AddEmployee.Show();
-        }
-
-
-        private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
-        {
-            DialogResult dr = MessageBox.Show("Удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button3);
-            if (dr == DialogResult.Cancel)
-            {
-                e.Cancel = true;
-            }
+            AddEmployee.ShowDialog();
+            dataGridView1.DataSource = Db.Employees.ToList();
         }
 
         private void button5_Click(object sender, EventArgs e)

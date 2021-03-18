@@ -12,7 +12,7 @@ namespace Grades
 {
     public partial class AddEmployee : Form
     {
-        private Context DB = new Context();
+        private Context Db = new Context();
         public AddEmployee()
         {
             InitializeComponent();
@@ -20,9 +20,7 @@ namespace Grades
 
         private void AddEmployee_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "dBDataSet.Employee". При необходимости она может быть перемещена или удалена.
             this.employeeTableAdapter.Fill(this.dBDataSet.Employee);
-
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -35,7 +33,8 @@ namespace Grades
             try
             {
                 EmployeeLogic.AddEmployee(TextBox2.Text, TextBox3.Text,TextBox4.Text,DateTime.Parse(TextBox5.Text),
-                    TextBox6.Text,Convert.ToInt32(TextBox7.Text), Convert.ToInt32(TextBox8.Text), Convert.ToInt32(TextBox1.Text));
+                    TextBox6.Text,Convert.ToInt32(TextBox7.Text), Convert.ToInt32(TextBox8.Text), Convert.ToInt32(TextBox1.Text), Db);
+                Close();
             }catch(Exception  er)
             {
                 MessageBox.Show(er.ToString());

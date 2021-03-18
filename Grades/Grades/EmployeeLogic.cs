@@ -14,7 +14,7 @@ namespace Grades
     {
 
         public static void AddEmployee(string Surname, string Name, string MiddleName,
-            DateTime DateOfBirth, string Address, int Phone, int PositionId, int SchoolId)
+            DateTime DateOfBirth, string Address, int Phone, int PositionId, int SchoolId, Context db)
     	{
     		Employee epl = new Employee();
             epl.Surname = Surname;
@@ -25,7 +25,6 @@ namespace Grades
             epl.Phone = Phone;
             epl.PositionId = PositionId;
             epl.SchoolId = SchoolId;
-            Context db = new Context();
             db.Employees.Add(epl);
             db.SaveChanges();
     	}
