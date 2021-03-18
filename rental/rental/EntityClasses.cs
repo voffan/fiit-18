@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.Spatial;
-using System.Data.Entity;
 
-namespace Rental
+namespace rental
 {
     public enum ClientStatus { normal, blacklist }
     public enum OrderStatus { Active, Inactive }
-    public enum DiscStatus { status1,status2}
+    public enum DiskStatus { status1, status2 }
     public class Genre
     {
         [Key]
@@ -19,6 +15,7 @@ namespace Rental
         [StringLength(255)]
         public string Name { get; set; }
     }
+
     public class Country
     {
         [Key]
@@ -52,11 +49,12 @@ namespace Rental
     }
     public class Client : Person
     {
-        public int PhoneNumber { get; set; }
+        [StringLength(12)]
+        public string PhoneNumber { get; set; }
         [StringLength(255)]
         public string Email { get; set; }
         public ClientStatus Status { get; set; }
-
+        
     }
     public class Order
     {
@@ -68,14 +66,14 @@ namespace Rental
         [StringLength(255)]
         public string Pledgetype { get; set; }
         public OrderStatus Status { get; set; }
-        public virtual List<Disc> Discs { get; set; }
+        public virtual List<Disk> Disks { get; set; }
+        
     }
-    public class Disc
+    public class Disk
     {
         [Key]
         public int Id { get; set; }
-        public DiscStatus Status { get; set; }
-        public virtual List<Order> Orders { get; set; }
+        public DiskStatus Status { get; set; }
         public virtual List<Movie> Movies { get; set; }
     }
     public class Movie
@@ -87,18 +85,15 @@ namespace Rental
         public int GenreId { get; set; }
         [ForeignKey("GenreId")]
         public Genre Genre { get; set; }
-        public int Year { get; set;}
+        public int Year { get; set; }
         public Country Country { get; set; }
         [StringLength(12)]
         public string AgeLimit { get; set; }
         public float Rating { get; set; }
-
-        public virtual List<Disc> Dicsc { get; set; }
     }
+    
     public class Blacklist
     {
-        [Key]
-        public int Id { get; set; }
         public int ClientId { get; set; }
         [ForeignKey("ClientId")]
         public Client Client { get; set; }
@@ -114,4 +109,5 @@ namespace Rental
         public DateTime OpenTime { get; set; }
         public int CloseTime { get; set; }
     }
+ 
 }
