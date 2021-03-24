@@ -71,11 +71,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcademicYearLogic.cs" />
+    <Compile Include="AcademicYears.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcademicYears.Designer.cs">
+      <DependentUpon>AcademicYears.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAcademicYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAcademicYear.Designer.cs">
+      <DependentUpon>AddAcademicYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCheckPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCheckPoint.Designer.cs">
+      <DependentUpon>AddCheckPoint.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddEmployee.Designer.cs">
       <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckPointLogic.cs" />
+    <Compile Include="ChekPoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChekPoints.Designer.cs">
+      <DependentUpon>ChekPoints.cs</DependentUpon>
     </Compile>
     <Compile Include="Context.cs" />
     <Compile Include="DBDataSet.Designer.cs">
@@ -104,8 +130,20 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AcademicYears.resx">
+      <DependentUpon>AcademicYears.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAcademicYear.resx">
+      <DependentUpon>AddAcademicYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCheckPoint.resx">
+      <DependentUpon>AddCheckPoint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChekPoints.resx">
+      <DependentUpon>ChekPoints.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>

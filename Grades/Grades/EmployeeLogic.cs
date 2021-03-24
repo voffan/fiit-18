@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,12 +29,6 @@ namespace Grades
             db.Employees.Add(epl);
             db.SaveChanges();
     	}
-
-        public static void Save—hanges()
-        {
-            Context DB = new Context();
-            DB.SaveChanges();
-        }
 
 
     }

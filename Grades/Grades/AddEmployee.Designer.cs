@@ -50,7 +50,7 @@ namespace Grades
             this.Button1 = new System.Windows.Forms.Button();
             this.Button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TextBox1 = new System.Windows.Forms.TextBox();
+            this.TextBox9 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).BeginInit();
@@ -185,7 +185,7 @@ namespace Grades
             // 
             // Button1
             // 
-            this.Button1.Location = new System.Drawing.Point(81, 300);
+            this.Button1.Location = new System.Drawing.Point(70, 294);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(118, 29);
             this.Button1.TabIndex = 17;
@@ -195,7 +195,7 @@ namespace Grades
             // 
             // Button2
             // 
-            this.Button2.Location = new System.Drawing.Point(231, 300);
+            this.Button2.Location = new System.Drawing.Point(236, 294);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(118, 29);
             this.Button2.TabIndex = 18;
@@ -205,7 +205,7 @@ namespace Grades
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.TextBox1);
+            this.groupBox1.Controls.Add(this.TextBox9);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.Button2);
             this.groupBox1.Controls.Add(this.Button1);
@@ -225,17 +225,17 @@ namespace Grades
             this.groupBox1.Controls.Add(this.TextBox2);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(411, 361);
+            this.groupBox1.Size = new System.Drawing.Size(392, 329);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Добавление нового сотрудника";
             // 
-            // TextBox1
+            // TextBox9
             // 
-            this.TextBox1.Location = new System.Drawing.Point(149, 255);
-            this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(142, 20);
-            this.TextBox1.TabIndex = 20;
+            this.TextBox9.Location = new System.Drawing.Point(149, 255);
+            this.TextBox9.Name = "TextBox9";
+            this.TextBox9.Size = new System.Drawing.Size(142, 20);
+            this.TextBox9.TabIndex = 20;
             // 
             // label1
             // 
@@ -286,7 +286,7 @@ namespace Grades
         private System.Windows.Forms.Button Button1;
         private System.Windows.Forms.Button Button2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox TextBox1;
+        private System.Windows.Forms.TextBox TextBox9;
         private System.Windows.Forms.Label label1;
     }
 }

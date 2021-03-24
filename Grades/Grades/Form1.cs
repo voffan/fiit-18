@@ -11,10 +11,10 @@ using System.Data.SqlClient;
 
 namespace Grades
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         private Context db = new Context();
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
@@ -27,10 +27,22 @@ namespace Grades
             employees.ShowDialog();
             this.Show();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
+            ChekPoints chekPoints = new ChekPoints();
+            this.Hide();
+            chekPoints.Db = db;
+            chekPoints.ShowDialog();
+            this.Show();
+        }
 
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            AcademicYears academicYears = new AcademicYears();
+            this.Hide();
+            academicYears.Db = db;
+            academicYears.ShowDialog();
+            this.Show();
         }
     }
 }
