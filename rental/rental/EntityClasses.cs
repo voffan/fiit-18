@@ -94,6 +94,7 @@ namespace rental
     
     public class Blacklist
     {
+        [Key]
         public int ClientId { get; set; }
         [ForeignKey("ClientId")]
         public Client Client { get; set; }
@@ -102,6 +103,7 @@ namespace rental
     }
     public class Rental
     {
+        [Key]
         [StringLength(255)]
         public string Name { get; set; }
         [StringLength(255)]

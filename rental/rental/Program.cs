@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.Extensions.Configuration;
 using System.Windows.Forms;
 
 namespace rental
@@ -16,5 +15,6 @@ namespace rental
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1()); 
         }
+        
     }
 }
