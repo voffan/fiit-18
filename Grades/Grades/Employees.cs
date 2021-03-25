@@ -38,7 +38,7 @@ namespace Grades
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            EmployeeLogic.DeleteEmployee(Db, Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value)); 
         }
     }
 }

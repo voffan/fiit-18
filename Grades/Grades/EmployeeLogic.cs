@@ -30,6 +30,9 @@ namespace Grades
             db.SaveChanges();
     	}
 
+        public static void DeleteEmployee(Context db, int id)
+        {
 
+        }
     }
 }
