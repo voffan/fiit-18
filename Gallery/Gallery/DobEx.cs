@@ -11,9 +11,10 @@ using System.Windows.Forms;
 
 namespace Gallery
 {
-    public partial class Form8 : Form
+    public partial class DobEx : Form
     {
-        public Form8()
+        public Context Db { get; set; }
+        public DobEx()
         {
             InitializeComponent();
         }
@@ -27,7 +28,8 @@ namespace Gallery
         {
             try
             {
-                ExhibitionLogic.AddEx(textBox1.Text, Convert.ToInt32(textBox2.Text), textBox3.Text, DateTime.Parse(textBox4.Text));
+                ExhibitionLogic.AddEx(Db, textBox1.Text, Convert.ToInt32(textBox2.Text), textBox3.Text, DateTime.Parse(textBox4.Text));
+                Close();
             }
             catch(Exception er)
             {
@@ -36,5 +38,9 @@ namespace Gallery
             Close();
         }
 
+        private void Form8_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

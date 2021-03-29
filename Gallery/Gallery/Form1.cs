@@ -29,7 +29,7 @@ namespace Gallery
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            WinEx form3 = new WinEx();
             this.Hide();
             form3.Db = db;
             form3.ShowDialog();

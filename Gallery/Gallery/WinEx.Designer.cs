@@ -1,7 +1,7 @@
 ﻿
 namespace Gallery
 {
-    partial class Form3
+    partial class WinEx
     {
         /// <summary>
         /// Required designer variable.
@@ -67,6 +67,7 @@ namespace Gallery
             this.button2.TabIndex = 1;
             this.button2.Text = "Редактировать";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -77,6 +78,7 @@ namespace Gallery
             this.button3.TabIndex = 2;
             this.button3.Text = "Удалить";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -91,7 +93,10 @@ namespace Gallery
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -102,7 +107,10 @@ namespace Gallery
             this.countryIdDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.exhibitionBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(545, 426);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -119,28 +127,32 @@ namespace Gallery
             this.nameExhibitionDataGridViewTextBoxColumn.DataPropertyName = "NameExhibition";
             this.nameExhibitionDataGridViewTextBoxColumn.HeaderText = "NameExhibition";
             this.nameExhibitionDataGridViewTextBoxColumn.Name = "nameExhibitionDataGridViewTextBoxColumn";
+            this.nameExhibitionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cityDataGridViewTextBoxColumn
             // 
             this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
             this.cityDataGridViewTextBoxColumn.HeaderText = "City";
             this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.cityDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
             this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // countryIdDataGridViewTextBoxColumn
             // 
             this.countryIdDataGridViewTextBoxColumn.DataPropertyName = "Country_Id";
             this.countryIdDataGridViewTextBoxColumn.HeaderText = "Country_Id";
             this.countryIdDataGridViewTextBoxColumn.Name = "countryIdDataGridViewTextBoxColumn";
+            this.countryIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // exhibitionBindingSource
             // 
-            this.exhibitionBindingSource.DataMember = "Exhibition";
+            this.exhibitionBindingSource.DataMember = "Exhibitions";
             this.exhibitionBindingSource.DataSource = this.dBDataSetBindingSource;
             // 
             // Form3
@@ -156,9 +168,6 @@ namespace Gallery
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
-            
-            this.ResumeLayout(false);
-
         }
 
         #endregion
