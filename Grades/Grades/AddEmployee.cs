@@ -33,12 +33,14 @@ namespace Grades
             try
             {
                 EmployeeLogic.AddEmployee(TextBox2.Text, TextBox3.Text,TextBox4.Text,DateTime.Parse(TextBox5.Text),
-                    TextBox6.Text,Convert.ToInt32(TextBox7.Text), Convert.ToInt32(TextBox8.Text), Convert.ToInt32(TextBox9.Text), Db);
+                    TextBox6.Text,TextBox7.Text, Convert.ToInt32(TextBox8.Text), Convert.ToInt32(TextBox9.Text), Db);
                 Close();
             }catch(Exception  er)
             {
                 MessageBox.Show(er.ToString());
             }
         }
+
+
     }
 }

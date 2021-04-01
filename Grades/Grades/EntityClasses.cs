@@ -23,7 +23,8 @@ namespace Grades
         public DateTime DateOfBirth { get; set; }
         [StringLength(255)]
         public string Address { get; set; }
-        public int Phone { get; set; }
+        [StringLength(12)]
+        public string Phone { get; set; }
 
         public int? ClassId { get; set; }
         [ForeignKey("ClassId")]
@@ -60,7 +61,7 @@ namespace Grades
         public string Address { get; set; }
         [StringLength(255)]
         public string Email { get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
 
         public virtual ICollection<Employee> Employeers { get; set; }
         public virtual ICollection<Class> Classes { get; set; }
@@ -79,7 +80,8 @@ namespace Grades
         public DateTime DateOfBirth { get; set; }
         [StringLength(255)]
         public string Address { get; set; }
-        public int Phone { get; set; }
+        [StringLength(12)]
+        public string Phone { get; set; }
 
         public int? PositionId { get; set; }
         [ForeignKey("PositionId")]
