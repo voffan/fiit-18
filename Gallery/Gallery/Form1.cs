@@ -23,7 +23,8 @@ namespace Gallery
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            EmployeeWin form2 = new EmployeeWin();
+            form2.Db = this.db;
             form2.Show();
         }
 
@@ -39,6 +40,11 @@ namespace Gallery
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

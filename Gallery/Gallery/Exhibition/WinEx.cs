@@ -29,7 +29,7 @@ namespace Gallery
             DobEx form = new DobEx();
             form.Db = this.Db;
             form.ShowDialog();
-            dataGridView1.DataSource = Db.Exhibitions.ToList();
+            dataGridView2.DataSource = Db.Exhibitions.ToList();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -39,16 +39,16 @@ namespace Gallery
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Db.Exhibitions.ToList();
+            dataGridView2.DataSource = Db.Exhibitions.ToList();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView2.SelectedRows.Count > 0)
             {
-                int index = dataGridView1.SelectedRows[0].Index;
+                int index = dataGridView2.SelectedRows[0].Index;
                 int id = 0;
-                bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
+                bool converted = Int32.TryParse(dataGridView2[0, index].Value.ToString(), out id);
                 if (converted == false)
                     return;
 
@@ -58,8 +58,8 @@ namespace Gallery
                 form.Db = this.Db; 
                 form.ShowDialog();
             }
-            dataGridView1.Refresh();
-            dataGridView1.DataSource = Db.Exhibitions.ToList();
+            dataGridView2.Refresh();
+            dataGridView2.DataSource = Db.Exhibitions.ToList();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -69,11 +69,11 @@ namespace Gallery
             {
                 try
                 {
-                    if (dataGridView1.SelectedRows.Count > 0)
+                    if (dataGridView2.SelectedRows.Count > 0)
                     {
-                        int index = dataGridView1.SelectedRows[0].Index;
+                        int index = dataGridView2.SelectedRows[0].Index;
                         int id = 0;
-                        bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
+                        bool converted = Int32.TryParse(dataGridView2[0, index].Value.ToString(), out id);
                         if (converted == false)
                             return;
 
@@ -91,7 +91,7 @@ namespace Gallery
             {
 
             }
-            dataGridView1.DataSource = Db.Exhibitions.ToList();
+            dataGridView2.DataSource = Db.Exhibitions.ToList();
         }
     }
 }
