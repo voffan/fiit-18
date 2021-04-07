@@ -20,6 +20,7 @@ namespace Gallery
         public DbSet<Exhibition> Exhibitions { get; set; }
         public DbSet<Departament> Departaments { get; set; }
         public DbSet<Country> Countries { get; set; }
+        public DbSet<Auth> Auths { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

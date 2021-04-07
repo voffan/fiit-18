@@ -76,7 +76,7 @@ namespace Gallery
                         bool converted = Int32.TryParse(dataGridView2[0, index].Value.ToString(), out id);
                         if (converted == false)
                             return;
-
+                        
                         ExhibitionLogic.DelEx(Db, id);
 
                         MessageBox.Show("Запись удалена");

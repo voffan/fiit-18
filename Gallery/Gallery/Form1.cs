@@ -14,7 +14,7 @@ namespace Gallery
 
     public partial class Form1 : Form
     {
-        private Context db = new Context();
+        public Context Db1 { get; set; }
         public Form1()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace Gallery
         private void button1_Click(object sender, EventArgs e)
         {
             EmployeeWin form2 = new EmployeeWin();
-            form2.Db = this.db;
+            form2.Db = this.Db1;
             form2.Show();
         }
 
@@ -32,7 +32,7 @@ namespace Gallery
         {
             WinEx form3 = new WinEx();
             this.Hide();
-            form3.Db = db;
+            form3.Db = Db1;
             form3.ShowDialog();
             this.Show();
         }

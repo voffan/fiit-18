@@ -149,5 +149,14 @@ namespace Gallery
     {
         public ICollection<Sell> Sells { get; set; }
     }
-
+    public class Auth
+    {
+        public int Id { get; set; }
+        [Key]
+        public string Login { get; set; }
+        public string Password { get; set; }
+        public int EmployeeId { get; set; }
+        [ForeignKey("EmployeeId")]
+        public Employee Employee { get; set; }
+    }
 }

@@ -8,13 +8,13 @@ namespace Gallery
 {
     public class ExhibitionLogic
     {
-       
+
         public static void AddEx(Context db, string name, int country, string city, DateTime date)
         {
 
             Exhibition ex = new Exhibition
             {
-                NameExhibition = name, 
+                NameExhibition = name,
                 Date = date,
                 City = city,
                 CountryId = country
@@ -23,6 +23,7 @@ namespace Gallery
             db.Exhibitions.Add(ex);
             db.SaveChanges();
         }
+
         public static void DelEx(Context db, int ident)
         {
             Exhibition ex = db.Exhibitions.Find(ident);
