@@ -34,7 +34,7 @@ namespace Gallery
             }
             catch (Exception er)
             {
-                MessageBox.Show("" + er.ToString());
+                MessageBox.Show("Ошибка авторизации" + er.ToString());
             }
         }
 

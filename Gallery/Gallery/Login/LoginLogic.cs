@@ -11,17 +11,14 @@ namespace Gallery
     {
         public static bool LogAuth(Context db, string log, string pass)
         {
-            using (db)
+            var query = db.Auths
+                                .Where(a => a.Login == log)
+                                .FirstOrDefault<Auth>();
+            if (query != null && query.Password == pass)
             {
-                var query = db.Auths
-                                   .Where(a => a.Login == log)
-                                   .FirstOrDefault<Auth>();
-                if (query.Password == pass)
-                {
-                    return true;
-                }
-                else return false;
+                return true;
             }
+            else return false;
         }
     }
 }
