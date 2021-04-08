@@ -10,6 +10,18 @@ using Grades;
 
 namespace Grades
 {
+
+    public class User
+    {
+        [Key]
+        public int Id { get; set; }
+        [StringLength(40)]
+        public string UserName { get; set; }
+        [StringLength(40)]
+        public string Password { get; set; }
+        public string Role { get; set; }
+
+    }
     public class Student
     {
         [Key]
@@ -20,7 +32,7 @@ namespace Grades
         public string Name { get; set; }
         [StringLength(50)]
         public string MiddleName { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         [StringLength(255)]
         public string Address { get; set; }
         [StringLength(12)]
@@ -37,7 +49,7 @@ namespace Grades
     public class Class
     {
         [Key]
-        public int? Id { get; set; }
+        public int Id { get; set; }
         public char Symbol { get; set; }
         public int? Year { get; set; }
         public int? SchoolId { get; set; }
@@ -77,7 +89,7 @@ namespace Grades
         public string Name { get; set; }
         [StringLength(50)]
         public string MiddleName { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         [StringLength(255)]
         public string Address { get; set; }
         [StringLength(12)]
@@ -192,7 +204,7 @@ namespace Grades
         [Key]
         public int Id { get; set; }
         public DateTime Start { get; set; }
-        public DateTime End { get; set; }
+        public DateTime? End { get; set; }
 
         public virtual ICollection<Table> Tables { get; set; }
     }
