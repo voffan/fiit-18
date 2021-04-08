@@ -20,7 +20,7 @@ namespace Grades
 
         private void AddEmployee_Load(object sender, EventArgs e)
         {
-            this.employeeTableAdapter.Fill(this.dBDataSet.Employee);
+         //   this.employeeTableAdapter.Fill(this.dBDataSet.Employee);
         }
 
         private void Button2_Click(object sender, EventArgs e)
