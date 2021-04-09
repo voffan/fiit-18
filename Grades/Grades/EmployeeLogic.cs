@@ -34,7 +34,6 @@ namespace Grades
         {
             Employee epl = db.Employees.Where(e => e.Id == id).FirstOrDefault();
             db.Employees.Remove(epl);
-            
             db.SaveChanges();
             
         }
