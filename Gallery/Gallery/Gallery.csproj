@@ -113,6 +113,12 @@
     <Compile Include="Exhibition\RedEx.Designer.cs">
       <DependentUpon>RedEx.cs</DependentUpon>
     </Compile>
+    <Compile Include="JournalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JournalForm.Designer.cs">
+      <DependentUpon>JournalForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\LoginLogic.cs" />
     <Compile Include="Login\LoginWin.cs">
       <SubType>Form</SubType>
@@ -131,6 +137,10 @@
     <Compile Include="Migrations\202104071229379_forth.cs" />
     <Compile Include="Migrations\202104071229379_forth.designer.cs">
       <DependentUpon>202104071229379_forth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104100349149_fifth.cs" />
+    <Compile Include="Migrations\202104100349149_fifth.designer.cs">
+      <DependentUpon>202104100349149_fifth.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -153,6 +163,9 @@
     <EmbeddedResource Include="Exhibition\RedEx.resx">
       <DependentUpon>RedEx.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JournalForm.resx">
+      <DependentUpon>JournalForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\LoginWin.resx">
       <DependentUpon>LoginWin.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104071229379_forth.resx">
       <DependentUpon>202104071229379_forth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104100349149_fifth.resx">
+      <DependentUpon>202104100349149_fifth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -181,6 +197,7 @@
     <None Include="Properties\DataSources\Gallery.Migrations.first.datasource" />
     <None Include="Properties\DataSources\Gallery.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\Gallery.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Journal.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

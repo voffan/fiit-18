@@ -30,7 +30,7 @@ namespace Gallery
                     form.Db1 = this.db;
                     form.ShowDialog();
                 }
-                else MessageBox.Show("");
+                else MessageBox.Show("Пройдите авторизацию!", "Авторизация");
             }
             catch (Exception er)
             {

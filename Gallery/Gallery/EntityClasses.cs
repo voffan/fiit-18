@@ -78,6 +78,7 @@ namespace Gallery
 
     public class Journal
     {
+        public int Id { get; set; }
         public int EmpId { get; set; }
         [ForeignKey("EmpId")]
         public Employee Employee { get; set; }
