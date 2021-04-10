@@ -37,7 +37,8 @@ namespace Grades
 
         private void Button4_Click(object sender, EventArgs e)
         {
-
+            AcademicYearLogic.DeleteAcademicYear(Db, Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value));
+            dataGridView1.DataSource = Db.AcademicYears.ToList();
         }
 
         private void Button3_Click(object sender, EventArgs e)

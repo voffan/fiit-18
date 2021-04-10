@@ -16,5 +16,11 @@ namespace Grades
             db.AcademicYears.Add(epl);
             db.SaveChanges();
         }
+        public static void DeleteAcademicYear(Context db, int id)
+        {
+            AcademicYear epl = db.AcademicYears.Where(e => e.Id == id).FirstOrDefault();
+            db.AcademicYears.Remove(epl);
+            db.SaveChanges();
+        }
     }
 }

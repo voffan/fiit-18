@@ -39,5 +39,11 @@ namespace Grades
         {
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CheckPointLogic.DeleteCheckPoint(Db, Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value));
+            dataGridView1.DataSource = Db.CheckPoints.ToList();
+        }
     }
 }

@@ -42,9 +42,5 @@ namespace Grades
             dataGridView1.DataSource = Db.Employees.ToList();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

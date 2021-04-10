@@ -15,5 +15,11 @@ namespace Grades
             db.CheckPoints.Add(epl);
             db.SaveChanges();
         }
+        public static void DeleteCheckPoint(Context db, int id)
+        {
+            CheckPoint epl = db.CheckPoints.Where(e => e.Id == id).FirstOrDefault();
+            db.CheckPoints.Remove(epl);
+            db.SaveChanges();
+        }
     }
 }
