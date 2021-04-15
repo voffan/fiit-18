@@ -12,34 +12,29 @@ namespace Grades
 {
     public partial class Authorization : Form
     {
+        private Context Db = new Context();
         public Authorization()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
+            string login = loginField.Text;
+            string pass = passField.Text;
+            try
+            {
+                if (AuthorizationLogic.logIn(Db, login, pass))
+                {
+                    Main form = new Main();
+                    form.ShowDialog();
+                }
+                else MessageBox.Show("Неверный логин и/или пароль");
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Ошибка авторизации" + er.ToString());
+            }
         }
     }
 }

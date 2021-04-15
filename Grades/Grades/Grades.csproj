@@ -108,6 +108,7 @@
     <Compile Include="AddSubject.Designer.cs">
       <DependentUpon>AddSubject.cs</DependentUpon>
     </Compile>
+    <Compile Include="AuthorizationLogic.cs" />
     <Compile Include="CheckPointLogic.cs" />
     <Compile Include="ChekPoints.cs">
       <SubType>Form</SubType>

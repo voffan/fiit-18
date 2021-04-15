@@ -29,30 +29,30 @@ namespace Grades
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.loginField = new System.Windows.Forms.TextBox();
+            this.passField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // loginField
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 22);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.loginField.Location = new System.Drawing.Point(79, 61);
+            this.loginField.Name = "loginField";
+            this.loginField.Size = new System.Drawing.Size(156, 22);
+            this.loginField.TabIndex = 0;
             // 
-            // textBox2
+            // passField
             // 
-            this.textBox2.Location = new System.Drawing.Point(79, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 22);
-            this.textBox2.TabIndex = 1;
+            this.passField.Location = new System.Drawing.Point(79, 99);
+            this.passField.Name = "passField";
+            this.passField.Size = new System.Drawing.Size(156, 22);
+            this.passField.TabIndex = 1;
+            this.passField.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -62,7 +62,6 @@ namespace Grades
             this.label1.Size = new System.Drawing.Size(47, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Логин";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -75,28 +74,27 @@ namespace Grades
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.buttonLogin);
+            this.groupBox1.Controls.Add(this.loginField);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.passField);
             this.groupBox1.Location = new System.Drawing.Point(28, 92);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(269, 195);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Авторизация";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button1
+            // buttonLogin
             // 
-            this.button1.Location = new System.Drawing.Point(97, 147);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 34);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Войти";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonLogin.Location = new System.Drawing.Point(97, 147);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(75, 34);
+            this.buttonLogin.TabIndex = 4;
+            this.buttonLogin.Text = "Войти";
+            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // label3
             // 
@@ -106,7 +104,6 @@ namespace Grades
             this.label3.Size = new System.Drawing.Size(147, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Электронный табель";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Authorization
             // 
@@ -126,12 +123,12 @@ namespace Grades
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox loginField;
+        private System.Windows.Forms.TextBox passField;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Label label3;
     }
 }
