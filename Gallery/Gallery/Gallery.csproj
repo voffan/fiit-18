@@ -87,6 +87,12 @@
     <Compile Include="Employee\EmployeeWin.Designer.cs">
       <DependentUpon>EmployeeWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee\EmpRed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\EmpRed.Designer.cs">
+      <DependentUpon>EmpRed.cs</DependentUpon>
+    </Compile>
     <Compile Include="EntityClasses.cs" />
     <Compile Include="Exhibition\ExhibitionLogic.cs" />
     <Compile Include="Form1.cs">
@@ -143,6 +149,12 @@
       <DependentUpon>202104100349149_fifth.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PaintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaintForm.Designer.cs">
+      <DependentUpon>PaintForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Employee\EmpAdd.resx">
@@ -150,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\EmployeeWin.resx">
       <DependentUpon>EmployeeWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmpRed.resx">
+      <DependentUpon>EmpRed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

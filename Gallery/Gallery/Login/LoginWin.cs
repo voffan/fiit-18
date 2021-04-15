@@ -22,6 +22,7 @@ namespace Gallery
         {
             string login = textBox1.Text;
             string pass = textBox2.Text;
+            
             try
             {
                 if (LoginLogic.LogAuth(db, login, pass))
