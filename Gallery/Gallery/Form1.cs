@@ -46,5 +46,14 @@ namespace Gallery
         {
             
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            PaintWin form4 = new PaintWin();
+            this.Hide();
+            form4.Db = Db1;
+            form4.ShowDialog();
+            this.Show();
+        }
     }
 }

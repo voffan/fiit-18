@@ -148,12 +148,23 @@
     <Compile Include="Migrations\202104100349149_fifth.designer.cs">
       <DependentUpon>202104100349149_fifth.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104220401195_six.cs" />
+    <Compile Include="Migrations\202104220401195_six.designer.cs">
+      <DependentUpon>202104220401195_six.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="PaintForm.cs">
+    <Compile Include="PaintAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaintForm.Designer.cs">
-      <DependentUpon>PaintForm.cs</DependentUpon>
+    <Compile Include="PaintAdd.Designer.cs">
+      <DependentUpon>PaintAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaintLogic.cs" />
+    <Compile Include="PaintWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaintWin.Designer.cs">
+      <DependentUpon>PaintWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -196,6 +207,15 @@
     <EmbeddedResource Include="Migrations\202104100349149_fifth.resx">
       <DependentUpon>202104100349149_fifth.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104220401195_six.resx">
+      <DependentUpon>202104220401195_six.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaintAdd.resx">
+      <DependentUpon>PaintAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaintWin.resx">
+      <DependentUpon>PaintWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -213,6 +233,7 @@
     <None Include="Properties\DataSources\Gallery.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\Gallery.Properties.Settings.datasource" />
     <None Include="Properties\DataSources\Journal.datasource" />
+    <None Include="Properties\DataSources\Painting.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
