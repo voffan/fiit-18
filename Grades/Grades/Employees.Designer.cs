@@ -214,11 +214,7 @@ namespace Grades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1439, 603);
-=======
-            this.ClientSize = new System.Drawing.Size(1081, 499);
->>>>>>> 3499c9e308c76723a3d0c78745e4b2aca66ca929
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
