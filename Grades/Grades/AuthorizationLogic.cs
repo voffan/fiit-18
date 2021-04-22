@@ -8,16 +8,35 @@ namespace Grades
 {
     class AuthorizationLogic
     {
-        public static bool logIn(Context db, string login, string pass)
+        public static int logIn(Context db, string login, string pass)
         {
             var query = db.Users
                                 .Where(a => a.UserName == login)
                                 .FirstOrDefault<User>();
             if (query != null && query.Password == pass)
             {
-                return true;
+                int role;
+                switch (query.Role)
+                {
+                    case "Admin":
+                        role = 1;
+                        break;
+                    case "Director":
+                        role = 2;
+                        break;
+                    case "Teacher":
+                        role = 3;
+                        break;
+                    case "Student":
+                        role = 4;
+                        break;
+                    default:
+                        role = -1;
+                        break;
+                }
+                return role;
             }
-            else return false;
+            else return 0;
         }
     }
 }

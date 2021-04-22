@@ -41,34 +41,38 @@ namespace Grades
             // 
             // loginField
             // 
-            this.loginField.Location = new System.Drawing.Point(79, 61);
+            this.loginField.Location = new System.Drawing.Point(59, 50);
+            this.loginField.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginField.Name = "loginField";
-            this.loginField.Size = new System.Drawing.Size(156, 22);
+            this.loginField.Size = new System.Drawing.Size(118, 20);
             this.loginField.TabIndex = 0;
             // 
             // passField
             // 
-            this.passField.Location = new System.Drawing.Point(79, 99);
+            this.passField.Location = new System.Drawing.Point(59, 80);
+            this.passField.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passField.Name = "passField";
-            this.passField.Size = new System.Drawing.Size(156, 22);
+            this.passField.Size = new System.Drawing.Size(118, 20);
             this.passField.TabIndex = 1;
             this.passField.UseSystemPasswordChar = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 61);
+            this.label1.Location = new System.Drawing.Point(12, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Логин";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 102);
+            this.label2.Location = new System.Drawing.Point(12, 83);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 17);
+            this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Пароль";
             // 
@@ -79,18 +83,21 @@ namespace Grades
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.passField);
-            this.groupBox1.Location = new System.Drawing.Point(28, 92);
+            this.groupBox1.Location = new System.Drawing.Point(21, 75);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(269, 195);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(202, 158);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Авторизация";
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(97, 147);
+            this.buttonLogin.Location = new System.Drawing.Point(73, 119);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(75, 34);
+            this.buttonLogin.Size = new System.Drawing.Size(56, 28);
             this.buttonLogin.TabIndex = 4;
             this.buttonLogin.Text = "Войти";
             this.buttonLogin.UseVisualStyleBackColor = true;
@@ -99,21 +106,23 @@ namespace Grades
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(93, 36);
+            this.label3.Location = new System.Drawing.Point(70, 29);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 17);
+            this.label3.Size = new System.Drawing.Size(113, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Электронный табель";
             // 
             // Authorization
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 394);
+            this.ClientSize = new System.Drawing.Size(249, 320);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Authorization";
-            this.Text = "Form2";
+            this.Text = "Authorization";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

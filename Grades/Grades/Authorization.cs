@@ -13,6 +13,7 @@ namespace Grades
     public partial class Authorization : Form
     {
         private Context Db = new Context();
+        public static User User { get; set; }
         public Authorization()
         {
             InitializeComponent();
@@ -24,10 +25,31 @@ namespace Grades
             string pass = passField.Text;
             try
             {
-                if (AuthorizationLogic.logIn(Db, login, pass))
+                if (AuthorizationLogic.logIn(Db, login, pass) != 0)
                 {
-                    Main form = new Main();
-                    form.ShowDialog();
+                    int role;
+                    role = AuthorizationLogic.logIn(Db, login, pass);
+                    switch (role)
+                    {
+                        case 1:
+                            {
+                                Main form = new Main();
+                                form.ShowDialog();
+                            }
+                            break;
+                        case 2:
+                            MessageBox.Show("Авторизация в качестве директора выполнена");
+                            break;
+                        case 3:
+                            MessageBox.Show("Авторизация в качестве учителя выполнена");
+                            break;
+                        case 4:
+                            MessageBox.Show("Авторизация в качестве ученика выполнена");
+                            break;
+                        default:
+                            MessageBox.Show("Error!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                            break;
+                    }
                 }
                 else MessageBox.Show("Неверный логин и/или пароль");
             }
