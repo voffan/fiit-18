@@ -90,6 +90,12 @@
     <Compile Include="AddCheckPoint.Designer.cs">
       <DependentUpon>AddCheckPoint.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClass.Designer.cs">
+      <DependentUpon>AddClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,13 @@
     <Compile Include="ChekPoints.Designer.cs">
       <DependentUpon>ChekPoints.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes.Designer.cs">
+      <DependentUpon>Classes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassLogic.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="DBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -180,6 +193,9 @@
     <EmbeddedResource Include="AddCheckPoint.resx">
       <DependentUpon>AddCheckPoint.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddClass.resx">
+      <DependentUpon>AddClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChekPoints.resx">
       <DependentUpon>ChekPoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes.resx">
+      <DependentUpon>Classes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>

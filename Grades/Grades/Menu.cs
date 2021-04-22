@@ -69,5 +69,14 @@ namespace Grades
             subjects.ShowDialog();
             this.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Classes classes = new Classes();
+            this.Hide();
+            classes.Db = db;
+            classes.ShowDialog();
+            this.Show();
+        }
     }
 }

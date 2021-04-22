@@ -34,11 +34,12 @@ namespace Grades
             this.Button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Button1
             // 
-            this.Button1.Location = new System.Drawing.Point(200, 127);
+            this.Button1.Location = new System.Drawing.Point(192, 24);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(310, 30);
             this.Button1.TabIndex = 0;
@@ -48,7 +49,7 @@ namespace Grades
             // 
             // Button2
             // 
-            this.Button2.Location = new System.Drawing.Point(200, 172);
+            this.Button2.Location = new System.Drawing.Point(192, 69);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(310, 30);
             this.Button2.TabIndex = 1;
@@ -58,7 +59,7 @@ namespace Grades
             // 
             // Button3
             // 
-            this.Button3.Location = new System.Drawing.Point(200, 222);
+            this.Button3.Location = new System.Drawing.Point(192, 119);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(310, 30);
             this.Button3.TabIndex = 2;
@@ -68,7 +69,7 @@ namespace Grades
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(200, 272);
+            this.button4.Location = new System.Drawing.Point(192, 169);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(310, 30);
             this.button4.TabIndex = 3;
@@ -78,7 +79,7 @@ namespace Grades
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(200, 325);
+            this.button5.Location = new System.Drawing.Point(192, 222);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(310, 30);
             this.button5.TabIndex = 4;
@@ -86,11 +87,22 @@ namespace Grades
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(192, 276);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(310, 30);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Список классов";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 473);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.Button3);
@@ -110,6 +122,7 @@ namespace Grades
         private System.Windows.Forms.Button Button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 
