@@ -152,6 +152,18 @@
     <Compile Include="Migrations\202104220401195_six.designer.cs">
       <DependentUpon>202104220401195_six.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104280826533_seven.cs" />
+    <Compile Include="Migrations\202104280826533_seven.designer.cs">
+      <DependentUpon>202104280826533_seven.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104280850028_Eight.cs" />
+    <Compile Include="Migrations\202104280850028_Eight.designer.cs">
+      <DependentUpon>202104280850028_Eight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104280858007_9.cs" />
+    <Compile Include="Migrations\202104280858007_9.designer.cs">
+      <DependentUpon>202104280858007_9.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PaintAdd.cs">
       <SubType>Form</SubType>
@@ -209,6 +221,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104220401195_six.resx">
       <DependentUpon>202104220401195_six.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280826533_seven.resx">
+      <DependentUpon>202104280826533_seven.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280850028_Eight.resx">
+      <DependentUpon>202104280850028_Eight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280858007_9.resx">
+      <DependentUpon>202104280858007_9.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaintAdd.resx">
       <DependentUpon>PaintAdd.cs</DependentUpon>

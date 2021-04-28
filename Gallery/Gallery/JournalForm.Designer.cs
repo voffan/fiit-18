@@ -31,7 +31,6 @@ namespace Gallery
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.journalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +38,7 @@ namespace Gallery
             this.destinationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exhibitionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paintingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.journalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -60,10 +60,6 @@ namespace Gallery
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(746, 426);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // journalBindingSource
-            // 
-            this.journalBindingSource.DataSource = typeof(Gallery.Journal);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -106,6 +102,10 @@ namespace Gallery
             this.paintingDataGridViewTextBoxColumn.DataPropertyName = "Painting";
             this.paintingDataGridViewTextBoxColumn.HeaderText = "Painting";
             this.paintingDataGridViewTextBoxColumn.Name = "paintingDataGridViewTextBoxColumn";
+            // 
+            // journalBindingSource
+            // 
+            this.journalBindingSource.DataSource = typeof(Gallery.Journal);
             // 
             // JournalForm
             // 

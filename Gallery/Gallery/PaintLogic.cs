@@ -8,7 +8,7 @@ namespace Gallery
 {
     class PaintLogic
     {
-        public static void AddPaint(Context db, string name, int country, string city, DateTime date)
+        public static void AddPaint(Context db, int genreid)
         {
 
             Painting p = new Painting

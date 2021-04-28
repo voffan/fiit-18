@@ -112,10 +112,12 @@ namespace Gallery
         public string Name { get; set; }
         [StringLength(255)]
         public string Middle_Name { get; set; }
-        public DateTime BirthYear { get; set; }
-        public DateTime DeathYear { get; set; }
+        public string BirthYear { get; set; }
+        public string DeathYear { get; set; }
 
         public virtual List<Painting> Paintings {get;set;}
+
+        public string FName => $"{Surname} {Name} {Middle_Name}";
     }
     public class SellPainting
     {

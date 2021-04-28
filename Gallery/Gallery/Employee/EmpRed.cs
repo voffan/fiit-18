@@ -14,7 +14,7 @@ namespace Gallery
 
     {
         public Context Db { get; set; }
-        public EmpRed(int id, string name, string middle_name, string surname, int pass_id, int pass_series, string phone, int position, int depid, int stat)
+        public EmpRed(int id, string name, string middle_name, string surname, int pass_id, int pass_series, string phone, Position position, int depid, Status stat)
         {
             InitializeComponent();
             this.id = id;
@@ -24,9 +24,9 @@ namespace Gallery
             this.pass_id = pass_id;
             pass_ser = pass_series;
             ph = phone;
-            pos = (Position)position;
+            pos = position;
             dep_id = depid;
-            st = (Status)stat;
+            st = stat;
         }
 
         int id;

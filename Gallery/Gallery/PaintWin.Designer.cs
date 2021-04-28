@@ -31,9 +31,6 @@ namespace Gallery
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genreIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +41,9 @@ namespace Gallery
             this.artistDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paintingStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paintingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paintingBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -67,34 +67,6 @@ namespace Gallery
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(944, 334);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(68, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 73);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(202, 366);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 74);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Редактировать";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(357, 366);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 73);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Удалить";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -153,6 +125,34 @@ namespace Gallery
             // paintingBindingSource
             // 
             this.paintingBindingSource.DataSource = typeof(Gallery.Painting);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(68, 366);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 73);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Добавить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(202, 366);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 74);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Редактировать";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(357, 366);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(114, 73);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Удалить";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // PaintWin
             // 

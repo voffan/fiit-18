@@ -78,10 +78,24 @@ namespace Gallery
             dataGridView1.DataSource = Db.Employees.ToList();
       
     }
-
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int index = dataGridView1.SelectedRows[0].Index;
+                int id = 0;
+                bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
+                if (converted == false)
+                    return;
+                Employee ex = EmployeeLogic.GetEmpById(Db, id);
+
+                EmpRed form = new EmpRed(id, ex.Name, ex.Surname, ex.Middle_Name, ex.Passport_id, ex.Passport_series, ex.Phone, ex.Position, ex.DepId, ex.Status);
+                form.Db = this.Db;
+                form.ShowDialog();
+            }
+            dataGridView1.Refresh();
+            dataGridView1.DataSource = Db.Employees.ToList();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

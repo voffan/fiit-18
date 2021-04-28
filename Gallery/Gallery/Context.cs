@@ -22,6 +22,8 @@ namespace Gallery
         public DbSet<Country> Countries { get; set; }
         public DbSet<Auth> Auths { get; set; }
         public DbSet<Journal> Journals { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
