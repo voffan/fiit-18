@@ -164,6 +164,10 @@
     <Compile Include="Migrations\202104280858007_9.designer.cs">
       <DependentUpon>202104280858007_9.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104281135582_10.cs" />
+    <Compile Include="Migrations\202104281135582_10.designer.cs">
+      <DependentUpon>202104281135582_10.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PaintAdd.cs">
       <SubType>Form</SubType>
@@ -172,6 +176,12 @@
       <DependentUpon>PaintAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="PaintLogic.cs" />
+    <Compile Include="PaintRed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaintRed.Designer.cs">
+      <DependentUpon>PaintRed.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaintWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,8 +241,14 @@
     <EmbeddedResource Include="Migrations\202104280858007_9.resx">
       <DependentUpon>202104280858007_9.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104281135582_10.resx">
+      <DependentUpon>202104281135582_10.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PaintAdd.resx">
       <DependentUpon>PaintAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaintRed.resx">
+      <DependentUpon>PaintRed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaintWin.resx">
       <DependentUpon>PaintWin.cs</DependentUpon>

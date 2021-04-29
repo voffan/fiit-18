@@ -46,7 +46,16 @@ namespace Gallery
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                PaintLogic.AddPaint(Db, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(comboBox4.SelectedValue), textBox2.Text, Convert.ToInt32(comboBox2.SelectedValue), comboBox2.SelectedIndex);
+                Close();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Запись не выполнена: \n" + er.ToString());
+            }
+            Close();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

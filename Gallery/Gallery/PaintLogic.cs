@@ -8,12 +8,16 @@ namespace Gallery
 {
     class PaintLogic
     {
-        public static void AddPaint(Context db, int genreid)
+        public static void AddPaint(Context db, int genre_id, int ex_id, string name_painting, int art_id, int painting_status)
         {
 
             Painting p = new Painting
             {
-                
+                GenreId = genre_id,
+                ExhibitionId = ex_id,
+                NamePainting = name_painting,
+                ArtistId = art_id,
+                PaintingStatus = (PaintingStatus)painting_status
             };
 
             db.Paintings.Add(p);
@@ -26,19 +30,23 @@ namespace Gallery
             db.Paintings.Remove(p);
             db.SaveChanges();
         }
-        public static Painting GetExById(Context db, int ident)
+        public static Painting GetPaintById(Context db, int ident)
         {
 
             Painting p = db.Paintings.Find(ident);
 
             return p;
         }
-        public static void SaveEditPaint(Context db, int id, string name, int country, string city, DateTime date)
+        public static void SaveEditPaint(Context db, int genre_id, int ex_id, string name_paint, int art_id, PaintingStatus paint_status, int id)
         {
 
-            Painting p = GetExById(db, id);
+            Painting p = GetPaintById(db, id);
 
-            p.NamePainting = name;
+            p.GenreId = genre_id;
+            p.ExhibitionId = ex_id;
+            p.NamePainting = name_paint;
+            p.ArtistId = art_id;
+            p.PaintingStatus = paint_status;
 
             db.Entry(p).State = System.Data.Entity.EntityState.Modified;
 
