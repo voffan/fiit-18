@@ -102,6 +102,12 @@
     <Compile Include="AddEmployee.Designer.cs">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddSchool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSchool.Designer.cs">
+      <DependentUpon>AddSchool.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,13 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolLogic.cs" />
+    <Compile Include="Schools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schools.Designer.cs">
+      <DependentUpon>Schools.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentLogic.cs" />
     <Compile Include="Students.cs">
       <SubType>Form</SubType>
@@ -198,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSchool.resx">
+      <DependentUpon>AddSchool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
@@ -238,6 +254,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Schools.resx">
+      <DependentUpon>Schools.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students.resx">
       <DependentUpon>Students.cs</DependentUpon>
     </EmbeddedResource>
