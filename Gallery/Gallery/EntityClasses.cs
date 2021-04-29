@@ -138,7 +138,7 @@ namespace Gallery
         public int GenreId { get; set; }
         [ForeignKey("GenreId")]
         public Genre Genre { get; set; }
-        public int ExhibitionId { get; set; }
+        public int? ExhibitionId { get; set; }
         [ForeignKey("ExhibitionId")]
         public Exhibition Exhibition { get; set; }
         public string NamePainting { get; set; }

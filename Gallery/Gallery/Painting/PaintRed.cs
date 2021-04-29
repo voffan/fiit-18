@@ -13,9 +13,10 @@ namespace Gallery
     public partial class PaintRed : Form
     {
         public Context Db { get; set; }
-        public PaintRed(int id, int genre_id, int ex_id, string name_paint, int art_id, PaintingStatus paint_status)
+        public PaintRed(int id, int genre_id, int? ex_id, string name_paint, int art_id, PaintingStatus paint_status)
         {
             InitializeComponent();
+            comboBox3.DataSource = Enum.GetValues(typeof(Gallery.PaintingStatus));
             this.id = id;
             this.genre_id = genre_id;
             this.ex_id = ex_id;
@@ -26,7 +27,7 @@ namespace Gallery
 
         int id;
         int genre_id;
-        int ex_id;
+        int? ex_id;
         string name_paint;
         int art_id;
         PaintingStatus paint_status;
@@ -40,6 +41,7 @@ namespace Gallery
             comboBox2.DisplayMember = "FName";
             comboBox2.ValueMember = "Id";
             comboBox2.SelectedValue = art_id;
+           
             comboBox3.SelectedIndex = (int)paint_status;
             comboBox4.DataSource = Db.Exhibitions.ToList();
             comboBox4.DisplayMember = "NameExhibition";
@@ -53,7 +55,7 @@ namespace Gallery
         {
             try
             {
-                PaintLogic.SaveEditPaint(Db, (int)comboBox1.SelectedValue, (int)comboBox4.SelectedValue, name_paint, (int)comboBox2.SelectedValue, (PaintingStatus)comboBox3.SelectedIndex, id);
+                PaintLogic.SaveEditPaint(Db, (int)comboBox1.SelectedValue, (int)comboBox4.SelectedValue, textBox2.Text, (int)comboBox2.SelectedValue, (PaintingStatus)comboBox3.SelectedIndex, id);
 
                 MessageBox.Show("Запись отредактирована");
                 Close();

@@ -20,7 +20,12 @@ namespace Gallery
 
         private void JournalForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Db.Exhibitions.ToList();
+            dataGridView1.DataSource = Db.Journals.ToList();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

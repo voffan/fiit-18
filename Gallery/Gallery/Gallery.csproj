@@ -168,24 +168,32 @@
     <Compile Include="Migrations\202104281135582_10.designer.cs">
       <DependentUpon>202104281135582_10.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104290255546_11.cs" />
+    <Compile Include="Migrations\202104290255546_11.designer.cs">
+      <DependentUpon>202104290255546_11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104290328594_12.cs" />
+    <Compile Include="Migrations\202104290328594_12.designer.cs">
+      <DependentUpon>202104290328594_12.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="PaintAdd.cs">
+    <Compile Include="Painting\PaintAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaintAdd.Designer.cs">
+    <Compile Include="Painting\PaintAdd.Designer.cs">
       <DependentUpon>PaintAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaintLogic.cs" />
-    <Compile Include="PaintRed.cs">
+    <Compile Include="Painting\PaintLogic.cs" />
+    <Compile Include="Painting\PaintRed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaintRed.Designer.cs">
+    <Compile Include="Painting\PaintRed.Designer.cs">
       <DependentUpon>PaintRed.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaintWin.cs">
+    <Compile Include="Painting\PaintWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaintWin.Designer.cs">
+    <Compile Include="Painting\PaintWin.Designer.cs">
       <DependentUpon>PaintWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -244,13 +252,19 @@
     <EmbeddedResource Include="Migrations\202104281135582_10.resx">
       <DependentUpon>202104281135582_10.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PaintAdd.resx">
+    <EmbeddedResource Include="Migrations\202104290255546_11.resx">
+      <DependentUpon>202104290255546_11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104290328594_12.resx">
+      <DependentUpon>202104290328594_12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Painting\PaintAdd.resx">
       <DependentUpon>PaintAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PaintRed.resx">
+    <EmbeddedResource Include="Painting\PaintRed.resx">
       <DependentUpon>PaintRed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PaintWin.resx">
+    <EmbeddedResource Include="Painting\PaintWin.resx">
       <DependentUpon>PaintWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -17,6 +17,7 @@ namespace Gallery
         public DobEx()
         {
             InitializeComponent();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,7 +29,7 @@ namespace Gallery
         {
             try
             {
-                ExhibitionLogic.AddEx(Db, textBox1.Text, Convert.ToInt32(textBox2.Text), textBox3.Text, DateTime.Parse(textBox4.Text));
+                ExhibitionLogic.AddEx(Db, textBox1.Text, Convert.ToInt32(comboBox1.SelectedValue), textBox3.Text, DateTime.Parse(textBox4.Text));
                 Close();
             }
             catch(Exception er)
@@ -39,6 +40,18 @@ namespace Gallery
         }
 
         private void Form8_Load(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = Db.Countries.ToList();
+            comboBox1.DisplayMember = "Name";
+            comboBox1.ValueMember = "Id";
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
