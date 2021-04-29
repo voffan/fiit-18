@@ -78,5 +78,14 @@ namespace Grades
             classes.ShowDialog();
             this.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Schools schools = new Schools();
+            this.Hide();
+            schools.Db = db;
+            schools.ShowDialog();
+            this.Show();
+        }
     }
 }

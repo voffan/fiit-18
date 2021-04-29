@@ -256,7 +256,6 @@ namespace Grades
             this.MinimumSize = new System.Drawing.Size(438, 391);
             this.Name = "AddEmployee";
             this.Text = "AddEmployee";
-            this.Load += new System.EventHandler(this.AddEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
