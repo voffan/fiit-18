@@ -42,5 +42,20 @@ namespace Grades
             dataGridView1.DataSource = Db.Employees.ToList();
         }
 
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show(dataGridView1.CurrentCell.OwningRow.Cells[0].Value.ToString());
+            EmployeeLogic.EditEmployee(
+                Convert.ToInt32(dataGridView1.CurrentCell.OwningRow.Cells[0].Value),
+                dataGridView1.CurrentCell.OwningRow.Cells[1].Value.ToString(),
+                dataGridView1.CurrentCell.OwningRow.Cells[2].Value.ToString(),
+                dataGridView1.CurrentCell.OwningRow.Cells[3].Value.ToString(),
+                Convert.ToDateTime(dataGridView1.CurrentCell.OwningRow.Cells[4].Value),
+                dataGridView1.CurrentCell.OwningRow.Cells[5].Value.ToString(),
+                dataGridView1.CurrentCell.OwningRow.Cells[6].Value.ToString(),
+                Convert.ToInt32(dataGridView1.CurrentCell.OwningRow.Cells[7].Value),
+                Convert.ToInt32(dataGridView1.CurrentCell.OwningRow.Cells[8].Value),
+                Db );
+        } 
     }
 }

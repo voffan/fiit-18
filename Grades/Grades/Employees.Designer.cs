@@ -59,7 +59,7 @@ namespace Grades
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(28, 555);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.MaximumSize = new System.Drawing.Size(223, 42);
             this.button1.MinimumSize = new System.Drawing.Size(223, 42);
             this.button1.Name = "button1";
@@ -72,7 +72,7 @@ namespace Grades
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(301, 555);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.MaximumSize = new System.Drawing.Size(223, 42);
             this.button2.MinimumSize = new System.Drawing.Size(223, 42);
             this.button2.Name = "button2";
@@ -84,7 +84,7 @@ namespace Grades
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(575, 555);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.MaximumSize = new System.Drawing.Size(223, 42);
             this.button3.MinimumSize = new System.Drawing.Size(223, 42);
             this.button3.Name = "button3";
@@ -97,7 +97,7 @@ namespace Grades
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(1199, 555);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.MaximumSize = new System.Drawing.Size(223, 42);
             this.button5.MinimumSize = new System.Drawing.Size(223, 42);
             this.button5.Name = "button5";
@@ -125,13 +125,14 @@ namespace Grades
             this.schoolIdDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.employeeBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(16, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MaximumSize = new System.Drawing.Size(1572, 533);
             this.dataGridView1.MinimumSize = new System.Drawing.Size(1243, 533);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1405, 533);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -139,6 +140,7 @@ namespace Grades
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Width = 50;
             // 
             // surnameDataGridViewTextBoxColumn
@@ -220,7 +222,7 @@ namespace Grades
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1457, 650);
             this.MinimumSize = new System.Drawing.Size(1457, 650);
             this.Name = "Employees";

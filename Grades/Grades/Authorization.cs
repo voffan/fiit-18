@@ -34,7 +34,9 @@ namespace Grades
                         case 1:
                             {
                                 Main form = new Main();
+                                this.Hide();
                                 form.ShowDialog();
+                                Close();
                             }
                             break;
                         case 2:
