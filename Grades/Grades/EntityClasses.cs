@@ -40,7 +40,7 @@ namespace Grades
 
         public int? ClassId { get; set; }
         [ForeignKey("ClassId")]
-        public Class Class { get; set; }
+        public virtual Class Class { get; set; }
 
         public virtual ICollection<Group> Groups { get; set; }
         public virtual ICollection<Table> Tables { get; set; }
@@ -54,10 +54,10 @@ namespace Grades
         public int? Year { get; set; }
         public int? SchoolId { get; set; }
         [ForeignKey("SchoolId")]
-        public School School { get; set; }
+        public virtual School School { get; set; }
         public int? EmployeeId { get; set; }
         [ForeignKey("EmployeeId")]
-        public Employee Employee { get; set; }
+        public virtual Employee Employee { get; set; }
 
 
         public virtual ICollection<Student> Students { get; set; }
@@ -77,6 +77,10 @@ namespace Grades
 
         public virtual ICollection<Employee> Employeers { get; set; }
         public virtual ICollection<Class> Classes { get; set; }
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 
     public class Employee
@@ -97,11 +101,11 @@ namespace Grades
 
         public int? PositionId { get; set; }
         [ForeignKey("PositionId")]
-        public Position Position { get; set; }
+        public virtual Position Position { get; set; }
 
         public int? SchoolId { get; set; }
         [ForeignKey("SchoolId")]
-        public School School { get; set; }
+        public virtual School School { get; set; }
 
         public virtual ICollection<Course> Courses { get; set; }
         public virtual ICollection<Class> Classes { get; set; }
@@ -119,12 +123,12 @@ namespace Grades
         public Class Class { get; set; }
         public int? GroupId { get; set; }
         [ForeignKey("GroupId")]
-        public Group Subgroup { get; set; }
+        public virtual Group Subgroup { get; set; }
         public int? EmployeeId { get; set; }
         [ForeignKey("EmployeeId")]
-        public Employee Employee { get; set; }
+        public virtual Employee Employee { get; set; }
 
-        public ICollection<Table> Tables { get; set; }
+        public virtual ICollection<Table> Tables { get; set; }
     }
 
     public class Group
@@ -135,12 +139,16 @@ namespace Grades
         public string Name { get; set; }
         public int? SubjectId { get; set; }
         [ForeignKey("SubjectId")]
-        public Subject Subject { get; set; }
+        public virtual Subject Subject { get; set; }
         public int? ClassId { get; set; }
         [ForeignKey("ClassId")]
-        public Class Class { get; set; }
+        public virtual Class Class { get; set; }
 
         public virtual ICollection<Student> Students { get; set; }
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 
     public class Table
@@ -149,19 +157,19 @@ namespace Grades
         public int Id { get; set; }
         public int? StudentId { get; set; }
         [ForeignKey("StudentId")]
-        public Student Student { get; set; }
+        public virtual Student Student { get; set; }
         public int? AcademicYearId { get; set; }
         [ForeignKey("AcademicYearId")]
-        public AcademicYear AcademicYear { get; set; }
+        public virtual AcademicYear AcademicYear { get; set; }
         public int? CheckPointId { get; set; }
         [ForeignKey("CheckPointId")]
-        public CheckPoint CheckPoint { get; set; }
+        public virtual CheckPoint CheckPoint { get; set; }
         public int? CourseId { get; set; }
         [ForeignKey("CourseId")]
-        public Course Course { get; set; }
+        public virtual Course Course { get; set; }
         public int? MarkId { get; set; }
         [ForeignKey("MarkId")]
-        public Mark Mark { get; set; }
+        public virtual Mark Mark { get; set; }
     }
 
 
@@ -172,6 +180,10 @@ namespace Grades
         public int Id { get; set; }
         [StringLength(150)]
         public String Name { get; set; }
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 
     public class Position
@@ -180,6 +192,10 @@ namespace Grades
         public int Id { get; set; }
         [StringLength(50)]
         public string Name { get; set; }
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 
     public class Subject
@@ -188,6 +204,10 @@ namespace Grades
         public int Id { get; set; }
         [StringLength(50)]
         public string Name { get; set; }
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 
     public class CheckPoint
@@ -198,6 +218,10 @@ namespace Grades
         public string Name { get; set; }
         
         public virtual ICollection<Table> Tables { get; set; }
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
     public class AcademicYear
     {

@@ -29,65 +29,22 @@ namespace Grades
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dBDataSet = new Grades.DBDataSet();
-            this.subjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.subjectTableAdapter = new Grades.DBDataSetTableAdapters.SubjectTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.subjectBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(185, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(296, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dBDataSet
-            // 
-            this.dBDataSet.DataSetName = "DBDataSet";
-            this.dBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // subjectBindingSource
-            // 
-            this.subjectBindingSource.DataMember = "Subject";
-            this.subjectBindingSource.DataSource = this.dBDataSet;
-            // 
-            // subjectTableAdapter
-            // 
-            this.subjectTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 200;
             // 
             // button3
             // 
@@ -153,8 +110,6 @@ namespace Grades
             this.Text = "Subjects";
             this.Load += new System.EventHandler(this.Subjects_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -162,11 +117,6 @@ namespace Grades
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private DBDataSet dBDataSet;
-        private System.Windows.Forms.BindingSource subjectBindingSource;
-        private DBDataSetTableAdapters.SubjectTableAdapter subjectTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;

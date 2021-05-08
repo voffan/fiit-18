@@ -29,82 +29,24 @@ namespace Grades
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dBDataSet = new Grades.DBDataSet();
-            this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.schoolIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.yearDataGridViewTextBoxColumn,
-            this.schoolIdDataGridViewTextBoxColumn,
-            this.employeeIdDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.classBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(185, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(513, 352);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dBDataSet
-            // 
-            this.dBDataSet.DataSetName = "DBDataSet";
-            this.dBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // classBindingSource
-            // 
-            this.classBindingSource.DataMember = "Class";
-            this.classBindingSource.DataSource = this.dBDataSet;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            this.yearDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // schoolIdDataGridViewTextBoxColumn
-            // 
-            this.schoolIdDataGridViewTextBoxColumn.DataPropertyName = "SchoolId";
-            this.schoolIdDataGridViewTextBoxColumn.HeaderText = "SchoolId";
-            this.schoolIdDataGridViewTextBoxColumn.Name = "schoolIdDataGridViewTextBoxColumn";
-            this.schoolIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.schoolIdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // employeeIdDataGridViewTextBoxColumn
-            // 
-            this.employeeIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn.HeaderText = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn.Name = "employeeIdDataGridViewTextBoxColumn";
-            this.employeeIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.employeeIdDataGridViewTextBoxColumn.Width = 150;
             // 
             // button3
             // 
@@ -158,7 +100,7 @@ namespace Grades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 394);
+            this.ClientSize = new System.Drawing.Size(714, 393);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -170,8 +112,6 @@ namespace Grades
             this.Text = "Classes";
             this.Load += new System.EventHandler(this.Classes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -179,12 +119,6 @@ namespace Grades
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private DBDataSet dBDataSet;
-        private System.Windows.Forms.BindingSource classBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn schoolIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
