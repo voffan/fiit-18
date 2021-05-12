@@ -20,6 +20,10 @@ namespace Gallery
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
     public class Departament
     {
@@ -28,7 +32,7 @@ namespace Gallery
         public string name { get; set; }
         public override string ToString()
         {
-            return name.ToString();
+            return name;
         }
     }
     public class Person
@@ -51,7 +55,7 @@ namespace Gallery
     {
         public int DepId { get; set; }
         [ForeignKey("DepId")]
-        public Departament Departament { get; set; }
+        public virtual Departament Departament { get; set; }
         public Status Status { get; set; }
 
     }
@@ -74,7 +78,7 @@ namespace Gallery
         public string NameExhibition { get; set; }
         public int CountryId { get; set; }
         [ForeignKey("CountryId")]
-        public Country Country { get; set; }
+        public virtual Country Country { get; set; }
         public string City { get; set; }
         public DateTime Date { get; set; }
 
@@ -86,14 +90,14 @@ namespace Gallery
         public int Id { get; set; }
         public int EmpId { get; set; }
         [ForeignKey("EmpId")]
-        public Employee Employee { get; set; }
+        public virtual Employee Employee { get; set; }
         public DateTime Date { get; set; }
         public int? SrcId { get; set; }
         [ForeignKey("SrcId")]
-        public Departament Source { get; set; }
+        public virtual Departament Source { get; set; }
         public int? ExhId { get; set; }
         [ForeignKey("ExhId")]
-        public Exhibition Exhibition { get; set; }
+        public virtual Exhibition Exhibition { get; set; }
         public int PaintingId { get; set; }
         [ForeignKey("PaintingId")]
         public Painting Painting { get; set; }
@@ -103,6 +107,7 @@ namespace Gallery
         [Key]
         public int Id { get; set; }
         public string NameGenre { get; set; }
+        
     }
     public class Artist
     {
@@ -127,10 +132,10 @@ namespace Gallery
         public int Id { get; set; }
         public int SellId { get; set; }
         [ForeignKey("SellId")]
-        public Sell Sell { get; set; }
+        public virtual Sell Sell { get; set; }
         public int PaintingId { get; set; }
         [ForeignKey("PaintingId")]
-        public Painting Painting { get; set; }
+        public virtual Painting Painting { get; set; }
         public int Cost { get; set; }
     }
     public class Painting
@@ -139,14 +144,14 @@ namespace Gallery
         public int Id { get; set; }
         public int GenreId { get; set; }
         [ForeignKey("GenreId")]
-        public Genre Genre { get; set; }
+        public virtual Genre Genre { get; set; }
         public int? ExhibitionId { get; set; }
         [ForeignKey("ExhibitionId")]
-        public Exhibition Exhibition { get; set; }
+        public virtual Exhibition Exhibition { get; set; }
         public string NamePainting { get; set; }
         public int ArtistId { get; set; }
         [ForeignKey("ArtistId")]
-        public Artist Artist { get; set; }
+        public virtual Artist Artist { get; set; }
         public PaintingStatus PaintingStatus { get; set; }
         public override string ToString()
         {
@@ -166,6 +171,6 @@ namespace Gallery
         public string Password { get; set; }
         public int EmployeeId { get; set; }
         [ForeignKey("EmployeeId")]
-        public Employee Employee { get; set; }
+        public virtual Employee Employee { get; set; }
     }
 }

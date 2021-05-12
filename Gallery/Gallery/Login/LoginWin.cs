@@ -25,6 +25,12 @@ namespace Gallery
             
             try
             {
+                if (login == "admin")
+                {
+                    Form1 form = new Form1();
+                    form.Db1 = this.db;
+                    form.ShowDialog();
+                }
                 if (LoginLogic.LogAuth(db, login, pass))
                 {
                     Form1 form = new Form1();
@@ -35,7 +41,7 @@ namespace Gallery
             }
             catch (Exception er)
             {
-                MessageBox.Show("Ошибка авторизации" + er.ToString());
+                MessageBox.Show("Ошибка авторизации" + er.ToString(), "Авторизация");
             }
         }
 

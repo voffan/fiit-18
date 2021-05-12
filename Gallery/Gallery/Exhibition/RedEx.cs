@@ -31,7 +31,7 @@ namespace Gallery
         private void Form9_Load(object sender, EventArgs e)
         {
             textBox1.Text = name;
-            textBox2.Text = Convert.ToString(country);
+            comboBox1.SelectedValue = (int)(country);
             textBox3.Text = city;
             textBox4.Text = Convert.ToString(date.ToShortDateString());
         }
@@ -40,7 +40,7 @@ namespace Gallery
         {
             try
             {
-                ExhibitionLogic.SaveEditEx(Db, id, textBox1.Text, Convert.ToInt32(textBox2.Text), textBox3.Text, DateTime.Parse(textBox4.Text));
+                ExhibitionLogic.SaveEditEx(Db, id, textBox1.Text, (int)comboBox1.SelectedValue, textBox3.Text, DateTime.Parse(textBox4.Text));
                 
                 MessageBox.Show("Запись отредактирована");
                 Close();

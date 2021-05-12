@@ -29,7 +29,7 @@ namespace Gallery
         {
             try
             {
-                ExhibitionLogic.AddEx(Db, textBox1.Text, Convert.ToInt32(comboBox1.SelectedValue), textBox3.Text, DateTime.Parse(textBox4.Text));
+                ExhibitionLogic.AddEx(Db, textBox1.Text, (int)comboBox1.SelectedValue, textBox3.Text, DateTime.Parse(textBox4.Text));
                 Close();
             }
             catch(Exception er)

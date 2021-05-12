@@ -210,6 +210,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SellWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellWin.Designer.cs">
+      <DependentUpon>SellWin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Employee\EmpAdd.resx">
       <DependentUpon>EmpAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +303,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SellWin.resx">
+      <DependentUpon>SellWin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Employee.datasource" />

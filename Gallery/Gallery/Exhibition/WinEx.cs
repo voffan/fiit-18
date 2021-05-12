@@ -40,6 +40,12 @@ namespace Gallery
         private void Form3_Load(object sender, EventArgs e)
         {
             dataGridView2.DataSource = Db.Exhibitions.ToList();
+            dataGridView2.Columns[0].Visible = false;
+            dataGridView2.Columns[1].HeaderText = "Название выставки";
+            dataGridView2.Columns[2].Visible = false;
+            dataGridView2.Columns[3].HeaderText = "Страна";
+            dataGridView2.Columns[4].HeaderText = "Город";
+            dataGridView2.Columns[5].HeaderText = "Дата проведения";
         }
 
         private void button2_Click(object sender, EventArgs e)
