@@ -57,6 +57,11 @@ namespace Gallery
         [ForeignKey("DepId")]
         public virtual Departament Departament { get; set; }
         public Status Status { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
+
 
     }
     public class Sell
@@ -83,6 +88,11 @@ namespace Gallery
         public DateTime Date { get; set; }
 
         public virtual List<Painting> Paintings { get; set; }
+        public override string ToString()
+        {
+            return NameExhibition;
+        }
+
     }
 
     public class Journal
@@ -107,7 +117,12 @@ namespace Gallery
         [Key]
         public int Id { get; set; }
         public string NameGenre { get; set; }
-        
+        public override string ToString()
+        {
+            return NameGenre;
+        }
+
+
     }
     public class Artist
     {
@@ -125,6 +140,11 @@ namespace Gallery
         public virtual List<Painting> Paintings {get;set;}
 
         public string FName => $"{Surname} {Name} {Middle_Name}";
+        public override string ToString()
+        {
+            return Name;
+        }
+
     }
     public class SellPainting
     {

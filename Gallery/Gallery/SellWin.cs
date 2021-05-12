@@ -20,10 +20,15 @@ namespace Gallery
 
         private void SellWin_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = Db.Sells.ToList();
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

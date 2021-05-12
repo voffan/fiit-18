@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Gallery
+{
+    public partial class AuthSell : Form
+    {
+        public Context Db1 { get; set; }
+        public AuthSell()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SellWin sellform = new SellWin();
+            this.Hide();
+            sellform.Db = Db1;
+            sellform.ShowDialog();
+            this.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            JournalForm jform = new JournalForm();
+            this.Hide();
+            jform.Db = Db1;
+            jform.ShowDialog();
+            this.Show();
+        }
+
+        private void AuthSell_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

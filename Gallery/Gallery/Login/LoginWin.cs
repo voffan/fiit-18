@@ -27,17 +27,42 @@ namespace Gallery
             {
                 if (login == "admin")
                 {
-                    Form1 form = new Form1();
+                    AuthAdmin form = new AuthAdmin();
                     form.Db1 = this.db;
                     form.ShowDialog();
                 }
-                if (LoginLogic.LogAuth(db, login, pass))
+                if (LoginLogic.LogAuth(db, login, pass)==0)
                 {
-                    Form1 form = new Form1();
+                    AuthAdmin form = new AuthAdmin();
                     form.Db1 = this.db;
                     form.ShowDialog();
                 }
-                else MessageBox.Show("Пройдите авторизацию!", "Авторизация");
+
+                if (LoginLogic.LogAuth(db, login, pass) == 1)
+                {
+                    AuthRest form = new AuthRest();
+                    form.Db1 = this.db;
+                    form.ShowDialog();
+                }
+                if (LoginLogic.LogAuth(db, login, pass) == 2)
+                {
+                    AuthSell form = new AuthSell();
+                    form.Db1 = this.db;
+                    form.ShowDialog();
+                }
+
+                if (LoginLogic.LogAuth(db, login, pass) == 3)
+                {
+                    AuthEmp auth_form = new AuthEmp();
+                    auth_form.Db1 = this.db;
+                    auth_form.ShowDialog();
+                }
+                if (LoginLogic.LogAuth(db, login, pass) == 10)
+                {
+                    MessageBox.Show("Ошибка автторизации!");
+                }
+
+
             }
             catch (Exception er)
             {
