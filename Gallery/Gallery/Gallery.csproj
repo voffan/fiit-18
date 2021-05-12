@@ -176,6 +176,18 @@
     <Compile Include="Migrations\202104290328594_12.designer.cs">
       <DependentUpon>202104290328594_12.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105120740144_new17.cs" />
+    <Compile Include="Migrations\202105120740144_new17.designer.cs">
+      <DependentUpon>202105120740144_new17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105120754516_new18.cs" />
+    <Compile Include="Migrations\202105120754516_new18.designer.cs">
+      <DependentUpon>202105120754516_new18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105120759598_new19.cs" />
+    <Compile Include="Migrations\202105120759598_new19.designer.cs">
+      <DependentUpon>202105120759598_new19.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Painting\PaintAdd.cs">
       <SubType>Form</SubType>
@@ -257,6 +269,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104290328594_12.resx">
       <DependentUpon>202104290328594_12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105120740144_new17.resx">
+      <DependentUpon>202105120740144_new17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105120754516_new18.resx">
+      <DependentUpon>202105120754516_new18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105120759598_new19.resx">
+      <DependentUpon>202105120759598_new19.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Painting\PaintAdd.resx">
       <DependentUpon>PaintAdd.cs</DependentUpon>

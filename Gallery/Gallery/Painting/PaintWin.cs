@@ -50,5 +50,37 @@ namespace Gallery
             dataGridView1.Refresh();
             dataGridView1.DataSource = Db.Paintings.ToList();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Вы уверены?", "Предупреждение", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    if (dataGridView1.SelectedRows.Count > 0)
+                    {
+                        int index = dataGridView1.SelectedRows[0].Index;
+                        int id = 0;
+                        bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
+                        if (converted == false)
+                            return;
+
+                        PaintLogic.DelPaint(Db, id);
+
+                        MessageBox.Show("Запись удалена");
+                    }
+                }
+                catch (Exception er)
+                {
+                    MessageBox.Show("Удаление записи не выполнено: \n" + er.ToString());
+                }
+            }
+            else
+            {
+
+            }
+            dataGridView1.DataSource = Db.Paintings.ToList();
+        }
     }
 }

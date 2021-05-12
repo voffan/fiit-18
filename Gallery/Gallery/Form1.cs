@@ -55,5 +55,14 @@ namespace Gallery
             form4.ShowDialog();
             this.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            JournalForm jform = new JournalForm();
+            this.Hide();
+            jform.Db = Db1;
+            jform.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -11,18 +11,18 @@ namespace Gallery
     public class Context : DbContext
     {
         public Context() : base("DB") { }
-        public DbSet<Person> People { get; set; }
-        public DbSet<Painting> Paintings { get; set; }
-        public DbSet<Employee> Employees { get; set; }
-        public DbSet<Sell> Sells { get; set; }
-        public DbSet<Artist> Artists { get; set; }
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<Exhibition> Exhibitions { get; set; }
-        public DbSet<Departament> Departaments { get; set; }
-        public DbSet<Country> Countries { get; set; }
-        public DbSet<Auth> Auths { get; set; }
-        public DbSet<Journal> Journals { get; set; }
-        public DbSet<Genre> Genres { get; set; }
+        public virtual DbSet<Person> People { get; set; }
+        public virtual DbSet<Painting> Paintings { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Sell> Sells { get; set; }
+        public virtual DbSet<Artist> Artists { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Exhibition> Exhibitions { get; set; }
+        public virtual DbSet<Departament> Departaments { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<Auth> Auths { get; set; }
+        public virtual DbSet<Journal> Journals { get; set; }
+        public virtual DbSet<Genre> Genres { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

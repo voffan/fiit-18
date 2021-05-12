@@ -31,16 +31,17 @@ namespace Gallery
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sourceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.destinationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exhibitionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paintingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.journalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.journalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.srcIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exhIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paintingIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journalBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -49,18 +50,26 @@ namespace Gallery
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.employeeDataGridViewTextBoxColumn,
+            this.empIdDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn,
-            this.sourceDataGridViewTextBoxColumn,
-            this.destinationDataGridViewTextBoxColumn,
-            this.exhibitionDataGridViewTextBoxColumn,
-            this.paintingDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.journalBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.srcIdDataGridViewTextBoxColumn,
+            this.exhIdDataGridViewTextBoxColumn,
+            this.paintingIdDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.journalBindingSource1;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(746, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(645, 450);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // journalBindingSource
+            // 
+            this.journalBindingSource.DataSource = typeof(Gallery.Journal);
+            // 
+            // journalBindingSource1
+            // 
+            this.journalBindingSource1.DataSource = typeof(Gallery.Journal);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -68,11 +77,11 @@ namespace Gallery
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
-            // employeeDataGridViewTextBoxColumn
+            // empIdDataGridViewTextBoxColumn
             // 
-            this.employeeDataGridViewTextBoxColumn.DataPropertyName = "Employee";
-            this.employeeDataGridViewTextBoxColumn.HeaderText = "Employee";
-            this.employeeDataGridViewTextBoxColumn.Name = "employeeDataGridViewTextBoxColumn";
+            this.empIdDataGridViewTextBoxColumn.DataPropertyName = "EmpId";
+            this.empIdDataGridViewTextBoxColumn.HeaderText = "EmpId";
+            this.empIdDataGridViewTextBoxColumn.Name = "empIdDataGridViewTextBoxColumn";
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -80,45 +89,36 @@ namespace Gallery
             this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             // 
-            // sourceDataGridViewTextBoxColumn
+            // srcIdDataGridViewTextBoxColumn
             // 
-            this.sourceDataGridViewTextBoxColumn.DataPropertyName = "Source";
-            this.sourceDataGridViewTextBoxColumn.HeaderText = "Source";
-            this.sourceDataGridViewTextBoxColumn.Name = "sourceDataGridViewTextBoxColumn";
+            this.srcIdDataGridViewTextBoxColumn.DataPropertyName = "SrcId";
+            this.srcIdDataGridViewTextBoxColumn.HeaderText = "SrcId";
+            this.srcIdDataGridViewTextBoxColumn.Name = "srcIdDataGridViewTextBoxColumn";
             // 
-            // destinationDataGridViewTextBoxColumn
+            // exhIdDataGridViewTextBoxColumn
             // 
-            this.destinationDataGridViewTextBoxColumn.DataPropertyName = "Destination";
-            this.destinationDataGridViewTextBoxColumn.HeaderText = "Destination";
-            this.destinationDataGridViewTextBoxColumn.Name = "destinationDataGridViewTextBoxColumn";
+            this.exhIdDataGridViewTextBoxColumn.DataPropertyName = "ExhId";
+            this.exhIdDataGridViewTextBoxColumn.HeaderText = "ExhId";
+            this.exhIdDataGridViewTextBoxColumn.Name = "exhIdDataGridViewTextBoxColumn";
             // 
-            // exhibitionDataGridViewTextBoxColumn
+            // paintingIdDataGridViewTextBoxColumn
             // 
-            this.exhibitionDataGridViewTextBoxColumn.DataPropertyName = "Exhibition";
-            this.exhibitionDataGridViewTextBoxColumn.HeaderText = "Exhibition";
-            this.exhibitionDataGridViewTextBoxColumn.Name = "exhibitionDataGridViewTextBoxColumn";
-            // 
-            // paintingDataGridViewTextBoxColumn
-            // 
-            this.paintingDataGridViewTextBoxColumn.DataPropertyName = "Painting";
-            this.paintingDataGridViewTextBoxColumn.HeaderText = "Painting";
-            this.paintingDataGridViewTextBoxColumn.Name = "paintingDataGridViewTextBoxColumn";
-            // 
-            // journalBindingSource
-            // 
-            this.journalBindingSource.DataSource = typeof(Gallery.Journal);
+            this.paintingIdDataGridViewTextBoxColumn.DataPropertyName = "PaintingId";
+            this.paintingIdDataGridViewTextBoxColumn.HeaderText = "PaintingId";
+            this.paintingIdDataGridViewTextBoxColumn.Name = "paintingIdDataGridViewTextBoxColumn";
             // 
             // JournalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 450);
+            this.ClientSize = new System.Drawing.Size(645, 450);
             this.Controls.Add(this.dataGridView1);
             this.Name = "JournalForm";
             this.Text = "JournalForm";
             this.Load += new System.EventHandler(this.JournalForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journalBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -126,13 +126,14 @@ namespace Gallery
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn employeeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sourceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn destinationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exhibitionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paintingDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource journalBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn empIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn srcIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exhIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paintingIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource journalBindingSource1;
     }
 }

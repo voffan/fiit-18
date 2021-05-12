@@ -26,6 +26,10 @@ namespace Gallery
         [Key]
         public int Id { get; set; }
         public string name { get; set; }
+        public override string ToString()
+        {
+            return name.ToString();
+        }
     }
     public class Person
     {
@@ -49,6 +53,7 @@ namespace Gallery
         [ForeignKey("DepId")]
         public Departament Departament { get; set; }
         public Status Status { get; set; }
+
     }
     public class Sell
     {
@@ -86,9 +91,6 @@ namespace Gallery
         public int? SrcId { get; set; }
         [ForeignKey("SrcId")]
         public Departament Source { get; set; }
-        public int? DstId { get; set; }
-        [ForeignKey("DstId")]
-        public Departament Destination { get; set; }
         public int? ExhId { get; set; }
         [ForeignKey("ExhId")]
         public Exhibition Exhibition { get; set; }
@@ -146,6 +148,10 @@ namespace Gallery
         [ForeignKey("ArtistId")]
         public Artist Artist { get; set; }
         public PaintingStatus PaintingStatus { get; set; }
+        public override string ToString()
+        {
+            return NamePainting;
+        }
 
     }
     public class Customer:Person

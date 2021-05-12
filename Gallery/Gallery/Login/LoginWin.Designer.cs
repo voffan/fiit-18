@@ -48,7 +48,7 @@ namespace Gallery
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(153, 288);
+            this.button1.Location = new System.Drawing.Point(116, 252);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -94,7 +94,7 @@ namespace Gallery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 323);
+            this.ClientSize = new System.Drawing.Size(326, 323);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
