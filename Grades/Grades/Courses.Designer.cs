@@ -56,6 +56,7 @@ namespace Grades
             this.Button2.TabIndex = 20;
             this.Button2.Text = "Редактировать";
             this.Button2.UseVisualStyleBackColor = true;
+            this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Button1
             // 
@@ -66,6 +67,7 @@ namespace Grades
             this.Button1.TabIndex = 19;
             this.Button1.Text = "Добавить";
             this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button3
             // 
@@ -76,6 +78,7 @@ namespace Grades
             this.button3.TabIndex = 21;
             this.button3.Text = "Удалить";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -86,6 +89,7 @@ namespace Grades
             this.button4.TabIndex = 22;
             this.button4.Text = "Выход";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Courses
             // 
