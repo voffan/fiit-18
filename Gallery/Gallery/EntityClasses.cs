@@ -7,14 +7,20 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Spatial;
 using System.Data.Entity;
-
-
+using System.ComponentModel;
+using System.Windows.Forms;
 namespace Gallery
 {
-    public enum StatusSell { sold, cancel, progress }
-    public enum Status {active, inactive }
-    public enum PaintingStatus { vault, exhibition, restoration}
-    public enum Position { admin, restore, sellManager, employee}
+    public enum StatusSell { Продана, Отменено, Ожидание}
+    public enum Status {Работает, Отпуск}
+    public enum PaintingStatus { Хранилище, Выставка, Рестоврация}
+    public enum Position { 
+         Администратор, 
+         Рестовратор, 
+         Менеджер, 
+         Сотрудник
+    }
+   
     public class Country
     {
         [Key]
@@ -182,6 +188,10 @@ namespace Gallery
     public class Customer:Person
     {
         public ICollection<Sell> Sells { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
     public class Auth
     {

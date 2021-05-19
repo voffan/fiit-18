@@ -194,6 +194,18 @@
     <Compile Include="Migrations\202105120759598_new19.designer.cs">
       <DependentUpon>202105120759598_new19.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105190526498_19.cs" />
+    <Compile Include="Migrations\202105190526498_19.designer.cs">
+      <DependentUpon>202105190526498_19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105190540522_20.cs" />
+    <Compile Include="Migrations\202105190540522_20.designer.cs">
+      <DependentUpon>202105190540522_20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105191017221_21.cs" />
+    <Compile Include="Migrations\202105191017221_21.designer.cs">
+      <DependentUpon>202105191017221_21.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Painting\PaintAdd.cs">
       <SubType>Form</SubType>
@@ -227,6 +239,19 @@
     </Compile>
     <Compile Include="AuthSell.Designer.cs">
       <DependentUpon>AuthSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellAdd.Designer.cs">
+      <DependentUpon>SellAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellLogic.cs" />
+    <Compile Include="SellRed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellRed.Designer.cs">
+      <DependentUpon>SellRed.cs</DependentUpon>
     </Compile>
     <Compile Include="SellWin.cs">
       <SubType>Form</SubType>
@@ -306,6 +331,15 @@
     <EmbeddedResource Include="Migrations\202105120759598_new19.resx">
       <DependentUpon>202105120759598_new19.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105190526498_19.resx">
+      <DependentUpon>202105190526498_19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105190540522_20.resx">
+      <DependentUpon>202105190540522_20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105191017221_21.resx">
+      <DependentUpon>202105191017221_21.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Painting\PaintAdd.resx">
       <DependentUpon>PaintAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,6 +363,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AuthSell.resx">
       <DependentUpon>AuthSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellAdd.resx">
+      <DependentUpon>SellAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellRed.resx">
+      <DependentUpon>SellRed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SellWin.resx">
       <DependentUpon>SellWin.cs</DependentUpon>
