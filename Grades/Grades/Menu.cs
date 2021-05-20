@@ -96,14 +96,5 @@ namespace Grades
             courses.ShowDialog();
             this.Show();
         }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Groups groups = new Groups();
-            this.Hide();
-            groups.Db = db;
-            groups.ShowDialog();
-            this.Show();
-        }
     }
 }

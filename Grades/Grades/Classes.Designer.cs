@@ -34,6 +34,7 @@ namespace Grades
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@ namespace Grades
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 151);
+            this.button3.Location = new System.Drawing.Point(12, 142);
             this.button3.MaximumSize = new System.Drawing.Size(167, 34);
             this.button3.MinimumSize = new System.Drawing.Size(167, 34);
             this.button3.Name = "button3";
@@ -96,11 +97,22 @@ namespace Grades
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(12, 182);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(167, 34);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Список групп";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Classes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 393);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -123,5 +135,6 @@ namespace Grades
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }

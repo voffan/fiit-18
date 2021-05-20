@@ -35,5 +35,12 @@ namespace Grades
         {
             this.Close();
         }
+
+        private void AddCourse_Load(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = Db.Subjects.ToList();
+            comboBox1.DisplayMember = "Name";
+            comboBox1.ValueMember = "Id";
+        }
     }
 }
