@@ -41,9 +41,19 @@ namespace Grades
             dataGridView1.DataSource = Db.Classes.ToList();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Groups groups = new Groups();
+            this.Hide();
+            groups.Db = Db;
+            groups.ShowDialog();
+            this.Show();
+        }
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
     }
 }
