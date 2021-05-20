@@ -28,7 +28,7 @@ namespace Grades
             try
             {
                 EmployeeLogic.AddEmployee(TextBox2.Text, TextBox3.Text,TextBox4.Text,DateTime.Parse(TextBox5.Text),
-                    TextBox6.Text,TextBox7.Text, Convert.ToInt32(TextBox8.Text), Convert.ToInt32(TextBox9.Text), Db);
+                    TextBox6.Text,TextBox7.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(comboBoxSchool.SelectedValue), Db);
                 Close();
             }catch(Exception  er)
             {
@@ -36,6 +36,15 @@ namespace Grades
             }
         }
 
+        private void AddEmployee_Load(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = Db.Positions.ToList();
+            comboBox1.DisplayMember = "Name";
+            comboBox1.ValueMember = "Id";
 
+            comboBoxSchool.DataSource = Db.Schools.ToList();
+            comboBoxSchool.DisplayMember = "Name";
+            comboBoxSchool.ValueMember = "Id";
+        }
     }
 }

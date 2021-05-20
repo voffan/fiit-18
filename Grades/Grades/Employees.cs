@@ -55,7 +55,7 @@ namespace Grades
                 dataGridView1.CurrentCell.OwningRow.Cells[5].Value.ToString(),
                 dataGridView1.CurrentCell.OwningRow.Cells[6].Value.ToString(),
                 Convert.ToInt32(dataGridView1.CurrentCell.OwningRow.Cells[7].Value),
-                Convert.ToInt32(dataGridView1.CurrentCell.OwningRow.Cells[8].Value),
+                Convert.ToInt32(dataGridView1.CurrentCell.OwningRow.Cells[9].Value),
                 Db );
         } 
     }
