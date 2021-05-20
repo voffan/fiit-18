@@ -44,7 +44,8 @@ namespace Grades
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show(dataGridView1.CurrentCell.OwningRow.Cells[0].Value.ToString());
+            //MessageBox.Show(dataGridView1.CurrentCell.OwningRow.Cells[0].Value.ToString());
+            MessageBox.Show("Запись изменена");
             EmployeeLogic.EditEmployee(
                 Convert.ToInt32(dataGridView1.CurrentCell.OwningRow.Cells[0].Value),
                 dataGridView1.CurrentCell.OwningRow.Cells[1].Value.ToString(),
