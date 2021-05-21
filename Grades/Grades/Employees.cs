@@ -22,6 +22,19 @@ namespace Grades
         private void Employees_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Employees.ToList();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Фамилия";
+            dataGridView1.Columns[2].HeaderText = "Имя";
+            dataGridView1.Columns[3].HeaderText = "Отчество";
+            dataGridView1.Columns[4].HeaderText = "Дата рождения";
+            dataGridView1.Columns[5].HeaderText = "Адрес";
+            dataGridView1.Columns[6].HeaderText = "Телефон";
+            dataGridView1.Columns[7].Visible = false;
+            dataGridView1.Columns[8].HeaderText = "Должность";
+            dataGridView1.Columns[9].Visible = false;
+            dataGridView1.Columns[10].HeaderText = "Школа";
+            dataGridView1.Columns[11].Visible = false;
+            dataGridView1.Columns[12].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,6 +70,15 @@ namespace Grades
                 Convert.ToInt32(dataGridView1.CurrentCell.OwningRow.Cells[7].Value),
                 Convert.ToInt32(dataGridView1.CurrentCell.OwningRow.Cells[9].Value),
                 Db );
-        } 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Positions positions = new Positions();
+            this.Hide();
+            positions.Db = Db;
+            positions.ShowDialog();
+            this.Show();
+        }
     }
 }

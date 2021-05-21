@@ -35,21 +35,21 @@ namespace Grades
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.TextBox4 = new System.Windows.Forms.TextBox();
-            this.TextBox3 = new System.Windows.Forms.TextBox();
             this.TextBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.Button2);
             this.groupBox1.Controls.Add(this.Button1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.TextBox4);
-            this.groupBox1.Controls.Add(this.TextBox3);
             this.groupBox1.Controls.Add(this.TextBox2);
             this.groupBox1.Location = new System.Drawing.Point(31, 25);
             this.groupBox1.Name = "groupBox1";
@@ -105,20 +105,6 @@ namespace Grades
             this.label5.TabIndex = 5;
             this.label5.Text = "Классный руководитель";
             // 
-            // TextBox4
-            // 
-            this.TextBox4.Location = new System.Drawing.Point(149, 101);
-            this.TextBox4.Name = "TextBox4";
-            this.TextBox4.Size = new System.Drawing.Size(184, 20);
-            this.TextBox4.TabIndex = 12;
-            // 
-            // TextBox3
-            // 
-            this.TextBox3.Location = new System.Drawing.Point(149, 71);
-            this.TextBox3.Name = "TextBox3";
-            this.TextBox3.Size = new System.Drawing.Size(184, 20);
-            this.TextBox3.TabIndex = 11;
-            // 
             // TextBox2
             // 
             this.TextBox2.Location = new System.Drawing.Point(149, 39);
@@ -126,16 +112,33 @@ namespace Grades
             this.TextBox2.Size = new System.Drawing.Size(184, 20);
             this.TextBox2.TabIndex = 10;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(149, 68);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(184, 21);
+            this.comboBox1.TabIndex = 19;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(149, 98);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(184, 21);
+            this.comboBox2.TabIndex = 20;
+            // 
             // AddClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 272);
+            this.ClientSize = new System.Drawing.Size(470, 271);
             this.Controls.Add(this.groupBox1);
             this.MaximumSize = new System.Drawing.Size(486, 310);
             this.MinimumSize = new System.Drawing.Size(486, 310);
             this.Name = "AddClass";
             this.Text = "AddClass";
+            this.Load += new System.EventHandler(this.AddClass_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -150,8 +153,8 @@ namespace Grades
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TextBox4;
-        private System.Windows.Forms.TextBox TextBox3;
         private System.Windows.Forms.TextBox TextBox2;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

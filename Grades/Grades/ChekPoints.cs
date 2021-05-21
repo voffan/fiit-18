@@ -21,6 +21,9 @@ namespace Grades
         private void ChekPoints_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.CheckPoints.ToList();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Название";
+            dataGridView1.Columns[2].Visible = false;
         }
 
         private void Button1_Click(object sender, EventArgs e)

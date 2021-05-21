@@ -34,12 +34,13 @@ namespace Grades
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(21, 451);
+            this.button1.Location = new System.Drawing.Point(12, 451);
             this.button1.MaximumSize = new System.Drawing.Size(167, 34);
             this.button1.MinimumSize = new System.Drawing.Size(167, 34);
             this.button1.Name = "button1";
@@ -51,7 +52,7 @@ namespace Grades
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(226, 451);
+            this.button2.Location = new System.Drawing.Point(185, 451);
             this.button2.MaximumSize = new System.Drawing.Size(167, 34);
             this.button2.MinimumSize = new System.Drawing.Size(167, 34);
             this.button2.Name = "button2";
@@ -62,7 +63,7 @@ namespace Grades
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(431, 451);
+            this.button3.Location = new System.Drawing.Point(358, 451);
             this.button3.MaximumSize = new System.Drawing.Size(167, 34);
             this.button3.MinimumSize = new System.Drawing.Size(167, 34);
             this.button3.Name = "button3";
@@ -74,7 +75,7 @@ namespace Grades
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1024, 451);
+            this.button5.Location = new System.Drawing.Point(790, 451);
             this.button5.MaximumSize = new System.Drawing.Size(167, 34);
             this.button5.MinimumSize = new System.Drawing.Size(167, 34);
             this.button5.Name = "button5";
@@ -94,21 +95,34 @@ namespace Grades
             this.dataGridView1.MinimumSize = new System.Drawing.Size(932, 433);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1179, 433);
+            this.dataGridView1.Size = new System.Drawing.Size(945, 433);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(531, 451);
+            this.button4.MaximumSize = new System.Drawing.Size(167, 34);
+            this.button4.MinimumSize = new System.Drawing.Size(167, 34);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(167, 34);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Список должностей";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1225, 529);
+            this.ClientSize = new System.Drawing.Size(981, 529);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.MinimumSize = new System.Drawing.Size(1097, 535);
+            this.MinimumSize = new System.Drawing.Size(997, 568);
             this.Name = "Employees";
             this.Text = "Сотрудники";
             this.Load += new System.EventHandler(this.Employees_Load);
@@ -123,5 +137,6 @@ namespace Grades
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button4;
     }
 }

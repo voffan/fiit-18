@@ -97,6 +97,7 @@ namespace Grades
             this.Controls.Add(this.dataGridView1);
             this.Name = "Groups";
             this.Text = "Groups";
+            this.Load += new System.EventHandler(this.Groups_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

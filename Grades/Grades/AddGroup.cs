@@ -22,7 +22,7 @@ namespace Grades
         {
             try
             {
-                GroupLogic.AddGroup(textBox1.Text,Convert.ToInt32(comboBox1.Text), Convert.ToInt32(comboBox2.Text), Db);
+                GroupLogic.AddGroup(textBox1.Text,Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(comboBox2.SelectedValue), Db);
                 Close();
             }
             catch (Exception er)
@@ -34,6 +34,16 @@ namespace Grades
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AddGroup_Load(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = Db.Subjects.ToList();
+            comboBox1.DisplayMember = "Name";
+            comboBox1.ValueMember = "Id";
+            comboBox2.DataSource = Db.Classes.ToList();
+            comboBox2.DisplayMember = "Year";
+            comboBox2.ValueMember = "Id";
         }
     }
 }

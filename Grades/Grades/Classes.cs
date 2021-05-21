@@ -21,6 +21,14 @@ namespace Grades
         private void Classes_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Classes.ToList();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Подгруппа класса";
+            dataGridView1.Columns[2].HeaderText = "Класс";
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[4].HeaderText = "Школа";
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[6].HeaderText = "Классный руководитель";
+            dataGridView1.Columns[7].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)

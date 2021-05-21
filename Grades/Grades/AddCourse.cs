@@ -22,7 +22,7 @@ namespace Grades
         {
             try
             {
-                CourseLogic.AddCourse(Convert.ToInt32(comboBox1.Text), Convert.ToInt32(comboBox2.Text), Convert.ToInt32(comboBox3.Text), Convert.ToInt32(comboBox4.Text), Db);
+                CourseLogic.AddCourse(Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(comboBox2.SelectedValue), Convert.ToInt32(comboBox3.SelectedValue), Convert.ToInt32(comboBox4.SelectedValue), Db);
                 Close();
             }
             catch (Exception er)
@@ -41,6 +41,15 @@ namespace Grades
             comboBox1.DataSource = Db.Subjects.ToList();
             comboBox1.DisplayMember = "Name";
             comboBox1.ValueMember = "Id";
+            comboBox2.DataSource = Db.Classes.ToList();
+            comboBox2.DisplayMember = "Year";
+            comboBox2.ValueMember = "Id";
+            comboBox3.DataSource = Db.Groups.ToList();
+            comboBox3.DisplayMember = "Name";
+            comboBox3.ValueMember = "Id";
+            comboBox4.DataSource = Db.Schools.ToList();
+            comboBox4.DisplayMember = "Name";
+            comboBox4.ValueMember = "Id";
         }
     }
 }

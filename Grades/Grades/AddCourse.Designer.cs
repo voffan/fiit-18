@@ -48,7 +48,7 @@ namespace Grades
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(138, 25);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 32);
+            this.comboBox1.Size = new System.Drawing.Size(169, 32);
             this.comboBox1.TabIndex = 0;
             // 
             // groupBox1
@@ -74,7 +74,7 @@ namespace Grades
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(138, 144);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 32);
+            this.comboBox4.Size = new System.Drawing.Size(169, 32);
             this.comboBox4.TabIndex = 7;
             // 
             // comboBox3
@@ -82,7 +82,7 @@ namespace Grades
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(138, 101);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 32);
+            this.comboBox3.Size = new System.Drawing.Size(169, 32);
             this.comboBox3.TabIndex = 6;
             // 
             // comboBox2
@@ -90,7 +90,7 @@ namespace Grades
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(138, 63);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 32);
+            this.comboBox2.Size = new System.Drawing.Size(169, 32);
             this.comboBox2.TabIndex = 5;
             // 
             // label4
@@ -114,7 +114,7 @@ namespace Grades
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 60);
+            this.label2.Location = new System.Drawing.Point(18, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 24);
             this.label2.TabIndex = 2;

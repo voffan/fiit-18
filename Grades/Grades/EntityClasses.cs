@@ -58,8 +58,6 @@ namespace Grades
         public int? EmployeeId { get; set; }
         [ForeignKey("EmployeeId")]
         public virtual Employee Employee { get; set; }
-
-
         public virtual ICollection<Student> Students { get; set; }
     }
 
@@ -109,6 +107,10 @@ namespace Grades
 
         public virtual ICollection<Course> Courses { get; set; }
         public virtual ICollection<Class> Classes { get; set; }
+        public override string ToString()
+        {
+            return this.Surname;
+        }
     }
 
     public class Course

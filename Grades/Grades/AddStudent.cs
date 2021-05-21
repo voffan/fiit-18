@@ -23,7 +23,7 @@ namespace Grades
             try
             {
                 StudentLogic.AddStudent(TextBox2.Text, TextBox3.Text, TextBox4.Text, DateTime.Parse(TextBox5.Text),
-                    TextBox6.Text, TextBox7.Text, Convert.ToInt32(TextBox8.Text), Db);
+                    TextBox6.Text, TextBox7.Text, Convert.ToInt32(comboBox1.SelectedValue), Db);
                 Close();
             }
             catch (Exception er)
@@ -35,6 +35,13 @@ namespace Grades
         private void Button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void AddStudent_Load(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = Db.Classes.ToList();
+            comboBox1.DisplayMember = "Year";
+            comboBox1.ValueMember = "Id";
         }
     }
 }

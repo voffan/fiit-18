@@ -21,6 +21,8 @@ namespace Grades
         private void Subjects_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Subjects.ToList();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Название предмета";
         }
 
         private void button1_Click(object sender, EventArgs e)

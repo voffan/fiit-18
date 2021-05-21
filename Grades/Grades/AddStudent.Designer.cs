@@ -33,7 +33,6 @@ namespace Grades
             this.Button2 = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.TextBox8 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TextBox7 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,15 +45,16 @@ namespace Grades
             this.TextBox3 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.TextBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.Button2);
             this.groupBox1.Controls.Add(this.Button1);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.TextBox8);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.TextBox7);
             this.groupBox1.Controls.Add(this.label5);
@@ -102,13 +102,6 @@ namespace Grades
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Имя:";
-            // 
-            // TextBox8
-            // 
-            this.TextBox8.Location = new System.Drawing.Point(149, 224);
-            this.TextBox8.Name = "TextBox8";
-            this.TextBox8.Size = new System.Drawing.Size(142, 20);
-            this.TextBox8.TabIndex = 16;
             // 
             // label3
             // 
@@ -206,6 +199,14 @@ namespace Grades
             this.TextBox2.Size = new System.Drawing.Size(184, 20);
             this.TextBox2.TabIndex = 10;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(149, 228);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(142, 21);
+            this.comboBox1.TabIndex = 19;
+            // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,6 +217,7 @@ namespace Grades
             this.MinimumSize = new System.Drawing.Size(437, 398);
             this.Name = "AddStudent";
             this.Text = "AddStudent";
+            this.Load += new System.EventHandler(this.AddStudent_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -228,7 +230,6 @@ namespace Grades
         private System.Windows.Forms.Button Button2;
         private System.Windows.Forms.Button Button1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TextBox8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TextBox7;
         private System.Windows.Forms.Label label5;
@@ -241,5 +242,6 @@ namespace Grades
         private System.Windows.Forms.TextBox TextBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TextBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -40,5 +40,17 @@ namespace Grades
         {
             this.Close();
         }
+
+        private void Groups_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Db.Groups.ToList();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Название группы";
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[3].HeaderText = "Предмет";
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[5].HeaderText = "Класс";
+            dataGridView1.Columns[6].Visible = false;
+        }
     }
 }
