@@ -8,21 +8,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Spatial;
 using System.Data.Entity;
 using System.ComponentModel;
-<<<<<<< HEAD
-
-namespace Gallery
-{
-    public enum StatusSell { sold, cancel, progress }
-    public enum Status {active, inactive }
-    public enum PaintingStatus { vault, exhibition, restoration}
-    public enum Position { 
-        [Description("Администратор")] admin,
-        [Description("Рестовратор")] restore,
-        [Description("Менеджер по продажам")] sellManager,
-        [Description("Сотрудник")] employee
-    }
-=======
 using System.Windows.Forms;
+
 namespace Gallery
 {
     public enum StatusSell { Продана, Отменено, Ожидание}
@@ -35,7 +22,6 @@ namespace Gallery
          Сотрудник
     }
    
->>>>>>> 38b217869ad5e1060b0d50df303abce104fa3415
     public class Country
     {
         [Key]
