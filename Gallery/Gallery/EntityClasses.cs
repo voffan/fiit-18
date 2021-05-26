@@ -8,6 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Spatial;
 using System.Data.Entity;
 using System.ComponentModel;
+<<<<<<< HEAD
 
 namespace Gallery
 {
@@ -20,6 +21,21 @@ namespace Gallery
         [Description("Менеджер по продажам")] sellManager,
         [Description("Сотрудник")] employee
     }
+=======
+using System.Windows.Forms;
+namespace Gallery
+{
+    public enum StatusSell { Продана, Отменено, Ожидание}
+    public enum Status {Работает, Отпуск}
+    public enum PaintingStatus { Хранилище, Выставка, Рестоврация}
+    public enum Position { 
+         Администратор, 
+         Рестовратор, 
+         Менеджер, 
+         Сотрудник
+    }
+   
+>>>>>>> 38b217869ad5e1060b0d50df303abce104fa3415
     public class Country
     {
         [Key]
@@ -187,6 +203,10 @@ namespace Gallery
     public class Customer:Person
     {
         public ICollection<Sell> Sells { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
     public class Auth
     {

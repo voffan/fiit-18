@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Gallery
+{
+    public partial class SellRed : Form
+    {
+        public Context Db { get; set; }
+        public SellRed(int id, long price, DateTime date, StatusSell status, int customer_id)
+        {
+            InitializeComponent();
+            comboBox1.DataSource = Enum.GetValues(typeof(Gallery.StatusSell));
+            this.id = id;
+            this.price = price;
+            this.date = date;
+            status1 = status;
+            this.customer_id = customer_id;
+        }
+        int id;
+        long price;
+        DateTime date;
+        StatusSell status1;
+        int customer_id;
+
+        private void SellRed_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = Convert.ToString(price);
+            textBox4.Text = Convert.ToString(customer_id);
+            dateTimePicker1.Value = date;
+            comboBox1.SelectedIndex = (int)status1; 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SellLogic.SaveEditEx(Db, Convert.ToInt32(textBox1.Text), dateTimePicker1.Value, comboBox1.SelectedIndex, Convert.ToInt32(textBox4.Text), id);
+
+                MessageBox.Show("Запись отредактирована");
+                Close();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Редактирование записи не выполнено: \n" + er.ToString());
+            }
+            Close();
+        }
+    }
+}

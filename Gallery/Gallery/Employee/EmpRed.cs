@@ -17,6 +17,8 @@ namespace Gallery
         public EmpRed(int id, string name, string middle_name, string surname, int pass_id, int pass_series, string phone, Position position, int depid, Status stat)
         {
             InitializeComponent();
+            comboBox1.DataSource = Enum.GetValues(typeof(Gallery.Position));
+            comboBox2.DataSource = Enum.GetValues(typeof(Gallery.Status));
             this.id = id;
             this.name = name;
             this.surname = surname;

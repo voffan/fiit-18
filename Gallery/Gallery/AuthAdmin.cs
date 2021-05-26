@@ -23,7 +23,7 @@ namespace Gallery
         private void button1_Click(object sender, EventArgs e)
         {
             EmployeeWin form2 = new EmployeeWin();
-            form2.Db = this.Db1;
+            form2.Db = Db1;
             form2.Show();
         }
 
