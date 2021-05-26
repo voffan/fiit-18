@@ -7,14 +7,19 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Spatial;
 using System.Data.Entity;
-
+using System.ComponentModel;
 
 namespace Gallery
 {
     public enum StatusSell { sold, cancel, progress }
     public enum Status {active, inactive }
     public enum PaintingStatus { vault, exhibition, restoration}
-    public enum Position { admin, restore, sellManager, employee}
+    public enum Position { 
+        [Description("Администратор")] admin,
+        [Description("Рестовратор")] restore,
+        [Description("Менеджер по продажам")] sellManager,
+        [Description("Сотрудник")] employee
+    }
     public class Country
     {
         [Key]

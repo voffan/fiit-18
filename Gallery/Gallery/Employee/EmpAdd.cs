@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Gallery
 {
@@ -16,7 +17,7 @@ namespace Gallery
         public EmpAdd()
         {
             InitializeComponent();
-            comboBox1.DataSource = Enum.GetValues(typeof(Gallery.Position));
+            comboBox1.DataSource = Enum.GetNames(typeof(Gallery.Position));
             comboBox2.DataSource = Enum.GetValues(typeof(Gallery.Status));
         }
 

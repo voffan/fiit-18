@@ -80,6 +80,25 @@
       <DependentUpon>AuthEmp.cs</DependentUpon>
     </Compile>
     <Compile Include="Context.cs" />
+    <Compile Include="CustAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustAdd.Designer.cs">
+      <DependentUpon>CustAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerLogic.cs" />
+    <Compile Include="CustRed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustRed.Designer.cs">
+      <DependentUpon>CustRed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustWin.Designer.cs">
+      <DependentUpon>CustWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee\EmpAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +256,15 @@
     <EmbeddedResource Include="AuthEmp.resx">
       <DependentUpon>AuthEmp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustAdd.resx">
+      <DependentUpon>CustAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustRed.resx">
+      <DependentUpon>CustRed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustWin.resx">
+      <DependentUpon>CustWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee\EmpAdd.resx">
       <DependentUpon>EmpAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +363,7 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Customer.datasource" />
     <None Include="Properties\DataSources\Employee.datasource" />
     <None Include="Properties\DataSources\Gallery.Migrations.Configuration.datasource" />
     <None Include="Properties\DataSources\Gallery.Migrations.first.datasource" />
