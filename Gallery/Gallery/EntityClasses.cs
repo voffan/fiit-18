@@ -69,7 +69,6 @@ namespace Gallery
         {
             return FName;
         }
-
     }
     public class Sell
     {

@@ -72,5 +72,15 @@ namespace Gallery
             sellform.ShowDialog();
             this.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AdminAuthWin adaform = new AdminAuthWin();
+            this.Hide();
+            adaform.Db = Db1;
+            
+            adaform.ShowDialog();
+            this.Show();
+        }
     }
 }

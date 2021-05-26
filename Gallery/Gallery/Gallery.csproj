@@ -73,6 +73,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminAuthAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAuthAdd.Designer.cs">
+      <DependentUpon>AdminAuthAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAuthLogic.cs" />
+    <Compile Include="AdminAuthRed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAuthRed.Designer.cs">
+      <DependentUpon>AdminAuthRed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAuthWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAuthWin.Designer.cs">
+      <DependentUpon>AdminAuthWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="AuthEmp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,25 +282,34 @@
     <Compile Include="AuthSell.Designer.cs">
       <DependentUpon>AuthSell.cs</DependentUpon>
     </Compile>
-    <Compile Include="SellAdd.cs">
+    <Compile Include="Sell\SellAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SellAdd.Designer.cs">
+    <Compile Include="Sell\SellAdd.Designer.cs">
       <DependentUpon>SellAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="SellLogic.cs" />
-    <Compile Include="SellRed.cs">
+    <Compile Include="Sell\SellLogic.cs" />
+    <Compile Include="Sell\SellRed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SellRed.Designer.cs">
+    <Compile Include="Sell\SellRed.Designer.cs">
       <DependentUpon>SellRed.cs</DependentUpon>
     </Compile>
-    <Compile Include="SellWin.cs">
+    <Compile Include="Sell\SellWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SellWin.Designer.cs">
+    <Compile Include="Sell\SellWin.Designer.cs">
       <DependentUpon>SellWin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminAuthAdd.resx">
+      <DependentUpon>AdminAuthAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAuthRed.resx">
+      <DependentUpon>AdminAuthRed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAuthWin.resx">
+      <DependentUpon>AdminAuthWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AuthEmp.resx">
       <DependentUpon>AuthEmp.cs</DependentUpon>
     </EmbeddedResource>
@@ -399,13 +427,13 @@
     <EmbeddedResource Include="AuthSell.resx">
       <DependentUpon>AuthSell.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SellAdd.resx">
+    <EmbeddedResource Include="Sell\SellAdd.resx">
       <DependentUpon>SellAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SellRed.resx">
+    <EmbeddedResource Include="Sell\SellRed.resx">
       <DependentUpon>SellRed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SellWin.resx">
+    <EmbeddedResource Include="Sell\SellWin.resx">
       <DependentUpon>SellWin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
