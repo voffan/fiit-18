@@ -56,19 +56,19 @@ namespace Gallery
         public int Passport_series { get; set; }
         [StringLength(100)]
         public string Phone { get; set; }
-        public Position Position { get; set; }
+        public string FName => $"{Surname} {Name} {Middle_Name}";
     }
     public class Employee:Person
     {
+        public Position Position { get; set; }
         public int DepId { get; set; }
         [ForeignKey("DepId")]
         public virtual Departament Departament { get; set; }
         public Status Status { get; set; }
         public override string ToString()
         {
-            return Name;
+            return FName;
         }
-
 
     }
     public class Sell
@@ -191,7 +191,7 @@ namespace Gallery
         public ICollection<Sell> Sells { get; set; }
         public override string ToString()
         {
-            return Name;
+            return FName;
         }
     }
     public class Auth

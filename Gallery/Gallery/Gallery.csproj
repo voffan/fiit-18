@@ -225,6 +225,10 @@
     <Compile Include="Migrations\202105191017221_21.designer.cs">
       <DependentUpon>202105191017221_21.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105261102343_customer asd.cs" />
+    <Compile Include="Migrations\202105261102343_customer asd.designer.cs">
+      <DependentUpon>202105261102343_customer asd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Painting\PaintAdd.cs">
       <SubType>Form</SubType>
@@ -367,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105191017221_21.resx">
       <DependentUpon>202105191017221_21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105261102343_customer asd.resx">
+      <DependentUpon>202105261102343_customer asd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Painting\PaintAdd.resx">
       <DependentUpon>PaintAdd.cs</DependentUpon>

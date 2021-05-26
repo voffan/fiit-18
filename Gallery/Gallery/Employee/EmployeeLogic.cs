@@ -55,7 +55,7 @@ namespace Gallery
             ex.DepId = depid;
             ex.Status = (Status)stat;
           
-   
+  
             db.Entry(ex).State = System.Data.Entity.EntityState.Modified;
 
             db.SaveChanges();

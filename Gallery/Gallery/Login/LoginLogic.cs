@@ -16,9 +16,9 @@ namespace Gallery
                                 .FirstOrDefault<Auth>();
             if (query != null && query.Password == pass)
             {
-                var query1 = db.People
+                var query1 = db.Employees
                     .Where(b => b.Id == query.EmployeeId)
-                    .FirstOrDefault<Person>();
+                    .FirstOrDefault<Employee>();
                 if (query1.Position == (Position)0)
                 {
                     return 0;
