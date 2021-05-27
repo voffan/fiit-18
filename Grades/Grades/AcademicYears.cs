@@ -23,7 +23,9 @@ namespace Grades
             dataGridView1.DataSource = Db.AcademicYears.ToList();
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Начало";
+            dataGridView1.Columns[1].Width = 150;
             dataGridView1.Columns[2].HeaderText = "Конец";
+            dataGridView1.Columns[2].Width = 150;
         }
 
         private void Button1_Click(object sender, EventArgs e)

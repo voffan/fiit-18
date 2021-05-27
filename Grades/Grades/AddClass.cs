@@ -37,7 +37,6 @@ namespace Grades
 
         private void AddClass_Load(object sender, EventArgs e)
         {
-
             comboBox1.DataSource = Db.Schools.ToList();
             comboBox1.DisplayMember = "Name";
             comboBox1.ValueMember = "Id";

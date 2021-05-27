@@ -44,6 +44,10 @@ namespace Grades
 
         public virtual ICollection<Group> Groups { get; set; }
         public virtual ICollection<Table> Tables { get; set; }
+        public override string ToString()
+        {
+            return Surname +" "+ Name +" " +MiddleName;
+        }
     }
 
     public class Class
@@ -109,7 +113,7 @@ namespace Grades
         public virtual ICollection<Class> Classes { get; set; }
         public override string ToString()
         {
-            return this.Surname;
+            return Surname + " " + Name + " " + MiddleName;
         }
     }
 

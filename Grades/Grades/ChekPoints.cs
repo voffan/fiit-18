@@ -23,6 +23,7 @@ namespace Grades
             dataGridView1.DataSource = Db.CheckPoints.ToList();
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Название";
+            dataGridView1.Columns[1].Width = 170;
             dataGridView1.Columns[2].Visible = false;
         }
 

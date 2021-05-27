@@ -28,6 +28,7 @@ namespace Grades
             dataGridView1.Columns[4].HeaderText = "Школа";
             dataGridView1.Columns[5].Visible = false;
             dataGridView1.Columns[6].HeaderText = "Классный руководитель";
+            dataGridView1.Columns[6].Width = 250;
             dataGridView1.Columns[7].Visible = false;
         }
 

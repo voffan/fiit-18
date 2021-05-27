@@ -24,12 +24,15 @@ namespace Grades
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].Visible = false;
             dataGridView1.Columns[2].HeaderText = "Предмет";
+            dataGridView1.Columns[2].Width = 180;
             dataGridView1.Columns[3].Visible = false;
             dataGridView1.Columns[4].HeaderText = "Класс";
             dataGridView1.Columns[5].Visible = false;
             dataGridView1.Columns[6].HeaderText = "Подгруппа";
+            dataGridView1.Columns[6].Width = 150;
             dataGridView1.Columns[7].Visible = false;
             dataGridView1.Columns[8].HeaderText = "Учитель";
+            dataGridView1.Columns[8].Width = 220;
             dataGridView1.Columns[9].Visible = false;
         }
 
