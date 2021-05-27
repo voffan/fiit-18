@@ -56,5 +56,19 @@ namespace Grades
         {
             Close();
         }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("Запись изменена");
+            StudentLogic.EditStudent(Convert.ToInt32(dataGridView1.CurrentCell.OwningRow.Cells[0].Value),
+                dataGridView1.CurrentCell.OwningRow.Cells[1].Value.ToString(),
+                dataGridView1.CurrentCell.OwningRow.Cells[2].Value.ToString(),
+                dataGridView1.CurrentCell.OwningRow.Cells[3].Value.ToString(),
+                Convert.ToDateTime(dataGridView1.CurrentCell.OwningRow.Cells[4].Value),
+                dataGridView1.CurrentCell.OwningRow.Cells[5].Value.ToString(),
+                dataGridView1.CurrentCell.OwningRow.Cells[6].Value.ToString(),
+                Convert.ToInt32(dataGridView1.CurrentCell.OwningRow.Cells[7].Value),
+                Db);
+        }
     }
 }
