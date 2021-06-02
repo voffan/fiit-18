@@ -62,5 +62,14 @@ namespace Gallery
         {
 
         }
+
+        private void comboBox4_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                SelectNextControl(ActiveControl, true, true, true, true);
+            }
+        }
     }
 }

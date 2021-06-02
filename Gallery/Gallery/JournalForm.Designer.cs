@@ -45,7 +45,7 @@ namespace Gallery
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(645, 450);
+            this.dataGridView1.Size = new System.Drawing.Size(784, 461);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -57,7 +57,7 @@ namespace Gallery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 450);
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.dataGridView1);
             this.Name = "JournalForm";
             this.Text = "JournalForm";

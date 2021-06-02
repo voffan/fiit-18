@@ -146,7 +146,7 @@ namespace Gallery
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(268, 19);
+            this.textBox1.Location = new System.Drawing.Point(322, 19);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(250, 31);
             this.textBox1.TabIndex = 0;
@@ -156,7 +156,7 @@ namespace Gallery
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(268, 56);
+            this.textBox2.Location = new System.Drawing.Point(322, 56);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(250, 31);
             this.textBox2.TabIndex = 1;
@@ -166,7 +166,7 @@ namespace Gallery
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(268, 93);
+            this.textBox3.Location = new System.Drawing.Point(322, 93);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(250, 31);
             this.textBox3.TabIndex = 2;
@@ -176,7 +176,7 @@ namespace Gallery
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(268, 130);
+            this.textBox4.Location = new System.Drawing.Point(322, 130);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(250, 31);
             this.textBox4.TabIndex = 3;
@@ -187,7 +187,7 @@ namespace Gallery
             this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(268, 167);
+            this.textBox5.Location = new System.Drawing.Point(322, 167);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(250, 31);
             this.textBox5.TabIndex = 4;
@@ -198,7 +198,7 @@ namespace Gallery
             this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(268, 204);
+            this.textBox6.Location = new System.Drawing.Point(322, 204);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(250, 31);
             this.textBox6.TabIndex = 5;
@@ -209,7 +209,7 @@ namespace Gallery
             this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox8.Location = new System.Drawing.Point(268, 280);
+            this.textBox8.Location = new System.Drawing.Point(322, 280);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(250, 31);
             this.textBox8.TabIndex = 7;
@@ -218,6 +218,7 @@ namespace Gallery
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(17, 389);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 60);
@@ -229,7 +230,8 @@ namespace Gallery
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(398, 389);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(452, 389);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 60);
             this.button2.TabIndex = 10;
@@ -248,7 +250,7 @@ namespace Gallery
             "Рествратор",
             "Менеджер продаж",
             "Сотрудник"});
-            this.comboBox1.Location = new System.Drawing.Point(268, 241);
+            this.comboBox1.Location = new System.Drawing.Point(322, 241);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(250, 33);
             this.comboBox1.TabIndex = 6;
@@ -263,7 +265,7 @@ namespace Gallery
             this.comboBox2.Items.AddRange(new object[] {
             "Работает",
             "Уволен"});
-            this.comboBox2.Location = new System.Drawing.Point(268, 317);
+            this.comboBox2.Location = new System.Drawing.Point(322, 317);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(250, 33);
             this.comboBox2.TabIndex = 8;
