@@ -73,49 +73,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminAuthAdd.cs">
+    <Compile Include="Admin\AdminAuthAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminAuthAdd.Designer.cs">
+    <Compile Include="Admin\AdminAuthAdd.Designer.cs">
       <DependentUpon>AdminAuthAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminAuthLogic.cs" />
-    <Compile Include="AdminAuthRed.cs">
+    <Compile Include="Admin\AdminAuthLogic.cs" />
+    <Compile Include="Admin\AdminAuthRed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminAuthRed.Designer.cs">
+    <Compile Include="Admin\AdminAuthRed.Designer.cs">
       <DependentUpon>AdminAuthRed.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminAuthWin.cs">
+    <Compile Include="Admin\AdminAuthWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminAuthWin.Designer.cs">
+    <Compile Include="Admin\AdminAuthWin.Designer.cs">
       <DependentUpon>AdminAuthWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="AuthEmp.cs">
+    <Compile Include="Auth\AuthEmp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthEmp.Designer.cs">
+    <Compile Include="Auth\AuthEmp.Designer.cs">
       <DependentUpon>AuthEmp.cs</DependentUpon>
     </Compile>
     <Compile Include="Context.cs" />
-    <Compile Include="CustAdd.cs">
+    <Compile Include="Customer\CustAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustAdd.Designer.cs">
+    <Compile Include="Customer\CustAdd.Designer.cs">
       <DependentUpon>CustAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerLogic.cs" />
-    <Compile Include="CustRed.cs">
+    <Compile Include="Customer\CustomerLogic.cs" />
+    <Compile Include="Customer\CustRed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustRed.Designer.cs">
+    <Compile Include="Customer\CustRed.Designer.cs">
       <DependentUpon>CustRed.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustWin.cs">
+    <Compile Include="Customer\CustWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustWin.Designer.cs">
+    <Compile Include="Customer\CustWin.Designer.cs">
       <DependentUpon>CustWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee\EmpAdd.cs">
@@ -139,10 +139,10 @@
     </Compile>
     <Compile Include="EntityClasses.cs" />
     <Compile Include="Exhibition\ExhibitionLogic.cs" />
-    <Compile Include="AuthAdmin.cs">
+    <Compile Include="Auth\AuthAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthAdmin.Designer.cs">
+    <Compile Include="Auth\AuthAdmin.Designer.cs">
       <DependentUpon>AuthAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Exhibition\WinEx.cs">
@@ -270,16 +270,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AuthRest.cs">
+    <Compile Include="Auth\AuthRest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthRest.Designer.cs">
+    <Compile Include="Auth\AuthRest.Designer.cs">
       <DependentUpon>AuthRest.cs</DependentUpon>
     </Compile>
-    <Compile Include="AuthSell.cs">
+    <Compile Include="Auth\AuthSell.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthSell.Designer.cs">
+    <Compile Include="Auth\AuthSell.Designer.cs">
       <DependentUpon>AuthSell.cs</DependentUpon>
     </Compile>
     <Compile Include="Sell\SellAdd.cs">
@@ -301,25 +301,25 @@
     <Compile Include="Sell\SellWin.Designer.cs">
       <DependentUpon>SellWin.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminAuthAdd.resx">
+    <EmbeddedResource Include="Admin\AdminAuthAdd.resx">
       <DependentUpon>AdminAuthAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminAuthRed.resx">
+    <EmbeddedResource Include="Admin\AdminAuthRed.resx">
       <DependentUpon>AdminAuthRed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminAuthWin.resx">
+    <EmbeddedResource Include="Admin\AdminAuthWin.resx">
       <DependentUpon>AdminAuthWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AuthEmp.resx">
+    <EmbeddedResource Include="Auth\AuthEmp.resx">
       <DependentUpon>AuthEmp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustAdd.resx">
+    <EmbeddedResource Include="Customer\CustAdd.resx">
       <DependentUpon>CustAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustRed.resx">
+    <EmbeddedResource Include="Customer\CustRed.resx">
       <DependentUpon>CustRed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustWin.resx">
+    <EmbeddedResource Include="Customer\CustWin.resx">
       <DependentUpon>CustWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\EmpAdd.resx">
@@ -331,7 +331,7 @@
     <EmbeddedResource Include="Employee\EmpRed.resx">
       <DependentUpon>EmpRed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AuthAdmin.resx">
+    <EmbeddedResource Include="Auth\AuthAdmin.resx">
       <DependentUpon>AuthAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Exhibition\WinEx.resx">
@@ -421,10 +421,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AuthRest.resx">
+    <EmbeddedResource Include="Auth\AuthRest.resx">
       <DependentUpon>AuthRest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AuthSell.resx">
+    <EmbeddedResource Include="Auth\AuthSell.resx">
       <DependentUpon>AuthSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sell\SellAdd.resx">
@@ -468,6 +468,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

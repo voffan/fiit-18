@@ -21,32 +21,36 @@ namespace Gallery
         private void EmployeeWin_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Employees.ToList();
+            
         }
 
-        private void обновитьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = Db.Employees.ToList();
-        }
-
-        private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             EmpAdd empAdd = new EmpAdd();
             empAdd.Db = this.Db;
             empAdd.ShowDialog();
-            
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int index = dataGridView1.SelectedRows[0].Index;
+                int id = 0;
+                bool converted = Int32.TryParse(dataGridView1[4, index].Value.ToString(), out id);
+                if (converted == false)
+                    return;
+                Employee ex = EmployeeLogic.GetEmpById(Db, id);
 
+                EmpRed form = new EmpRed(id, ex.Name, ex.Surname, ex.Middle_Name, ex.Passport_id, ex.Passport_series, ex.Phone, ex.Position, ex.DepId, ex.Status);
+                form.Db = this.Db;
+                form.ShowDialog();
+            }
+            dataGridView1.Refresh();
+            dataGridView1.DataSource = Db.Employees.ToList();
         }
 
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Вы уверены?", "Предупреждение", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -57,7 +61,7 @@ namespace Gallery
                     {
                         int index = dataGridView1.SelectedRows[0].Index;
                         int id = 0;
-                        bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
+                        bool converted = Int32.TryParse(dataGridView1[4, index].Value.ToString(), out id);
                         if (converted == false)
                             return;
 
@@ -76,34 +80,9 @@ namespace Gallery
 
             }
             dataGridView1.DataSource = Db.Employees.ToList();
-      
-    }
-        private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                int index = dataGridView1.SelectedRows[0].Index;
-                int id = 0;
-                bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
-                if (converted == false)
-                    return;
-                Employee ex = EmployeeLogic.GetEmpById(Db, id);
-
-                EmpRed form = new EmpRed(id, ex.Name, ex.Surname, ex.Middle_Name, ex.Passport_id, ex.Passport_series, ex.Phone, ex.Position, ex.DepId, ex.Status);
-                form.Db = this.Db;
-                form.ShowDialog();
-            }
-            dataGridView1.Refresh();
-            dataGridView1.DataSource = Db.Employees.ToList();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -43,20 +43,7 @@ namespace Gallery
         int dep_id;
         private void button2_Click(object sender, EventArgs e)
         {
-            fclear();
-        }
-        private void fclear()
-        {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
-            textBox8.Text = "";
-            comboBox1.SelectedIndex = 0;
-            comboBox2.SelectedIndex = 0;
-
+            Close();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -86,6 +73,14 @@ namespace Gallery
             textBox8.Text = Convert.ToString(dep_id);
             comboBox1.SelectedIndex = (int)pos;
             comboBox2.SelectedIndex = (int)st;
+        }
+
+        private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                button1_Click(sender, e);
+            }
         }
     }
 }

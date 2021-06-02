@@ -30,7 +30,9 @@ namespace Gallery
                 {
                     AuthAdmin form = new AuthAdmin();
                     form.Db1 = this.db;
-                    form.ShowDialog();
+                    form.Show();
+                    this.Hide();
+                    
                 }
 
                 if (LoginLogic.LogAuth(db, login, pass) == 1)
@@ -67,7 +69,7 @@ namespace Gallery
 
         private void LoginWin_Load(object sender, EventArgs e)
         {
-
+            CenterLabel(label1);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -75,6 +77,29 @@ namespace Gallery
 
         }
 
-           
+        private void CenterLabel(Label label)
+        {
+            label.Width = this.Width - 10;
+            label.Left = this.Width / 2 - label.Width / 2;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                SelectNextControl(ActiveControl, true, true, true, true);
+            }
+        }
     }
 }

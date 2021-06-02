@@ -82,5 +82,10 @@ namespace Gallery
             adaform.ShowDialog();
             this.Show();
         }
+
+        private void AuthAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

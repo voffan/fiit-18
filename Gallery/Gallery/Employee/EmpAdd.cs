@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.ComponentModel;
 
 namespace Gallery
 {
@@ -54,23 +53,9 @@ namespace Gallery
             Close();
         }
 
-        private void fclear()
-        {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
-            textBox8.Text = "";
-            comboBox1.SelectedIndex = 0;
-            comboBox2.SelectedIndex = 0;
-
-        }
         private void button2_Click(object sender, EventArgs e)
         {
-            fclear();
+            Close();
         }
-        
     }
 }
