@@ -42,7 +42,7 @@ namespace Grades
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 505);
+            this.dataGridView1.Size = new System.Drawing.Size(783, 505);
             this.dataGridView1.TabIndex = 0;
             // 
             // button3
@@ -83,7 +83,7 @@ namespace Grades
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(621, 523);
+            this.button4.Location = new System.Drawing.Point(628, 523);
             this.button4.MaximumSize = new System.Drawing.Size(167, 34);
             this.button4.MinimumSize = new System.Drawing.Size(167, 34);
             this.button4.Name = "button4";
@@ -97,7 +97,7 @@ namespace Grades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 569);
+            this.ClientSize = new System.Drawing.Size(810, 569);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
