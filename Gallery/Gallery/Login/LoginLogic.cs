@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 namespace Gallery
 {
@@ -11,10 +12,12 @@ namespace Gallery
     {
         public static int LogAuth(Context db, string log, string pass)
         {
+            byte[] tmpSource = ASCIIEncoding.ASCII.GetBytes(pass);
+            byte[] tmpHash = MD5.Create().ComputeHash(tmpSource);
             var query = db.Auths
                                 .Where(a => a.Login == log)
                                 .FirstOrDefault<Auth>();
-            if (query != null && query.Password == pass)
+            if (query != null && query.Password == tmpHash)
             {
                 var query1 = db.Employees
                     .Where(b => b.Id == query.EmployeeId)

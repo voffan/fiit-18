@@ -198,7 +198,7 @@ namespace Gallery
         public int Id { get; set; }
         [Key]
         public string Login { get; set; }
-        public string Password { get; set; }
+        public byte[] Password { get; set; }
         public int EmployeeId { get; set; }
         [ForeignKey("EmployeeId")]
         public virtual Employee Employee { get; set; }

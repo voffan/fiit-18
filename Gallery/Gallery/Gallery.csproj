@@ -80,12 +80,6 @@
       <DependentUpon>AdminAuthAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminAuthLogic.cs" />
-    <Compile Include="Admin\AdminAuthRed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\AdminAuthRed.Designer.cs">
-      <DependentUpon>AdminAuthRed.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\AdminAuthWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +242,10 @@
     <Compile Include="Migrations\202105261102343_customer asd.designer.cs">
       <DependentUpon>202105261102343_customer asd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106021052261_passhash.cs" />
+    <Compile Include="Migrations\202106021052261_passhash.designer.cs">
+      <DependentUpon>202106021052261_passhash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Painting\PaintAdd.cs">
       <SubType>Form</SubType>
@@ -303,9 +301,6 @@
     </Compile>
     <EmbeddedResource Include="Admin\AdminAuthAdd.resx">
       <DependentUpon>AdminAuthAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminAuthRed.resx">
-      <DependentUpon>AdminAuthRed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminAuthWin.resx">
       <DependentUpon>AdminAuthWin.cs</DependentUpon>
@@ -402,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105261102343_customer asd.resx">
       <DependentUpon>202105261102343_customer asd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106021052261_passhash.resx">
+      <DependentUpon>202106021052261_passhash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Painting\PaintAdd.resx">
       <DependentUpon>PaintAdd.cs</DependentUpon>

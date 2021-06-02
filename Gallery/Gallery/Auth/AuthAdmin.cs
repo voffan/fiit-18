@@ -87,5 +87,14 @@ namespace Gallery
         {
             Application.Exit();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            CustWin cust = new CustWin();
+            this.Hide();
+            cust.Db = Db1;
+            cust.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -25,7 +25,15 @@ namespace Gallery
             
             try
             {
-               
+                if (login == "admin")
+                {
+                    AuthAdmin form = new AuthAdmin();
+                    form.Db1 = this.db;
+                    form.Show();
+                    this.Hide();
+
+                }
+
                 if (LoginLogic.LogAuth(db, login, pass)==0)
                 {
                     AuthAdmin form = new AuthAdmin();

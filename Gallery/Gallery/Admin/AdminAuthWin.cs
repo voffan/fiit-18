@@ -33,21 +33,7 @@ namespace Gallery
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                int index = dataGridView1.SelectedRows[0].Index;
-                int id = 0;
-                bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
-                if (converted == false)
-                    return;
-                Auth ex = AdminAuthLogic.GetAuthById(Db, id);
-
-                AdminAuthRed form = new AdminAuthRed(id,ex.Login, ex.Password, ex.EmployeeId);
-                form.Db = this.Db;
-                form.ShowDialog();
-            }
-            dataGridView1.Refresh();
-            dataGridView1.DataSource = Db.Auths.ToList();
+         
         }
 
         private void button3_Click(object sender, EventArgs e)
