@@ -41,9 +41,8 @@ namespace Grades
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(33, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1259, 463);
             this.dataGridView1.TabIndex = 0;
@@ -52,7 +51,7 @@ namespace Grades
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(33, 496);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.MaximumSize = new System.Drawing.Size(248, 43);
             this.button1.MinimumSize = new System.Drawing.Size(248, 43);
             this.button1.Name = "button1";
@@ -65,7 +64,7 @@ namespace Grades
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(305, 496);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.MaximumSize = new System.Drawing.Size(248, 43);
             this.button2.MinimumSize = new System.Drawing.Size(248, 43);
             this.button2.Name = "button2";
@@ -78,7 +77,7 @@ namespace Grades
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(577, 496);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.MaximumSize = new System.Drawing.Size(248, 43);
             this.button3.MinimumSize = new System.Drawing.Size(248, 43);
             this.button3.Name = "button3";
@@ -91,7 +90,7 @@ namespace Grades
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(1044, 496);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.MaximumSize = new System.Drawing.Size(248, 43);
             this.button4.MinimumSize = new System.Drawing.Size(248, 43);
             this.button4.Name = "button4";
@@ -111,7 +110,7 @@ namespace Grades
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Students";
             this.Text = "Students";
             this.Load += new System.EventHandler(this.Students_Load);

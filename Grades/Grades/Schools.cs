@@ -21,7 +21,7 @@ namespace Grades
         private void Schools_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Schools.ToList();
-            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[0].HeaderText = "Id";
             dataGridView1.Columns[1].HeaderText = "Название";
             dataGridView1.Columns[2].HeaderText = "Адрес";
             dataGridView1.Columns[3].HeaderText = "Электронная почта";
@@ -39,7 +39,11 @@ namespace Grades
 
         private void Button2_Click(object sender, EventArgs e)
         {
-
+            School sch = SchoolLogic.GetSchool(Db, (int)dataGridView1.CurrentRow.Cells[0].Value);
+            SchoolEditForm se = new SchoolEditForm();
+            se.Db = Db;
+            se.School = sch;
+            se.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
