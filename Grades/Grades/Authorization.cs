@@ -25,13 +25,13 @@ namespace Grades
             string pass = passField.Text;
             try
             {
-                if (AuthorizationLogic.logIn(Db, login, pass) != 0)
+                User = AuthorizationLogic.logIn(Db, login, pass);
+                if (User != null)
                 {
-                    int role;
-                    role = AuthorizationLogic.logIn(Db, login, pass);
-                    switch (role)
+                   
+                    switch (User.Role)
                     {
-                        case 1:
+                        case "Admin":
                             {
                                 Main form = new Main();
                                 this.Hide();
@@ -39,13 +39,13 @@ namespace Grades
                                 Close();
                             }
                             break;
-                        case 2:
+                        case "Director":
                             MessageBox.Show("Авторизация в качестве директора выполнена");
                             break;
-                        case 3:
+                        case "Teacher":
                             MessageBox.Show("Авторизация в качестве учителя выполнена");
                             break;
-                        case 4:
+                        case "Student":
                             MessageBox.Show("Авторизация в качестве ученика выполнена");
                             break;
                         default:

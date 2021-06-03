@@ -63,6 +63,10 @@ namespace Grades
         [ForeignKey("EmployeeId")]
         public virtual Employee Employee { get; set; }
         public virtual ICollection<Student> Students { get; set; }
+        public override string ToString()
+        {
+            return Year.ToString() + Symbol;
+        }
     }
 
     public class School
