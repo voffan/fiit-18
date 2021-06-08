@@ -241,5 +241,9 @@ namespace Grades
         public DateTime? End { get; set; }
 
         public virtual ICollection<Table> Tables { get; set; }
+        public override string ToString()
+        {
+            return Start.ToString() + End.ToString();
+        }
     }
 }

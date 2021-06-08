@@ -32,7 +32,7 @@ namespace Grades
             dataGridView1.Columns[6].HeaderText = "Контрольная точка";
             dataGridView1.Columns[6].Width = 150;
             dataGridView1.Columns[7].Visible = false;
-            dataGridView1.Columns[8].HeaderText = "Курс";
+            dataGridView1.Columns[8].HeaderText = "Предмет";
             dataGridView1.Columns[9].Visible = false;
             dataGridView1.Columns[10].HeaderText = "Оценка";
             dataGridView1.Columns[10].Width = 150;

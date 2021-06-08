@@ -40,10 +40,10 @@ namespace Grades
         private void AddTable_Load(object sender, EventArgs e)
         {
             comboBox1.DataSource = Db.Students.ToList();
-            comboBox1.DisplayMember = "Surname";
+            comboBox1.DisplayMember = "Name";
             comboBox1.ValueMember = "Id";
             comboBox2.DataSource = Db.AcademicYears.ToList();
-            comboBox2.DisplayMember = "Name";
+            comboBox2.DisplayMember = "Start";
             comboBox2.ValueMember = "Id";
             comboBox3.DataSource = Db.CheckPoints.ToList();
             comboBox3.DisplayMember = "Name";
