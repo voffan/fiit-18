@@ -19,7 +19,14 @@ namespace Grades
         public string UserName { get; set; }
         [StringLength(40)]
         public string Password { get; set; }
+        public int? PositionId { get; set; }
+        [ForeignKey("PositionId")]
+        public virtual Position Position { get; set; }
         public string Role { get; set; }
+        public override string ToString()
+        {
+            return UserName;
+        }
 
     }
     public class Student
@@ -112,6 +119,9 @@ namespace Grades
         public int? SchoolId { get; set; }
         [ForeignKey("SchoolId")]
         public virtual School School { get; set; }
+        public int? UserId { get; set; }
+        [ForeignKey("UserId")]
+        public virtual User User { get; set; }
 
         public virtual ICollection<Course> Courses { get; set; }
         public virtual ICollection<Class> Classes { get; set; }
@@ -181,6 +191,37 @@ namespace Grades
         [ForeignKey("MarkId")]
         public virtual Mark Mark { get; set; }
     }
+    public class TeacherSubjects
+    {
+        [Key]
+        public int Id { get; set; }
+        public int? UserId { get; set; }
+        [ForeignKey("UserId")]
+        public virtual User User { get; set; }
+        public int? SubjectId { get; set; }
+        [ForeignKey("SubjectId")]
+        public virtual Subject Subject { get; set; }
+        public int? ClassId { get; set; }
+        [ForeignKey("ClassId")]
+        public virtual Class Class { get; set; }
+    }
+    public class TeacherMarksTable
+    {
+        [Key]
+        public int Id { get; set; }
+        public int? StudentId { get; set; }
+        [ForeignKey("StudentId")]
+        public virtual Student Student { get; set; }
+        public int? CheckPointId { get; set; }
+        [ForeignKey("CheckPointId")]
+        public virtual CheckPoint CheckPoint { get; set; }
+        public int? SubjectId { get; set; }
+        [ForeignKey("SubjectId")]
+        public virtual Subject Subject { get; set; }
+        public int? MarkId { get; set; }
+        [ForeignKey("MarkId")]
+        public virtual Mark Mark { get; set; }
+    }
 
 
     // Подклассы    
@@ -189,6 +230,7 @@ namespace Grades
         [Key]
         public int Id { get; set; }
         [StringLength(150)]
+
         public String Name { get; set; }
         public override string ToString()
         {

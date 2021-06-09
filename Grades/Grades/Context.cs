@@ -19,6 +19,8 @@ namespace Grades
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Mark> Marks { get; set; }
         public DbSet<Position> Positions { get; set; }
+        public DbSet<TeacherMarksTable> TeacherMarksTables { get; set; }
+        public DbSet<TeacherSubjects> TeacherSubjects { get; set; }
 
 
 

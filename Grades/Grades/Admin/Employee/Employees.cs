@@ -34,7 +34,8 @@ namespace Grades
             dataGridView1.Columns[9].Visible = false;
             dataGridView1.Columns[10].HeaderText = "Школа";
             dataGridView1.Columns[11].Visible = false;
-            dataGridView1.Columns[12].Visible = false;
+            dataGridView1.Columns[13].Visible = false;
+            dataGridView1.Columns[14].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)

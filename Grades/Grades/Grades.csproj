@@ -108,6 +108,12 @@
     <Compile Include="Admin\Employee\AddEmployee.Designer.cs">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Director\DirectorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Director\DirectorMenu.Designer.cs">
+      <DependentUpon>DirectorMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Group\AddGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,26 @@
     <Compile Include="Migrations\202104080338264_third.designer.cs">
       <DependentUpon>202104080338264_third.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106091402416_five.cs" />
+    <Compile Include="Migrations\202106091402416_five.designer.cs">
+      <DependentUpon>202106091402416_five.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106091413025_add_userid_to_employees.cs" />
+    <Compile Include="Migrations\202106091413025_add_userid_to_employees.designer.cs">
+      <DependentUpon>202106091413025_add_userid_to_employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106091433392_change_authorizationLogic.cs" />
+    <Compile Include="Migrations\202106091433392_change_authorizationLogic.designer.cs">
+      <DependentUpon>202106091433392_change_authorizationLogic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106091450035_add_teacherSubjects.cs" />
+    <Compile Include="Migrations\202106091450035_add_teacherSubjects.designer.cs">
+      <DependentUpon>202106091450035_add_teacherSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106091511168_fix_changeTeacherSubject%28UserId%29.cs" />
+    <Compile Include="Migrations\202106091511168_fix_changeTeacherSubject%28UserId%29.designer.cs">
+      <DependentUpon>202106091511168_fix_changeTeacherSubject%28UserId%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Admin\Position\PositionLogic.cs" />
     <Compile Include="Admin\Position\Positions.cs">
@@ -267,6 +293,12 @@
     <Compile Include="Admin\Table\Tables.Designer.cs">
       <DependentUpon>Tables.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeacherMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherMenu.Designer.cs">
+      <DependentUpon>TeacherMenu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\AcademicYear\AcademicYears.resx">
       <DependentUpon>AcademicYears.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Employee\AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Director\DirectorMenu.resx">
+      <DependentUpon>DirectorMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Group\AddGroup.resx">
       <DependentUpon>AddGroup.cs</DependentUpon>
@@ -336,6 +371,21 @@
     <EmbeddedResource Include="Admin\Position\Positions.resx">
       <DependentUpon>Positions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106091402416_five.resx">
+      <DependentUpon>202106091402416_five.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106091413025_add_userid_to_employees.resx">
+      <DependentUpon>202106091413025_add_userid_to_employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106091433392_change_authorizationLogic.resx">
+      <DependentUpon>202106091433392_change_authorizationLogic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106091450035_add_teacherSubjects.resx">
+      <DependentUpon>202106091450035_add_teacherSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106091511168_fix_changeTeacherSubject%28UserId%29.resx">
+      <DependentUpon>202106091511168_fix_changeTeacherSubject%28UserId%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -365,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Table\Tables.resx">
       <DependentUpon>Tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherMenu.resx">
+      <DependentUpon>TeacherMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
@@ -413,7 +466,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Teacher\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

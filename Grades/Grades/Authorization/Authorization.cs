@@ -28,10 +28,9 @@ namespace Grades
                 User = AuthorizationLogic.logIn(Db, login, pass);
                 if (User != null)
                 {
-                   
-                    switch (User.Role)
+                    switch (User.PositionId)
                     {
-                        case "Admin":
+                        case 1:
                             {
                                 Main form = new Main();
                                 this.Hide();
@@ -39,13 +38,23 @@ namespace Grades
                                 Close();
                             }
                             break;
-                        case "Director":
-                            MessageBox.Show("Авторизация в качестве директора выполнена");
+                        case 2:
+                            {
+                                DirectorMenu form = new DirectorMenu();
+                                this.Hide();
+                                form.ShowDialog();
+                                Close();
+                            }
                             break;
-                        case "Teacher":
-                            MessageBox.Show("Авторизация в качестве учителя выполнена");
+                        case 3:
+                            {
+                                TeacherMenu form = new TeacherMenu();
+                                this.Hide();
+                                form.ShowDialog();
+                                Close();
+                            }
                             break;
-                        case "Student":
+                        case 4:
                             {
                                 StudentMenu form = new StudentMenu();
                                 this.Hide();

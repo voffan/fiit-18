@@ -16,27 +16,6 @@ namespace Grades
             if (query != null && query.Password == pass)
             {
                 return query;
-                //int role;
-                //switch (query.Role)
-                //{
-                //    case "Admin":
-                //        role = 1;
-                //        break;
-                //    case "Director":
-                //        role = 2;
-                //        break;
-                //    case "Teacher":
-                //        role = 3;
-                //        break;
-                //    case "Student":
-                //        role = 4;
-                //        break;
-                //    default:
-                //        role = -1;
-                //        break;
-                //}
-                //return role;
-                
             }
             else return null;
         }
