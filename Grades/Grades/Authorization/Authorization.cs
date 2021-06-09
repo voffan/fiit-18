@@ -46,7 +46,12 @@ namespace Grades
                             MessageBox.Show("Авторизация в качестве учителя выполнена");
                             break;
                         case "Student":
-                            MessageBox.Show("Авторизация в качестве ученика выполнена");
+                            {
+                                StudentMenu form = new StudentMenu();
+                                this.Hide();
+                                form.ShowDialog();
+                                Close();
+                            };
                             break;
                         default:
                             MessageBox.Show("Error!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");

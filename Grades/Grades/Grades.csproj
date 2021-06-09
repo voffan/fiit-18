@@ -71,100 +71,100 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcademicYearLogic.cs" />
-    <Compile Include="AcademicYears.cs">
+    <Compile Include="Admin\AcademicYear\AcademicYearLogic.cs" />
+    <Compile Include="Admin\AcademicYear\AcademicYears.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AcademicYears.Designer.cs">
+    <Compile Include="Admin\AcademicYear\AcademicYears.Designer.cs">
       <DependentUpon>AcademicYears.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddAcademicYear.cs">
+    <Compile Include="Admin\AcademicYear\AddAcademicYear.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddAcademicYear.Designer.cs">
+    <Compile Include="Admin\AcademicYear\AddAcademicYear.Designer.cs">
       <DependentUpon>AddAcademicYear.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddCheckPoint.cs">
+    <Compile Include="Admin\CheckPoint\AddCheckPoint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCheckPoint.Designer.cs">
+    <Compile Include="Admin\CheckPoint\AddCheckPoint.Designer.cs">
       <DependentUpon>AddCheckPoint.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddClass.cs">
+    <Compile Include="Admin\Class\AddClass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddClass.Designer.cs">
+    <Compile Include="Admin\Class\AddClass.Designer.cs">
       <DependentUpon>AddClass.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddCourse.cs">
+    <Compile Include="Admin\Course\AddCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCourse.Designer.cs">
+    <Compile Include="Admin\Course\AddCourse.Designer.cs">
       <DependentUpon>AddCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddEmployee.cs">
+    <Compile Include="Admin\Employee\AddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEmployee.Designer.cs">
+    <Compile Include="Admin\Employee\AddEmployee.Designer.cs">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddGroup.cs">
+    <Compile Include="Group\AddGroup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddGroup.Designer.cs">
+    <Compile Include="Group\AddGroup.Designer.cs">
       <DependentUpon>AddGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddPosition.cs">
+    <Compile Include="Admin\Position\AddPosition.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPosition.Designer.cs">
+    <Compile Include="Admin\Position\AddPosition.Designer.cs">
       <DependentUpon>AddPosition.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddSchool.cs">
+    <Compile Include="Admin\School\AddSchool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddSchool.Designer.cs">
+    <Compile Include="Admin\School\AddSchool.Designer.cs">
       <DependentUpon>AddSchool.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddStudent.cs">
+    <Compile Include="Admin\Student\AddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStudent.Designer.cs">
+    <Compile Include="Admin\Student\AddStudent.Designer.cs">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddSubject.cs">
+    <Compile Include="Admin\Subject\AddSubject.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddSubject.Designer.cs">
+    <Compile Include="Admin\Subject\AddSubject.Designer.cs">
       <DependentUpon>AddSubject.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddTable.cs">
+    <Compile Include="Admin\Table\AddTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddTable.Designer.cs">
+    <Compile Include="Admin\Table\AddTable.Designer.cs">
       <DependentUpon>AddTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="AuthorizationLogic.cs" />
-    <Compile Include="CheckPointLogic.cs" />
-    <Compile Include="ChekPoints.cs">
+    <Compile Include="Authorization\AuthorizationLogic.cs" />
+    <Compile Include="Admin\CheckPoint\CheckPointLogic.cs" />
+    <Compile Include="Admin\CheckPoint\ChekPoints.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChekPoints.Designer.cs">
+    <Compile Include="Admin\CheckPoint\ChekPoints.Designer.cs">
       <DependentUpon>ChekPoints.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes.cs">
+    <Compile Include="Admin\Class\Classes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Classes.Designer.cs">
+    <Compile Include="Admin\Class\Classes.Designer.cs">
       <DependentUpon>Classes.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassLogic.cs" />
+    <Compile Include="Admin\Class\ClassLogic.cs" />
     <Compile Include="Context.cs" />
-    <Compile Include="CourseLogic.cs" />
-    <Compile Include="Courses.cs">
+    <Compile Include="Admin\Course\CourseLogic.cs" />
+    <Compile Include="Admin\Course\Courses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Courses.Designer.cs">
+    <Compile Include="Admin\Course\Courses.Designer.cs">
       <DependentUpon>Courses.cs</DependentUpon>
     </Compile>
     <Compile Include="DBDataSet.Designer.cs">
@@ -172,31 +172,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeLogic.cs" />
-    <Compile Include="Employees.cs">
+    <Compile Include="Admin\Employee\EmployeeLogic.cs" />
+    <Compile Include="Admin\Employee\Employees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employees.Designer.cs">
+    <Compile Include="Admin\Employee\Employees.Designer.cs">
       <DependentUpon>Employees.cs</DependentUpon>
     </Compile>
     <Compile Include="EntityClasses.cs" />
-    <Compile Include="GroupLogic.cs" />
-    <Compile Include="Groups.cs">
+    <Compile Include="Group\GroupLogic.cs" />
+    <Compile Include="Group\Groups.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Groups.Designer.cs">
+    <Compile Include="Group\Groups.Designer.cs">
       <DependentUpon>Groups.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="Admin\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
+    <Compile Include="Admin\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Authorization.cs">
+    <Compile Include="Authorization\Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Authorization.Designer.cs">
+    <Compile Include="Authorization\Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202102250530541_First.cs" />
@@ -212,104 +212,116 @@
       <DependentUpon>202104080338264_third.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="PositionLogic.cs" />
-    <Compile Include="Positions.cs">
+    <Compile Include="Admin\Position\PositionLogic.cs" />
+    <Compile Include="Admin\Position\Positions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Positions.Designer.cs">
+    <Compile Include="Admin\Position\Positions.Designer.cs">
       <DependentUpon>Positions.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SchoolEditForm.cs">
+    <Compile Include="Admin\School\SchoolEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SchoolEditForm.Designer.cs">
+    <Compile Include="Admin\School\SchoolEditForm.Designer.cs">
       <DependentUpon>SchoolEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SchoolLogic.cs" />
-    <Compile Include="Schools.cs">
+    <Compile Include="Admin\School\SchoolLogic.cs" />
+    <Compile Include="Admin\School\Schools.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Schools.Designer.cs">
+    <Compile Include="Admin\School\Schools.Designer.cs">
       <DependentUpon>Schools.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentLogic.cs" />
-    <Compile Include="Students.cs">
+    <Compile Include="Admin\Student\StudentLogic.cs" />
+    <Compile Include="Student\StudentMarks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Students.Designer.cs">
+    <Compile Include="Student\StudentMarks.Designer.cs">
+      <DependentUpon>StudentMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\StudentMenu.Designer.cs">
+      <DependentUpon>StudentMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Student\Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Student\Students.Designer.cs">
       <DependentUpon>Students.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubjectLogic.cs" />
-    <Compile Include="Subjects.cs">
+    <Compile Include="Admin\Subject\SubjectLogic.cs" />
+    <Compile Include="Admin\Subject\Subjects.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Subjects.Designer.cs">
+    <Compile Include="Admin\Subject\Subjects.Designer.cs">
       <DependentUpon>Subjects.cs</DependentUpon>
     </Compile>
-    <Compile Include="TableLogic.cs" />
-    <Compile Include="Tables.cs">
+    <Compile Include="Admin\Table\TableLogic.cs" />
+    <Compile Include="Admin\Table\Tables.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tables.Designer.cs">
+    <Compile Include="Admin\Table\Tables.Designer.cs">
       <DependentUpon>Tables.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AcademicYears.resx">
+    <EmbeddedResource Include="Admin\AcademicYear\AcademicYears.resx">
       <DependentUpon>AcademicYears.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddAcademicYear.resx">
+    <EmbeddedResource Include="Admin\AcademicYear\AddAcademicYear.resx">
       <DependentUpon>AddAcademicYear.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddCheckPoint.resx">
+    <EmbeddedResource Include="Admin\CheckPoint\AddCheckPoint.resx">
       <DependentUpon>AddCheckPoint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddClass.resx">
+    <EmbeddedResource Include="Admin\Class\AddClass.resx">
       <DependentUpon>AddClass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddCourse.resx">
+    <EmbeddedResource Include="Admin\Course\AddCourse.resx">
       <DependentUpon>AddCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddEmployee.resx">
+    <EmbeddedResource Include="Admin\Employee\AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddGroup.resx">
+    <EmbeddedResource Include="Group\AddGroup.resx">
       <DependentUpon>AddGroup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddPosition.resx">
+    <EmbeddedResource Include="Admin\Position\AddPosition.resx">
       <DependentUpon>AddPosition.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddSchool.resx">
+    <EmbeddedResource Include="Admin\School\AddSchool.resx">
       <DependentUpon>AddSchool.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddStudent.resx">
+    <EmbeddedResource Include="Admin\Student\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddSubject.resx">
+    <EmbeddedResource Include="Admin\Subject\AddSubject.resx">
       <DependentUpon>AddSubject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddTable.resx">
+    <EmbeddedResource Include="Admin\Table\AddTable.resx">
       <DependentUpon>AddTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Authorization.resx">
+    <EmbeddedResource Include="Authorization\Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChekPoints.resx">
+    <EmbeddedResource Include="Admin\CheckPoint\ChekPoints.resx">
       <DependentUpon>ChekPoints.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Classes.resx">
+    <EmbeddedResource Include="Admin\Class\Classes.resx">
       <DependentUpon>Classes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Courses.resx">
+    <EmbeddedResource Include="Admin\Course\Courses.resx">
       <DependentUpon>Courses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employees.resx">
+    <EmbeddedResource Include="Admin\Employee\Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Groups.resx">
+    <EmbeddedResource Include="Group\Groups.resx">
       <DependentUpon>Groups.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Admin\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102250530541_First.resx">
@@ -321,7 +333,7 @@
     <EmbeddedResource Include="Migrations\202104080338264_third.resx">
       <DependentUpon>202104080338264_third.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Positions.resx">
+    <EmbeddedResource Include="Admin\Position\Positions.resx">
       <DependentUpon>Positions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -333,19 +345,25 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SchoolEditForm.resx">
+    <EmbeddedResource Include="Admin\School\SchoolEditForm.resx">
       <DependentUpon>SchoolEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Schools.resx">
+    <EmbeddedResource Include="Admin\School\Schools.resx">
       <DependentUpon>Schools.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Students.resx">
+    <EmbeddedResource Include="Student\StudentMarks.resx">
+      <DependentUpon>StudentMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\StudentMenu.resx">
+      <DependentUpon>StudentMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Student\Students.resx">
       <DependentUpon>Students.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Subjects.resx">
+    <EmbeddedResource Include="Admin\Subject\Subjects.resx">
       <DependentUpon>Subjects.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tables.resx">
+    <EmbeddedResource Include="Admin\Table\Tables.resx">
       <DependentUpon>Tables.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
@@ -395,6 +413,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
