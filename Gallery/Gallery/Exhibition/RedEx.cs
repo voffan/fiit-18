@@ -31,6 +31,9 @@ namespace Gallery
         private void Form9_Load(object sender, EventArgs e)
         {
             textBox1.Text = name;
+            comboBox1.DataSource = Db.Countries.ToList();
+            comboBox1.DisplayMember = "Name";
+            comboBox1.ValueMember = "Id";
             comboBox1.SelectedValue = (int)(country);
             textBox3.Text = city;
             textBox4.Text = Convert.ToString(date.ToShortDateString());

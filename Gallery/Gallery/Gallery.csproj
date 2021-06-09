@@ -246,6 +246,18 @@
     <Compile Include="Migrations\202106021052261_passhash.designer.cs">
       <DependentUpon>202106021052261_passhash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106030300518_maxlenght byte.cs" />
+    <Compile Include="Migrations\202106030300518_maxlenght byte.designer.cs">
+      <DependentUpon>202106030300518_maxlenght byte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106091202404_auth key.cs" />
+    <Compile Include="Migrations\202106091202404_auth key.designer.cs">
+      <DependentUpon>202106091202404_auth key.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106091206388_auth string.cs" />
+    <Compile Include="Migrations\202106091206388_auth string.designer.cs">
+      <DependentUpon>202106091206388_auth string.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Painting\PaintAdd.cs">
       <SubType>Form</SubType>
@@ -400,6 +412,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106021052261_passhash.resx">
       <DependentUpon>202106021052261_passhash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106030300518_maxlenght byte.resx">
+      <DependentUpon>202106030300518_maxlenght byte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106091202404_auth key.resx">
+      <DependentUpon>202106091202404_auth key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106091206388_auth string.resx">
+      <DependentUpon>202106091206388_auth string.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Painting\PaintAdd.resx">
       <DependentUpon>PaintAdd.cs</DependentUpon>

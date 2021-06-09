@@ -18,13 +18,16 @@ namespace Gallery
         {
             InitializeComponent();
             comboBox1.DataSource = Enum.GetValues(typeof(Gallery.StatusSell));
+            comboBox2.DataSource = Db.Customers.ToList();
+            comboBox2.DisplayMember = "FName";
+            comboBox2.ValueMember = "Id";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                SellLogic.AddSell(Db,Convert.ToInt64(textBox1.Text), dateTimePicker1.Value,(StatusSell)comboBox1.SelectedIndex,Convert.ToInt32(textBox4.Text));
+                SellLogic.AddSell(Db,Convert.ToInt64(textBox1.Text), dateTimePicker1.Value,(StatusSell)comboBox1.SelectedIndex,Convert.ToInt32(comboBox2.Text));
                 Close();
             }
             catch (Exception er)

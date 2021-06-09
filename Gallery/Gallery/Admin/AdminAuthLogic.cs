@@ -17,7 +17,7 @@ namespace Gallery
             Auth p = new Auth
             {
                 Login = login,
-                Password = tmpHash,
+                Password = Convert.ToString(tmpHash),
                 EmployeeId = emp_id
             };
       
@@ -43,7 +43,7 @@ namespace Gallery
             Auth p = GetAuthById(db, id);
 
             p.Login = login;
-            p.Password = tmpHash;
+            p.Password = Convert.ToString(tmpHash);
             p.EmployeeId = emp_id;
             db.Entry(p).State = System.Data.Entity.EntityState.Modified;
 

@@ -77,6 +77,7 @@ namespace Gallery
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.MaximumSize = new System.Drawing.Size(800, 500);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "AdminAuthWin";
             this.Text = "AdminAuthWin";
             this.Load += new System.EventHandler(this.AdminAuthWin_Load);

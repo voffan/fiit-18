@@ -17,7 +17,7 @@ namespace Gallery
             var query = db.Auths
                                 .Where(a => a.Login == log)
                                 .FirstOrDefault<Auth>();
-            if (query != null && query.Password == tmpHash)
+            if (query != null && query.Password == Convert.ToString(tmpHash))
             {
                 var query1 = db.Employees
                     .Where(b => b.Id == query.EmployeeId)
