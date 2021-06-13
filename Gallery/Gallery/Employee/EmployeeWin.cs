@@ -21,6 +21,15 @@ namespace Gallery
         private void EmployeeWin_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Employees.ToList();
+            dataGridView1.Columns[0].HeaderText = "Отдел";
+            dataGridView1.Columns[2].HeaderText = "Должность";
+            dataGridView1.Columns[3].HeaderText = "Статус";
+            dataGridView1.Columns[5].HeaderText = "Фамилия";
+            dataGridView1.Columns[6].HeaderText = "Имя";
+            dataGridView1.Columns[7].HeaderText = "Отчество";
+            dataGridView1.Columns[8].HeaderText = "Серия паспорта";
+            dataGridView1.Columns[9].HeaderText = "Номер паспорта";
+            dataGridView1.Columns[10].HeaderText = "Контактный телефон";
             dataGridView1.Columns[1].Visible = false;
             dataGridView1.Columns[4].Visible = false;
             dataGridView1.Columns[11].Visible = false;
@@ -31,6 +40,7 @@ namespace Gallery
             EmpAdd empAdd = new EmpAdd();
             empAdd.Db = this.Db;
             empAdd.ShowDialog();
+            dataGridView1.DataSource = Db.Employees.ToList();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -87,6 +97,11 @@ namespace Gallery
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

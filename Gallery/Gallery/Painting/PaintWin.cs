@@ -82,5 +82,10 @@ namespace Gallery
             }
             dataGridView1.DataSource = Db.Paintings.ToList();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
