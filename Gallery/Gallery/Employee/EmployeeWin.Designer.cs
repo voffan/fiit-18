@@ -35,7 +35,6 @@ namespace Gallery
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -44,8 +43,6 @@ namespace Gallery
             this.фамилииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отделуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-=======
->>>>>>> 206add5514af616bbcc46c71d9519a7f36147aaa
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,12 +54,12 @@ namespace Gallery
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Departament});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 120);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 133);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(782, 329);
+            this.dataGridView1.Size = new System.Drawing.Size(782, 316);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.TabStop = false;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -77,13 +74,8 @@ namespace Gallery
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-<<<<<<< HEAD
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(632, 18);
-=======
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(12, 389);
->>>>>>> 206add5514af616bbcc46c71d9519a7f36147aaa
+            this.button2.Location = new System.Drawing.Point(632, 31);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 28);
             this.button2.TabIndex = 0;
@@ -94,13 +86,8 @@ namespace Gallery
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-<<<<<<< HEAD
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(632, 52);
-=======
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(138, 389);
->>>>>>> 206add5514af616bbcc46c71d9519a7f36147aaa
+            this.button3.Location = new System.Drawing.Point(632, 65);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 28);
             this.button3.TabIndex = 1;
@@ -112,7 +99,7 @@ namespace Gallery
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(632, 86);
+            this.button4.Location = new System.Drawing.Point(632, 99);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 28);
             this.button4.TabIndex = 2;
@@ -122,9 +109,8 @@ namespace Gallery
             // 
             // button1
             // 
-<<<<<<< HEAD
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(12, 84);
+            this.button1.Location = new System.Drawing.Point(12, 99);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 28);
             this.button1.TabIndex = 4;
@@ -135,7 +121,7 @@ namespace Gallery
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(364, 86);
+            this.button5.Location = new System.Drawing.Point(364, 99);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(140, 28);
             this.button5.TabIndex = 4;
@@ -146,7 +132,7 @@ namespace Gallery
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(158, 86);
+            this.textBox1.Location = new System.Drawing.Point(158, 101);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 26);
             this.textBox1.TabIndex = 5;
@@ -175,21 +161,21 @@ namespace Gallery
             // имениToolStripMenuItem
             // 
             this.имениToolStripMenuItem.Name = "имениToolStripMenuItem";
-            this.имениToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.имениToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.имениToolStripMenuItem.Text = "Имени";
             this.имениToolStripMenuItem.Click += new System.EventHandler(this.имениToolStripMenuItem_Click);
             // 
             // фамилииToolStripMenuItem
             // 
             this.фамилииToolStripMenuItem.Name = "фамилииToolStripMenuItem";
-            this.фамилииToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.фамилииToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.фамилииToolStripMenuItem.Text = "Фамилии";
             this.фамилииToolStripMenuItem.Click += new System.EventHandler(this.фамилииToolStripMenuItem_Click);
             // 
             // отделуToolStripMenuItem
             // 
             this.отделуToolStripMenuItem.Name = "отделуToolStripMenuItem";
-            this.отделуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.отделуToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.отделуToolStripMenuItem.Text = "Отделу";
             this.отделуToolStripMenuItem.Click += new System.EventHandler(this.отделуToolStripMenuItem_Click);
             // 
@@ -203,28 +189,14 @@ namespace Gallery
             this.label1.TabIndex = 7;
             this.label1.Text = "Сотрудники галереи";
             // 
-=======
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(652, 389);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 60);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Закрыть";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
->>>>>>> 206add5514af616bbcc46c71d9519a7f36147aaa
             // EmployeeWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-<<<<<<< HEAD
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button5);
-=======
->>>>>>> 206add5514af616bbcc46c71d9519a7f36147aaa
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -263,7 +235,7 @@ namespace Gallery
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
-<<<<<<< HEAD
+
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -272,7 +244,6 @@ namespace Gallery
         private System.Windows.Forms.ToolStripMenuItem фамилииToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отделуToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-=======
->>>>>>> 206add5514af616bbcc46c71d9519a7f36147aaa
+
     }
 }

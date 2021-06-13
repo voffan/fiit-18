@@ -101,7 +101,7 @@ namespace Gallery
 
         }
 
-<<<<<<< HEAD
+
         private void button5_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Employees.ToList();
@@ -163,11 +163,7 @@ namespace Gallery
         private void iDToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-=======
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
->>>>>>> 206add5514af616bbcc46c71d9519a7f36147aaa
+
         }
     }
 }
