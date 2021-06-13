@@ -21,7 +21,9 @@ namespace Gallery
         private void EmployeeWin_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Employees.ToList();
-            
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[11].Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)

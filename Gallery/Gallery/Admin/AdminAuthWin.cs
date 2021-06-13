@@ -21,6 +21,8 @@ namespace Gallery
         private void AdminAuthWin_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Auths.ToList();
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[3].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
