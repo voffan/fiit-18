@@ -40,6 +40,7 @@ namespace Gallery
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox2
@@ -50,6 +51,7 @@ namespace Gallery
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(200, 31);
             this.textBox2.TabIndex = 1;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             this.textBox2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox4_KeyUp);
             // 
             // label1
@@ -113,6 +115,7 @@ namespace Gallery
             this.comboBox1.Size = new System.Drawing.Size(200, 33);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown);
             this.comboBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox4_KeyUp);
             // 
             // comboBox2
@@ -126,6 +129,7 @@ namespace Gallery
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(200, 33);
             this.comboBox2.TabIndex = 2;
+            this.comboBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
             this.comboBox2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox4_KeyUp);
             // 
             // comboBox3
@@ -137,6 +141,7 @@ namespace Gallery
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(200, 33);
             this.comboBox3.TabIndex = 3;
+            this.comboBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox3_KeyDown);
             this.comboBox3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox4_KeyUp);
             // 
             // comboBox4
@@ -149,6 +154,7 @@ namespace Gallery
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(200, 33);
             this.comboBox4.TabIndex = 4;
+            this.comboBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox4_KeyDown);
             this.comboBox4.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox4_KeyUp);
             // 
             // button1
@@ -156,7 +162,7 @@ namespace Gallery
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(244, 389);
+            this.button1.Location = new System.Drawing.Point(12, 389);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 60);
             this.button1.TabIndex = 5;
@@ -164,11 +170,23 @@ namespace Gallery
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(452, 389);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 60);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Закрыть";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // PaintAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
@@ -201,5 +219,6 @@ namespace Gallery
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

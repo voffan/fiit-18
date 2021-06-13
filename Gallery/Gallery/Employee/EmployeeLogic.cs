@@ -10,7 +10,6 @@ namespace Gallery
     {
         public static void AddEmployee(Context db, string name, string middle_name, string surname, int pass_id, int pass_series, string phone, int position, int depid, int stat)
         {
-          
             Employee emp = new Employee
             {
                 Name = name,
