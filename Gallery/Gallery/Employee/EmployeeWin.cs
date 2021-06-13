@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace Gallery
 {
     public partial class EmployeeWin : Form
     {
+
+        public string connectionString= @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=DB;Integrated Security=True";
         public Context Db { get; set; }
         public EmployeeWin()
         {
@@ -85,6 +87,69 @@ namespace Gallery
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Db.Employees.ToList();
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+                        {
+                            dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.Red;
+                            dataGridView1.Rows[i].Selected = true;
+                        }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Db.Employees.ToList();
+        }
+
+        private void имениToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlDataAdapter command = new SqlDataAdapter("SELECT *FROM dbo.Person ORDER BY Name", connection);
+                DataSet ds = new DataSet();
+                command.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];          
+            }
+
+        }
+
+        private void фамилииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlDataAdapter command = new SqlDataAdapter("SELECT *FROM dbo.Person ORDER BY Surname", connection);
+                DataSet ds = new DataSet();
+                command.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+            }
+        }
+
+        private void отделуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlDataAdapter command = new SqlDataAdapter("SELECT *FROM dbo.Person ORDER BY DepId", connection);
+                DataSet ds = new DataSet();
+                command.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+            }
+        }
+
+        private void iDToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

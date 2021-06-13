@@ -58,7 +58,7 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -170,93 +170,9 @@
     <Compile Include="Login\LoginWin.Designer.cs">
       <DependentUpon>LoginWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202103130405110_first.cs" />
-    <Compile Include="Migrations\202103130405110_first.designer.cs">
-      <DependentUpon>202103130405110_first.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104071133074_third.cs" />
-    <Compile Include="Migrations\202104071133074_third.designer.cs">
-      <DependentUpon>202104071133074_third.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104071229379_forth.cs" />
-    <Compile Include="Migrations\202104071229379_forth.designer.cs">
-      <DependentUpon>202104071229379_forth.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104100349149_fifth.cs" />
-    <Compile Include="Migrations\202104100349149_fifth.designer.cs">
-      <DependentUpon>202104100349149_fifth.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104220401195_six.cs" />
-    <Compile Include="Migrations\202104220401195_six.designer.cs">
-      <DependentUpon>202104220401195_six.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104280826533_seven.cs" />
-    <Compile Include="Migrations\202104280826533_seven.designer.cs">
-      <DependentUpon>202104280826533_seven.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104280850028_Eight.cs" />
-    <Compile Include="Migrations\202104280850028_Eight.designer.cs">
-      <DependentUpon>202104280850028_Eight.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104280858007_9.cs" />
-    <Compile Include="Migrations\202104280858007_9.designer.cs">
-      <DependentUpon>202104280858007_9.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104281135582_10.cs" />
-    <Compile Include="Migrations\202104281135582_10.designer.cs">
-      <DependentUpon>202104281135582_10.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104290255546_11.cs" />
-    <Compile Include="Migrations\202104290255546_11.designer.cs">
-      <DependentUpon>202104290255546_11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104290328594_12.cs" />
-    <Compile Include="Migrations\202104290328594_12.designer.cs">
-      <DependentUpon>202104290328594_12.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105120740144_new17.cs" />
-    <Compile Include="Migrations\202105120740144_new17.designer.cs">
-      <DependentUpon>202105120740144_new17.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105120754516_new18.cs" />
-    <Compile Include="Migrations\202105120754516_new18.designer.cs">
-      <DependentUpon>202105120754516_new18.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105120759598_new19.cs" />
-    <Compile Include="Migrations\202105120759598_new19.designer.cs">
-      <DependentUpon>202105120759598_new19.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105190526498_19.cs" />
-    <Compile Include="Migrations\202105190526498_19.designer.cs">
-      <DependentUpon>202105190526498_19.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105190540522_20.cs" />
-    <Compile Include="Migrations\202105190540522_20.designer.cs">
-      <DependentUpon>202105190540522_20.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105191017221_21.cs" />
-    <Compile Include="Migrations\202105191017221_21.designer.cs">
-      <DependentUpon>202105191017221_21.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105261102343_customer asd.cs" />
-    <Compile Include="Migrations\202105261102343_customer asd.designer.cs">
-      <DependentUpon>202105261102343_customer asd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106021052261_passhash.cs" />
-    <Compile Include="Migrations\202106021052261_passhash.designer.cs">
-      <DependentUpon>202106021052261_passhash.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106030300518_maxlenght byte.cs" />
-    <Compile Include="Migrations\202106030300518_maxlenght byte.designer.cs">
-      <DependentUpon>202106030300518_maxlenght byte.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106091202404_auth key.cs" />
-    <Compile Include="Migrations\202106091202404_auth key.designer.cs">
-      <DependentUpon>202106091202404_auth key.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106091206388_auth string.cs" />
-    <Compile Include="Migrations\202106091206388_auth string.designer.cs">
-      <DependentUpon>202106091206388_auth string.cs</DependentUpon>
+    <Compile Include="Migrations\202106131031380_new db.cs" />
+    <Compile Include="Migrations\202106131031380_new db.designer.cs">
+      <DependentUpon>202106131031380_new db.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Painting\PaintAdd.cs">
@@ -356,71 +272,8 @@
     <EmbeddedResource Include="Login\LoginWin.resx">
       <DependentUpon>LoginWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103130405110_first.resx">
-      <DependentUpon>202103130405110_first.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104071133074_third.resx">
-      <DependentUpon>202104071133074_third.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104071229379_forth.resx">
-      <DependentUpon>202104071229379_forth.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104100349149_fifth.resx">
-      <DependentUpon>202104100349149_fifth.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104220401195_six.resx">
-      <DependentUpon>202104220401195_six.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104280826533_seven.resx">
-      <DependentUpon>202104280826533_seven.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104280850028_Eight.resx">
-      <DependentUpon>202104280850028_Eight.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104280858007_9.resx">
-      <DependentUpon>202104280858007_9.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104281135582_10.resx">
-      <DependentUpon>202104281135582_10.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104290255546_11.resx">
-      <DependentUpon>202104290255546_11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104290328594_12.resx">
-      <DependentUpon>202104290328594_12.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105120740144_new17.resx">
-      <DependentUpon>202105120740144_new17.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105120754516_new18.resx">
-      <DependentUpon>202105120754516_new18.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105120759598_new19.resx">
-      <DependentUpon>202105120759598_new19.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105190526498_19.resx">
-      <DependentUpon>202105190526498_19.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105190540522_20.resx">
-      <DependentUpon>202105190540522_20.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105191017221_21.resx">
-      <DependentUpon>202105191017221_21.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105261102343_customer asd.resx">
-      <DependentUpon>202105261102343_customer asd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106021052261_passhash.resx">
-      <DependentUpon>202106021052261_passhash.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106030300518_maxlenght byte.resx">
-      <DependentUpon>202106030300518_maxlenght byte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106091202404_auth key.resx">
-      <DependentUpon>202106091202404_auth key.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106091206388_auth string.resx">
-      <DependentUpon>202106091206388_auth string.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106131031380_new db.resx">
+      <DependentUpon>202106131031380_new db.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Painting\PaintAdd.resx">
       <DependentUpon>PaintAdd.cs</DependentUpon>
