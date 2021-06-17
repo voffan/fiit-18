@@ -93,6 +93,19 @@
       <DependentUpon>AuthEmp.cs</DependentUpon>
     </Compile>
     <Compile Include="Context.cs" />
+    <Compile Include="Country\CountryAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Country\CountryAdd.Designer.cs">
+      <DependentUpon>CountryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Country\CountryLogic.cs" />
+    <Compile Include="Country\CountryWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Country\CountryWin.Designer.cs">
+      <DependentUpon>CountryWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer\CustAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +124,19 @@
     </Compile>
     <Compile Include="Customer\CustWin.Designer.cs">
       <DependentUpon>CustWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepAdd.Designer.cs">
+      <DependentUpon>DepAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepLogic.cs" />
+    <Compile Include="DepWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepWin.Designer.cs">
+      <DependentUpon>DepWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee\EmpAdd.cs">
       <SubType>Form</SubType>
@@ -236,6 +262,12 @@
     <EmbeddedResource Include="Auth\AuthEmp.resx">
       <DependentUpon>AuthEmp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Country\CountryAdd.resx">
+      <DependentUpon>CountryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Country\CountryWin.resx">
+      <DependentUpon>CountryWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer\CustAdd.resx">
       <DependentUpon>CustAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +276,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\CustWin.resx">
       <DependentUpon>CustWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepAdd.resx">
+      <DependentUpon>DepAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepWin.resx">
+      <DependentUpon>DepWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\EmpAdd.resx">
       <DependentUpon>EmpAdd.cs</DependentUpon>

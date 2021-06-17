@@ -17,10 +17,6 @@ namespace Gallery
         public SellAdd()
         {
             InitializeComponent();
-            comboBox1.DataSource = Enum.GetValues(typeof(Gallery.StatusSell));
-            comboBox2.DataSource = Db.Customers.ToList();
-            comboBox2.DisplayMember = "FName";
-            comboBox2.ValueMember = "Id";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,7 +40,10 @@ namespace Gallery
 
         private void SellAdd_Load(object sender, EventArgs e)
         {
-
+            comboBox1.DataSource = Enum.GetValues(typeof(Gallery.StatusSell));
+            comboBox2.DataSource = Db.Customers.ToList();
+            comboBox2.DisplayMember = "FName";
+            comboBox2.ValueMember = "Id";
         }
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
@@ -54,6 +53,30 @@ namespace Gallery
                 e.Handled = true;
                 SelectNextControl(ActiveControl, true, true, true, true);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                SelectNextControl(ActiveControl, true, true, true, true);
+            }
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) e.SuppressKeyPress = true;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

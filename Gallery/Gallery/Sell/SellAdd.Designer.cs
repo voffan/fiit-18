@@ -61,6 +61,9 @@ namespace Gallery
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(299, 31);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp_1);
             // 
             // label1
             // 
@@ -112,6 +115,8 @@ namespace Gallery
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(299, 33);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.comboBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp_1);
             // 
             // dateTimePicker1
             // 
@@ -121,6 +126,8 @@ namespace Gallery
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(299, 31);
             this.dateTimePicker1.TabIndex = 1;
+            this.dateTimePicker1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.dateTimePicker1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp_1);
             // 
             // button2
             // 
@@ -142,6 +149,9 @@ namespace Gallery
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(299, 33);
             this.comboBox2.TabIndex = 6;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.comboBox2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp_1);
             // 
             // SellAdd
             // 

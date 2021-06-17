@@ -110,5 +110,10 @@ namespace Gallery
         {
             if (e.KeyCode == Keys.Enter) e.SuppressKeyPress = true;
         }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

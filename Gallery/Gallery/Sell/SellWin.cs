@@ -21,6 +21,11 @@ namespace Gallery
         private void SellWin_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Sells.ToList();
+            dataGridView1.Columns[0].HeaderText = "Номер продажи";
+            dataGridView1.Columns[1].HeaderText = "Цена";
+            dataGridView1.Columns[2].HeaderText = "Дата продажи";
+            dataGridView1.Columns[3].HeaderText = "";
+            dataGridView1.Columns[4].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)

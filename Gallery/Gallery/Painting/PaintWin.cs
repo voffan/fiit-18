@@ -29,6 +29,15 @@ namespace Gallery
         private void PaintWin_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Paintings.ToList();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[2].HeaderText = "Жанр";
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[4].HeaderText = "Выставка";
+            dataGridView1.Columns[5].HeaderText = "Картина";
+            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[7].HeaderText = "Художник";
+            dataGridView1.Columns[8].HeaderText = "Статус";
         }
 
         private void button2_Click(object sender, EventArgs e)

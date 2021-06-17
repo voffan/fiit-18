@@ -79,7 +79,6 @@ namespace Gallery
         public StatusSell Status { get; set; }
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
-
         public virtual List<SellPainting> Paintings { get; set; }
     }
     public class Exhibition

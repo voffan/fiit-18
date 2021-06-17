@@ -96,5 +96,23 @@ namespace Gallery
             cust.ShowDialog();
             this.Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            CountryWin co = new CountryWin();
+            this.Hide();
+            co.Db = Db1;
+            co.ShowDialog();
+            this.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            DepWin de = new DepWin();
+            de.Db = Db1;
+            this.Hide();
+            de.ShowDialog();
+            this.Show();
+        }
     }
 }

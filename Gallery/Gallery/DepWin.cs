@@ -10,35 +10,30 @@ using System.Windows.Forms;
 
 namespace Gallery
 {
-    public partial class AdminAuthWin : Form
+    public partial class DepWin : Form
     {
         public Context Db { get; set; }
-        public AdminAuthWin()
+        public DepWin()
         {
             InitializeComponent();
         }
 
-        private void AdminAuthWin_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Db.Auths.ToList();
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].HeaderText = "Логин";
-            dataGridView1.Columns[2].Visible = false;
-            dataGridView1.Columns[3].Visible = false;
-            dataGridView1.Columns[4].HeaderText = "ФИО сотрудника";
+            Close();
+        }
+
+        private void DepWin_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Db.Departaments.ToList();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminAuthAdd AuthAdd = new AdminAuthAdd();
-            AuthAdd.Db = this.Db;
-            AuthAdd.ShowDialog();
-            dataGridView1.DataSource = Db.Auths.ToList();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-         
+            DepAdd de = new DepAdd();
+            de.Db = Db;
+            de.ShowDialog();
+            dataGridView1.DataSource = Db.Departaments.ToList();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -56,7 +51,7 @@ namespace Gallery
                         if (converted == false)
                             return;
 
-                        AdminAuthLogic.DelAuth(Db, id);
+                        DepLogic.DelDep(Db, id);
 
                         MessageBox.Show("Запись удалена");
                     }
@@ -70,7 +65,7 @@ namespace Gallery
             {
 
             }
-            dataGridView1.DataSource = Db.Auths.ToList();
+            dataGridView1.DataSource = Db.Countries.ToList();
         }
     }
 }
