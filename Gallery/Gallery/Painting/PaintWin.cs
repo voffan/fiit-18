@@ -87,5 +87,46 @@ namespace Gallery
         {
             Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Db.Paintings.ToList();
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+                        {
+                            dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.Red;
+                            dataGridView1.Rows[i].Selected = true;
+                        }
+            }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Db.Paintings.ToList();
+        }
+
+        private void навзванииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = PaintLogic.GetOrderedPaintingName(Db);
+        }
+
+        private void жанруToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = PaintLogic.GetOrderedPaintingGenre(Db);
+        }
+
+        private void авторамToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = PaintLogic.GetOrderedPaintingArstist(Db);
+        }
+
+        private void выставкамToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = PaintLogic.GetOrderedPaintingExhib(Db);
+        }
     }
 }

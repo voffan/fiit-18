@@ -49,5 +49,9 @@ namespace Gallery
 
             db.SaveChanges();
         }
+        public static List<Auth> GetOrderedAuthFullname(Context Db)
+        {
+            return Db.Auths.OrderBy(e => e.EmployeeId).ToList();
+        }
     }
 }

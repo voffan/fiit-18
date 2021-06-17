@@ -52,5 +52,21 @@ namespace Gallery
 
             db.SaveChanges();
         }
+        public static List<Painting> GetOrderedPaintingName(Context Db)
+        {
+            return Db.Paintings.OrderBy(e => e.NamePainting).ToList();
+        }
+        public static List<Painting> GetOrderedPaintingGenre(Context Db)
+        {
+            return Db.Paintings.OrderBy(e => e.GenreId).ToList();
+        }
+        public static List<Painting> GetOrderedPaintingArstist(Context Db)
+        {
+            return Db.Paintings.OrderBy(e => e.ArtistId).ToList();
+        }
+        public static List<Painting> GetOrderedPaintingExhib(Context Db)
+        {
+            return Db.Paintings.OrderBy(e => e.ExhibitionId).ToList();
+        }
     }
 }

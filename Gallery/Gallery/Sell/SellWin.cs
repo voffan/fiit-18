@@ -86,5 +86,41 @@ namespace Gallery
             }
             dataGridView1.DataSource = Db.Sells.ToList();
         }
+
+        private void ценеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = SellLogic.GetOrderedSellPrice(Db);
+        }
+
+        private void датаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = SellLogic.GetOrderedSellDate(Db);
+        }
+
+        private void покупателямToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = SellLogic.GetOrderedSellCust(Db);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Db.Sells.ToList();
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+                        {
+                            dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.Red;
+                            dataGridView1.Rows[i].Selected = true;
+                        }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Db.Sells.ToList();
+        }
     }
 }

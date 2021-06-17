@@ -25,7 +25,7 @@ namespace Gallery
             dataGridView1.Columns[3].Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+            private void button1_Click(object sender, EventArgs e)
         {
             AdminAuthAdd AuthAdd = new AdminAuthAdd();
             AuthAdd.Db = this.Db;
@@ -67,6 +67,32 @@ namespace Gallery
             {
 
             }
+            dataGridView1.DataSource = Db.Auths.ToList();
+        }
+        
+        private void фИОToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = AdminAuthLogic.GetOrderedAuthFullname(Db);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Db.Auths.ToList();
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+                        {
+                            dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.Red;
+                            dataGridView1.Rows[i].Selected = true;
+                        }
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
             dataGridView1.DataSource = Db.Auths.ToList();
         }
     }

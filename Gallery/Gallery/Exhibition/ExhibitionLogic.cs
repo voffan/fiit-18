@@ -51,5 +51,22 @@ namespace Gallery
 
             db.SaveChanges();
         }
+        public static List<Exhibition> GetOrderedExhibName(Context Db)
+        {
+            return Db.Exhibitions.OrderBy(e => e.NameExhibition).ToList();
+        }
+        public static List<Exhibition> GetOrderedExhibCountry(Context Db)
+        {
+            return Db.Exhibitions.OrderBy(e => e.CountryId).ToList();
+        }
+        public static List<Exhibition> GetOrderedExhibCity(Context Db)
+        {
+            return Db.Exhibitions.OrderBy(e => e.City).ToList();
+        }
+        public static List<Exhibition> GetOrderedExhibDate(Context Db)
+        {
+            return Db.Exhibitions.OrderBy(e => e.Date).ToList();
+        }
+
     }
 }
