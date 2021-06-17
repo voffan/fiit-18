@@ -30,7 +30,7 @@ namespace Gallery
             EmpAdd empAdd = new EmpAdd();
             empAdd.Db = this.Db;
             empAdd.ShowDialog();
-            dataGridView1.DataSource = Db.Employees.ToList();
+            InitDataGridView(Db.Employees.ToList());
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace Gallery
                 form.ShowDialog();
             }
             dataGridView1.Refresh();
-            dataGridView1.DataSource = Db.Employees.ToList();
+            InitDataGridView(Db.Employees.ToList());
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -122,31 +122,17 @@ namespace Gallery
                 command.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];     
             }*/
-            InitDataGridView(EmployeeLogic.GetOrderedEmployees(Db)) ;
+            InitDataGridView(EmployeeLogic.GetOrderedEmployeesName(Db)) ;
     }
 
         private void фамилииToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                SqlDataAdapter command = new SqlDataAdapter("SELECT *FROM dbo.Person ORDER BY Surname", connection);
-                DataSet ds = new DataSet();
-                command.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0];
-            }
+            InitDataGridView(EmployeeLogic.GetOrderedEmployeesMiddleName(Db));
         }
 
         private void отделуToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                SqlDataAdapter command = new SqlDataAdapter("SELECT *FROM dbo.Person ORDER BY DepId", connection);
-                DataSet ds = new DataSet();
-                command.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0];
-            }
+            InitDataGridView(EmployeeLogic.GetOrderedEmployeesDep(Db));
         }
 
         private void iDToolStripMenuItem_Click(object sender, EventArgs e)
@@ -158,8 +144,8 @@ namespace Gallery
         private void InitDataGridView(List<Employee> emp)
         {
             dataGridView1.DataSource = emp;
-            dataGridView1.Columns[0].HeaderText = "Отдел";
-            dataGridView1.Columns[2].HeaderText = "Должность";
+            dataGridView1.Columns[0].HeaderText = "Должность";
+            dataGridView1.Columns[2].HeaderText = "Отдел";
             dataGridView1.Columns[3].HeaderText = "Статус";
             dataGridView1.Columns[5].HeaderText = "Фамилия";
             dataGridView1.Columns[6].HeaderText = "Имя";
@@ -170,6 +156,16 @@ namespace Gallery
             dataGridView1.Columns[1].Visible = false;
             dataGridView1.Columns[4].Visible = false;
             dataGridView1.Columns[11].Visible = false;
+        }
+
+        private void статусуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InitDataGridView(EmployeeLogic.GetOrderedEmployeesStatus(Db));
+        }
+
+        private void должностиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InitDataGridView(EmployeeLogic.GetOrderedEmployeesPosition(Db));
         }
     }
 }

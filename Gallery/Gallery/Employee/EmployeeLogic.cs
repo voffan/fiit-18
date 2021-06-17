@@ -60,9 +60,25 @@ namespace Gallery
             db.SaveChanges();
         }
 
-        public static List<Employee> GetOrderedEmployees(Context Db)
+        public static List<Employee> GetOrderedEmployeesName(Context Db)
         {
             return Db.Employees.OrderBy(e => e.Name).ToList();   
+        }
+        public static List<Employee> GetOrderedEmployeesMiddleName(Context Db)
+        {
+            return Db.Employees.OrderBy(e => e.Middle_Name).ToList();
+        }
+        public static List<Employee> GetOrderedEmployeesDep(Context Db)
+        {
+            return Db.Employees.OrderBy(e => e.DepId).ToList();
+        }
+        public static List<Employee> GetOrderedEmployeesStatus(Context Db)
+        {
+            return Db.Employees.OrderBy(e => e.Status).ToList();
+        }
+        public static List<Employee> GetOrderedEmployeesPosition(Context Db)
+        {
+            return Db.Employees.OrderBy(e => e.Position).ToList();
         }
     }
 }

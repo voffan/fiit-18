@@ -99,5 +99,46 @@ namespace Gallery
             }
             dataGridView2.DataSource = Db.Exhibitions.ToList();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = Db.Exhibitions.ToList();
+            for (int i = 0; i < dataGridView2.RowCount; i++)
+            {
+
+                for (int j = 0; j < dataGridView2.ColumnCount; j++)
+                    if (dataGridView2.Rows[i].Cells[j].Value != null)
+                        if (dataGridView2.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+                        {
+                            dataGridView2.Rows[i].Cells[j].Style.BackColor = Color.Red;
+                            dataGridView2.Rows[i].Selected = true;
+                        }
+            }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = Db.Exhibitions.ToList();
+        }
+
+        private void навзанииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = ExhibitionLogic.GetOrderedExhibName(Db);
+        }
+
+        private void городуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = ExhibitionLogic.GetOrderedExhibCity(Db);
+        }
+
+        private void странамToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = ExhibitionLogic.GetOrderedExhibCountry(Db);
+        }
+
+        private void датеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = ExhibitionLogic.GetOrderedExhibDate(Db);
+        }
     }
 }

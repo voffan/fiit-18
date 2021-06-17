@@ -54,5 +54,13 @@ namespace Gallery
 
             db.SaveChanges();
         }
+        public static List<Customer> GetOrderedCustomerName(Context Db)
+        {
+            return Db.Customers.OrderBy(e => e.Name).ToList();
+        }
+        public static List<Customer> GetOrderedCustomerMiddleName(Context Db)
+        {
+            return Db.Customers.OrderBy(e => e.Middle_Name).ToList();
+        }
     }
 }
