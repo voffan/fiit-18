@@ -114,5 +114,14 @@ namespace Gallery
             de.ShowDialog();
             this.Show();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ArtistWin ar = new ArtistWin();
+            ar.Db = Db1;
+            this.Hide();
+            ar.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -86,6 +86,25 @@
     <Compile Include="Admin\AdminAuthWin.Designer.cs">
       <DependentUpon>AdminAuthWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ArtistAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArtistAdd.Designer.cs">
+      <DependentUpon>ArtistAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArtistLogic.cs" />
+    <Compile Include="ArtistRed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArtistRed.Designer.cs">
+      <DependentUpon>ArtistRed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArtistWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArtistWin.Designer.cs">
+      <DependentUpon>ArtistWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Auth\AuthEmp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,17 +144,17 @@
     <Compile Include="Customer\CustWin.Designer.cs">
       <DependentUpon>CustWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="DepAdd.cs">
+    <Compile Include="Departament\DepAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DepAdd.Designer.cs">
+    <Compile Include="Departament\DepAdd.Designer.cs">
       <DependentUpon>DepAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="DepLogic.cs" />
-    <Compile Include="DepWin.cs">
+    <Compile Include="Departament\DepLogic.cs" />
+    <Compile Include="Departament\DepWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DepWin.Designer.cs">
+    <Compile Include="Departament\DepWin.Designer.cs">
       <DependentUpon>DepWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee\EmpAdd.cs">
@@ -259,6 +278,15 @@
     <EmbeddedResource Include="Admin\AdminAuthWin.resx">
       <DependentUpon>AdminAuthWin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ArtistAdd.resx">
+      <DependentUpon>ArtistAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArtistRed.resx">
+      <DependentUpon>ArtistRed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArtistWin.resx">
+      <DependentUpon>ArtistWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Auth\AuthEmp.resx">
       <DependentUpon>AuthEmp.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,10 +305,10 @@
     <EmbeddedResource Include="Customer\CustWin.resx">
       <DependentUpon>CustWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DepAdd.resx">
+    <EmbeddedResource Include="Departament\DepAdd.resx">
       <DependentUpon>DepAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DepWin.resx">
+    <EmbeddedResource Include="Departament\DepWin.resx">
       <DependentUpon>DepWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\EmpAdd.resx">
