@@ -59,5 +59,10 @@ namespace Gallery
 
             db.SaveChanges();
         }
+
+        public static List<Employee> GetOrderedEmployees(Context Db)
+        {
+            return Db.Employees.OrderBy(e => e.Name).ToList();   
+        }
     }
 }

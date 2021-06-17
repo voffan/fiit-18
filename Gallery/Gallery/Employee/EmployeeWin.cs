@@ -22,19 +22,7 @@ namespace Gallery
 
         private void EmployeeWin_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Db.Employees.ToList();
-            dataGridView1.Columns[0].HeaderText = "Отдел";
-            dataGridView1.Columns[2].HeaderText = "Должность";
-            dataGridView1.Columns[3].HeaderText = "Статус";
-            dataGridView1.Columns[5].HeaderText = "Фамилия";
-            dataGridView1.Columns[6].HeaderText = "Имя";
-            dataGridView1.Columns[7].HeaderText = "Отчество";
-            dataGridView1.Columns[8].HeaderText = "Серия паспорта";
-            dataGridView1.Columns[9].HeaderText = "Номер паспорта";
-            dataGridView1.Columns[10].HeaderText = "Контактный телефон";
-            dataGridView1.Columns[1].Visible = false;
-            dataGridView1.Columns[4].Visible = false;
-            dataGridView1.Columns[11].Visible = false;
+            InitDataGridView(Db.Employees.ToList());
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -125,16 +113,17 @@ namespace Gallery
 
         private void имениToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            /*using (SqlConnection connection = new SqlConnection(connectionString))
             {
+                
                 connection.Open();
                 SqlDataAdapter command = new SqlDataAdapter("SELECT *FROM dbo.Person ORDER BY Name", connection);
                 DataSet ds = new DataSet();
                 command.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0];          
-            }
-
-        }
+                dataGridView1.DataSource = ds.Tables[0];     
+            }*/
+            InitDataGridView(EmployeeLogic.GetOrderedEmployees(Db)) ;
+    }
 
         private void фамилииToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -164,6 +153,23 @@ namespace Gallery
         {
 
 
+        }
+
+        private void InitDataGridView(List<Employee> emp)
+        {
+            dataGridView1.DataSource = emp;
+            dataGridView1.Columns[0].HeaderText = "Отдел";
+            dataGridView1.Columns[2].HeaderText = "Должность";
+            dataGridView1.Columns[3].HeaderText = "Статус";
+            dataGridView1.Columns[5].HeaderText = "Фамилия";
+            dataGridView1.Columns[6].HeaderText = "Имя";
+            dataGridView1.Columns[7].HeaderText = "Отчество";
+            dataGridView1.Columns[8].HeaderText = "Серия паспорта";
+            dataGridView1.Columns[9].HeaderText = "Номер паспорта";
+            dataGridView1.Columns[10].HeaderText = "Контактный телефон";
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[11].Visible = false;
         }
     }
 }
