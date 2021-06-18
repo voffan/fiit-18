@@ -123,5 +123,14 @@ namespace Gallery
             ar.ShowDialog();
             this.Show();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            GenreWin ge = new GenreWin();
+            ge.Db = Db1;
+            this.Hide();
+            ge.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -57,10 +57,10 @@ namespace Gallery
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CountryAdd ad = new CountryAdd();
+            GenreAdd ad = new GenreAdd();
             ad.Db = Db;
             ad.ShowDialog();
-            dataGridView1.DataSource = Db.Countries.ToList();
+            dataGridView1.DataSource = Db.Genres.ToList();
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -86,23 +86,23 @@
     <Compile Include="Admin\AdminAuthWin.Designer.cs">
       <DependentUpon>AdminAuthWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="ArtistAdd.cs">
+    <Compile Include="Artist\ArtistAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ArtistAdd.Designer.cs">
+    <Compile Include="Artist\ArtistAdd.Designer.cs">
       <DependentUpon>ArtistAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="ArtistLogic.cs" />
-    <Compile Include="ArtistRed.cs">
+    <Compile Include="Artist\ArtistLogic.cs" />
+    <Compile Include="Artist\ArtistRed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ArtistRed.Designer.cs">
+    <Compile Include="Artist\ArtistRed.Designer.cs">
       <DependentUpon>ArtistRed.cs</DependentUpon>
     </Compile>
-    <Compile Include="ArtistWin.cs">
+    <Compile Include="Artist\ArtistWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ArtistWin.Designer.cs">
+    <Compile Include="Artist\ArtistWin.Designer.cs">
       <DependentUpon>ArtistWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Auth\AuthEmp.cs">
@@ -202,6 +202,19 @@
     <Compile Include="Exhibition\RedEx.Designer.cs">
       <DependentUpon>RedEx.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenreAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenreAdd.Designer.cs">
+      <DependentUpon>GenreAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenreLogic.cs" />
+    <Compile Include="GenreWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenreWin.Designer.cs">
+      <DependentUpon>GenreWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="JournalForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,13 +291,13 @@
     <EmbeddedResource Include="Admin\AdminAuthWin.resx">
       <DependentUpon>AdminAuthWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ArtistAdd.resx">
+    <EmbeddedResource Include="Artist\ArtistAdd.resx">
       <DependentUpon>ArtistAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ArtistRed.resx">
+    <EmbeddedResource Include="Artist\ArtistRed.resx">
       <DependentUpon>ArtistRed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ArtistWin.resx">
+    <EmbeddedResource Include="Artist\ArtistWin.resx">
       <DependentUpon>ArtistWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Auth\AuthEmp.resx">
@@ -331,6 +344,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Exhibition\RedEx.resx">
       <DependentUpon>RedEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenreAdd.resx">
+      <DependentUpon>GenreAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenreWin.resx">
+      <DependentUpon>GenreWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JournalForm.resx">
       <DependentUpon>JournalForm.cs</DependentUpon>
