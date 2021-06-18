@@ -203,6 +203,7 @@ namespace Gallery
             this.Controls.Add(this.textBox2);
             this.MinimumSize = new System.Drawing.Size(600, 500);
             this.Name = "PaintRed";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PaintRed";
             this.Load += new System.EventHandler(this.PaintRed_Load);
             this.ResumeLayout(false);

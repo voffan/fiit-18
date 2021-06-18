@@ -12,6 +12,7 @@ namespace Gallery
 {
     public partial class AuthSell : Form
     {
+        public string label;
         public Context Db1 { get; set; }
         public AuthSell()
         {
@@ -38,7 +39,7 @@ namespace Gallery
 
         private void AuthSell_Load(object sender, EventArgs e)
         {
-
+            label3.Text = label;
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -167,5 +167,10 @@ namespace Gallery
         {
             InitDataGridView(EmployeeLogic.GetOrderedEmployeesPosition(Db));
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

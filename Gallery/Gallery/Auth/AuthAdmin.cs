@@ -14,6 +14,7 @@ namespace Gallery
     public partial class AuthAdmin : Form
     {
         public Context Db1 { get; set; }
+        public string label;
         public AuthAdmin()
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace Gallery
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            label3.Text = label;
         }
 
         private void button2_Click(object sender, EventArgs e)

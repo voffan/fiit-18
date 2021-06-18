@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace Gallery
 {
+
     public partial class AuthEmp : Form
     {
+        public string label;
         public Context Db1 { get; set; }
         public AuthEmp()
         {
@@ -38,7 +40,7 @@ namespace Gallery
 
         private void AuthEmp_Load(object sender, EventArgs e)
         {
-
+            label3.Text = label;
         }
     }
 }

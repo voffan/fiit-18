@@ -60,6 +60,7 @@ namespace Gallery
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.dataGridView1);
             this.Name = "JournalForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "JournalForm";
             this.Load += new System.EventHandler(this.JournalForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

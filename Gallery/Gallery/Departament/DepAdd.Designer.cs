@@ -85,6 +85,7 @@ namespace Gallery
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "DepAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DepAdd";
             this.ResumeLayout(false);
             this.PerformLayout();

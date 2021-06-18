@@ -205,6 +205,7 @@ namespace Gallery
             this.Controls.Add(this.textBox2);
             this.MinimumSize = new System.Drawing.Size(600, 500);
             this.Name = "PaintAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PaintAdd";
             this.Load += new System.EventHandler(this.PaintAdd_Load);
             this.ResumeLayout(false);

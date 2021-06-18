@@ -156,7 +156,7 @@ namespace Gallery
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(600, 500);
             this.Name = "RedEx";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form9";
             this.Load += new System.EventHandler(this.Form9_Load);
             this.ResumeLayout(false);

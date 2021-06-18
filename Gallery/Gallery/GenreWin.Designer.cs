@@ -97,6 +97,7 @@ namespace Gallery
             this.Controls.Add(this.dataGridView1);
             this.MinimumSize = new System.Drawing.Size(400, 500);
             this.Name = "GenreWin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "GenreWin";
             this.Load += new System.EventHandler(this.GenreWin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

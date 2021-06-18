@@ -20,6 +20,7 @@ namespace Gallery
 
         private void JournalForm_Load(object sender, EventArgs e)
         {
+            
             dataGridView1.DataSource = Db.Journals.ToList();
         }
 

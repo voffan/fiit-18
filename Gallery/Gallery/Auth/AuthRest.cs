@@ -12,6 +12,7 @@ namespace Gallery
 {
     public partial class AuthRest : Form
     {
+        public string label;
         public Context Db1 { get; set; }
         public AuthRest()
         {
@@ -43,7 +44,7 @@ namespace Gallery
 
         private void AuthRest_Load(object sender, EventArgs e)
         {
-
+            label3.Text = label;
         }
     }
 }

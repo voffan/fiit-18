@@ -107,9 +107,7 @@ namespace Gallery
         [ForeignKey("EmpId")]
         public virtual Employee Employee { get; set; }
         public DateTime Date { get; set; }
-        public int? SrcId { get; set; }
-        [ForeignKey("SrcId")]
-        public virtual Departament Source { get; set; }
+        public PaintingStatus paintingStatus { get; set; }
         public int? ExhId { get; set; }
         [ForeignKey("ExhId")]
         public virtual Exhibition Exhibition { get; set; }

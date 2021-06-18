@@ -221,6 +221,7 @@
     <Compile Include="JournalForm.Designer.cs">
       <DependentUpon>JournalForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="JournalLogic.cs" />
     <Compile Include="Login\LoginLogic.cs" />
     <Compile Include="Login\LoginWin.cs">
       <SubType>Form</SubType>
@@ -231,6 +232,14 @@
     <Compile Include="Migrations\202106131031380_new db.cs" />
     <Compile Include="Migrations\202106131031380_new db.designer.cs">
       <DependentUpon>202106131031380_new db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106180532043_dep.cs" />
+    <Compile Include="Migrations\202106180532043_dep.designer.cs">
+      <DependentUpon>202106180532043_dep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106180659135_paintingst.cs" />
+    <Compile Include="Migrations\202106180659135_paintingst.designer.cs">
+      <DependentUpon>202106180659135_paintingst.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Painting\PaintAdd.cs">
@@ -359,6 +368,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106131031380_new db.resx">
       <DependentUpon>202106131031380_new db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106180532043_dep.resx">
+      <DependentUpon>202106180532043_dep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106180659135_paintingst.resx">
+      <DependentUpon>202106180659135_paintingst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Painting\PaintAdd.resx">
       <DependentUpon>PaintAdd.cs</DependentUpon>

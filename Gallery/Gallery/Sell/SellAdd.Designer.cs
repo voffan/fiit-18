@@ -170,7 +170,7 @@ namespace Gallery
             this.Controls.Add(this.button1);
             this.MinimumSize = new System.Drawing.Size(500, 350);
             this.Name = "SellAdd";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SellAdd";
             this.Load += new System.EventHandler(this.SellAdd_Load);
             this.ResumeLayout(false);

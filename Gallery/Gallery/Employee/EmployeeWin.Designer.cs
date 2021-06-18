@@ -138,6 +138,7 @@ namespace Gallery
             this.menuStrip1.Size = new System.Drawing.Size(784, 25);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // сортировкаПоToolStripMenuItem
             // 
@@ -155,35 +156,35 @@ namespace Gallery
             // имениToolStripMenuItem
             // 
             this.имениToolStripMenuItem.Name = "имениToolStripMenuItem";
-            this.имениToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.имениToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.имениToolStripMenuItem.Text = "Имени";
             this.имениToolStripMenuItem.Click += new System.EventHandler(this.имениToolStripMenuItem_Click);
             // 
             // фамилииToolStripMenuItem
             // 
             this.фамилииToolStripMenuItem.Name = "фамилииToolStripMenuItem";
-            this.фамилииToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.фамилииToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.фамилииToolStripMenuItem.Text = "Фамилии";
             this.фамилииToolStripMenuItem.Click += new System.EventHandler(this.фамилииToolStripMenuItem_Click);
             // 
             // отделуToolStripMenuItem
             // 
             this.отделуToolStripMenuItem.Name = "отделуToolStripMenuItem";
-            this.отделуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.отделуToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.отделуToolStripMenuItem.Text = "Отделу";
             this.отделуToolStripMenuItem.Click += new System.EventHandler(this.отделуToolStripMenuItem_Click);
             // 
             // статусуToolStripMenuItem
             // 
             this.статусуToolStripMenuItem.Name = "статусуToolStripMenuItem";
-            this.статусуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.статусуToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.статусуToolStripMenuItem.Text = "Статусу";
             this.статусуToolStripMenuItem.Click += new System.EventHandler(this.статусуToolStripMenuItem_Click);
             // 
             // должностиToolStripMenuItem
             // 
             this.должностиToolStripMenuItem.Name = "должностиToolStripMenuItem";
-            this.должностиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.должностиToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.должностиToolStripMenuItem.Text = "Должности";
             this.должностиToolStripMenuItem.Click += new System.EventHandler(this.должностиToolStripMenuItem_Click);
             // 
@@ -214,6 +215,7 @@ namespace Gallery
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "EmployeeWin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeWin";
             this.Load += new System.EventHandler(this.EmployeeWin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

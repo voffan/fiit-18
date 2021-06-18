@@ -12,6 +12,8 @@ namespace Gallery
 {
     public partial class LoginWin : Form
     {
+        public static string labeltxt;
+        public static int IdEmp;
         public Context db = new Context();
         public LoginWin()
         {
@@ -38,7 +40,10 @@ namespace Gallery
                 {
                     AuthAdmin form = new AuthAdmin();
                     form.Db1 = this.db;
+                    form.label = labeltxt;
+                    JournalLogic.Idempsda = IdEmp;
                     form.Show();
+                    
                     this.Hide();
                     
                 }
@@ -47,20 +52,32 @@ namespace Gallery
                 {
                     AuthRest form = new AuthRest();
                     form.Db1 = this.db;
-                    form.ShowDialog();
+                    form.label = labeltxt;
+                    JournalLogic.Idempsda = IdEmp;
+                    form.Show();
+
+                    this.Hide();
                 }
                 if (LoginLogic.LogAuth(db, login, pass) == 2)
                 {
                     AuthSell form = new AuthSell();
                     form.Db1 = this.db;
-                    form.ShowDialog();
+                    form.label = labeltxt;
+                    JournalLogic.Idempsda = IdEmp;
+                    form.Show();
+
+                    this.Hide(); ;
                 }
 
                 if (LoginLogic.LogAuth(db, login, pass) == 3)
                 {
                     AuthEmp auth_form = new AuthEmp();
                     auth_form.Db1 = this.db;
-                    auth_form.ShowDialog();
+                    auth_form.label = labeltxt;
+                    JournalLogic.Idempsda = IdEmp;
+                    auth_form.Show();
+
+                    this.Hide();
                 }
                 if (LoginLogic.LogAuth(db, login, pass) == 10)
                 {

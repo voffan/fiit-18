@@ -231,6 +231,7 @@ namespace Gallery
             this.Controls.Add(this.button1);
             this.MaximumSize = new System.Drawing.Size(600, 500);
             this.Name = "CustAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CustAdd";
             this.Load += new System.EventHandler(this.CustAdd_Load);
             this.ResumeLayout(false);

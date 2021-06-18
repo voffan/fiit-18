@@ -28,6 +28,7 @@ namespace Gallery
             ArtistAdd ar = new ArtistAdd();
             ar.Db = Db;
             ar.ShowDialog();
+            dataGridView1.DataSource = Db.Artists.ToList();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

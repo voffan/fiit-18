@@ -157,28 +157,28 @@ namespace Gallery
             // навзванииToolStripMenuItem
             // 
             this.навзванииToolStripMenuItem.Name = "навзванииToolStripMenuItem";
-            this.навзванииToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.навзванииToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.навзванииToolStripMenuItem.Text = "Навзвании";
             this.навзванииToolStripMenuItem.Click += new System.EventHandler(this.навзванииToolStripMenuItem_Click);
             // 
             // жанруToolStripMenuItem
             // 
             this.жанруToolStripMenuItem.Name = "жанруToolStripMenuItem";
-            this.жанруToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.жанруToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.жанруToolStripMenuItem.Text = "Жанрам";
             this.жанруToolStripMenuItem.Click += new System.EventHandler(this.жанруToolStripMenuItem_Click);
             // 
             // авторамToolStripMenuItem
             // 
             this.авторамToolStripMenuItem.Name = "авторамToolStripMenuItem";
-            this.авторамToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.авторамToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.авторамToolStripMenuItem.Text = "Авторам";
             this.авторамToolStripMenuItem.Click += new System.EventHandler(this.авторамToolStripMenuItem_Click);
             // 
             // выставкамToolStripMenuItem
             // 
             this.выставкамToolStripMenuItem.Name = "выставкамToolStripMenuItem";
-            this.выставкамToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выставкамToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.выставкамToolStripMenuItem.Text = "Выставкам";
             this.выставкамToolStripMenuItem.Click += new System.EventHandler(this.выставкамToolStripMenuItem_Click);
             // 
@@ -209,6 +209,7 @@ namespace Gallery
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "PaintWin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PaintWin";
             this.Load += new System.EventHandler(this.PaintWin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

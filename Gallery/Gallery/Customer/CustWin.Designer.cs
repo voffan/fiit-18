@@ -36,12 +36,12 @@ namespace Gallery
             this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.сортироватьПоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.имениToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фамилиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.имениToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.фамилиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -117,6 +117,20 @@ namespace Gallery
             this.сортироватьПоToolStripMenuItem.Size = new System.Drawing.Size(120, 21);
             this.сортироватьПоToolStripMenuItem.Text = "Сортировать по:";
             // 
+            // имениToolStripMenuItem
+            // 
+            this.имениToolStripMenuItem.Name = "имениToolStripMenuItem";
+            this.имениToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.имениToolStripMenuItem.Text = "Имени";
+            this.имениToolStripMenuItem.Click += new System.EventHandler(this.имениToolStripMenuItem_Click);
+            // 
+            // фамилиToolStripMenuItem
+            // 
+            this.фамилиToolStripMenuItem.Name = "фамилиToolStripMenuItem";
+            this.фамилиToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.фамилиToolStripMenuItem.Text = "Фамили";
+            this.фамилиToolStripMenuItem.Click += new System.EventHandler(this.фамилиToolStripMenuItem_Click);
+            // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -151,20 +165,6 @@ namespace Gallery
             // 
             this.employeeBindingSource.DataSource = typeof(Gallery.Employee);
             // 
-            // имениToolStripMenuItem
-            // 
-            this.имениToolStripMenuItem.Name = "имениToolStripMenuItem";
-            this.имениToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.имениToolStripMenuItem.Text = "Имени";
-            this.имениToolStripMenuItem.Click += new System.EventHandler(this.имениToolStripMenuItem_Click);
-            // 
-            // фамилиToolStripMenuItem
-            // 
-            this.фамилиToolStripMenuItem.Name = "фамилиToolStripMenuItem";
-            this.фамилиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.фамилиToolStripMenuItem.Text = "Фамили";
-            this.фамилиToolStripMenuItem.Click += new System.EventHandler(this.фамилиToolStripMenuItem_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -191,6 +191,7 @@ namespace Gallery
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "CustWin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CustWin";
             this.Load += new System.EventHandler(this.CustWin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

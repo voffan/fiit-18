@@ -317,6 +317,7 @@ namespace Gallery
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(600, 500);
             this.Name = "EmpRed";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EmpRed";
             this.Load += new System.EventHandler(this.EmpRed_Load);
             this.ResumeLayout(false);

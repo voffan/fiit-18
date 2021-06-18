@@ -90,7 +90,7 @@ namespace Gallery
             this.Controls.Add(this.button1);
             this.MinimumSize = new System.Drawing.Size(450, 210);
             this.Name = "CountryAdd";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CountryAdd";
             this.ResumeLayout(false);
             this.PerformLayout();

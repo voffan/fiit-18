@@ -319,6 +319,7 @@ namespace Gallery
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "EmpAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EmpAdd";
             this.Load += new System.EventHandler(this.EmpAdd_Load);
             this.ResumeLayout(false);

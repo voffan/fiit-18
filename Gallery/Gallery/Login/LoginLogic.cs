@@ -12,6 +12,7 @@ namespace Gallery
     {
         public static int LogAuth(Context db, string log, string pass)
         {
+            
             byte[] tmpSource = ASCIIEncoding.ASCII.GetBytes(pass);
             byte[] tmpHash = MD5.Create().ComputeHash(tmpSource);
             var query = db.Auths
@@ -24,19 +25,27 @@ namespace Gallery
                     .FirstOrDefault<Employee>();
                 if (query1.Position == (Position)0)
                 {
+                    LoginWin.IdEmp = query1.Id;
+                    LoginWin.labeltxt = query1.FName;
                     return 0;
                 }
 
                 if (query1.Position == (Position)1)
                 {
+                    LoginWin.IdEmp = query1.Id;
+                    LoginWin.labeltxt = query1.FName;
                     return 1;
                 }
                 if (query1.Position == (Position)2)
                 {
+                    LoginWin.IdEmp = query1.Id;
+                    LoginWin.labeltxt = query1.FName;
                     return 2;
                 }
                 if (query1.Position == (Position)3)
                 {
+                    LoginWin.IdEmp = query1.Id;
+                    LoginWin.labeltxt = query1.FName;
                     return 3;
                 }
                 return 4;

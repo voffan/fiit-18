@@ -162,7 +162,7 @@ namespace Gallery
             this.Controls.Add(this.button1);
             this.MinimumSize = new System.Drawing.Size(500, 350);
             this.Name = "SellRed";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SellRed";
             this.Load += new System.EventHandler(this.SellRed_Load);
             this.ResumeLayout(false);

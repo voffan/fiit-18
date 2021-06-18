@@ -197,6 +197,7 @@ namespace Gallery
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(550, 325);
             this.Name = "ArtistRed";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ArtistRed";
             this.Load += new System.EventHandler(this.ArtistRed_Load);
             this.ResumeLayout(false);

@@ -174,28 +174,28 @@ namespace Gallery
             // навзанииToolStripMenuItem
             // 
             this.навзанииToolStripMenuItem.Name = "навзанииToolStripMenuItem";
-            this.навзанииToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.навзанииToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.навзанииToolStripMenuItem.Text = "Навзании";
             this.навзанииToolStripMenuItem.Click += new System.EventHandler(this.навзанииToolStripMenuItem_Click);
             // 
             // городуToolStripMenuItem
             // 
             this.городуToolStripMenuItem.Name = "городуToolStripMenuItem";
-            this.городуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.городуToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.городуToolStripMenuItem.Text = "Городу";
             this.городуToolStripMenuItem.Click += new System.EventHandler(this.городуToolStripMenuItem_Click);
             // 
             // странамToolStripMenuItem
             // 
             this.странамToolStripMenuItem.Name = "странамToolStripMenuItem";
-            this.странамToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.странамToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.странамToolStripMenuItem.Text = "Странам";
             this.странамToolStripMenuItem.Click += new System.EventHandler(this.странамToolStripMenuItem_Click);
             // 
             // датеToolStripMenuItem
             // 
             this.датеToolStripMenuItem.Name = "датеToolStripMenuItem";
-            this.датеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.датеToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.датеToolStripMenuItem.Text = "Дате";
             this.датеToolStripMenuItem.Click += new System.EventHandler(this.датеToolStripMenuItem_Click);
             // 
@@ -215,7 +215,7 @@ namespace Gallery
             this.Controls.Add(this.menuStrip1);
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "WinEx";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

@@ -147,6 +147,7 @@ namespace Gallery
             this.Controls.Add(this.textBox1);
             this.MinimumSize = new System.Drawing.Size(600, 300);
             this.Name = "AdminAuthAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AdminAuthAdd";
             this.Load += new System.EventHandler(this.AdminAuthAdd_Load);
             this.ResumeLayout(false);

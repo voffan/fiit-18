@@ -118,21 +118,21 @@ namespace Gallery
             // ценеToolStripMenuItem
             // 
             this.ценеToolStripMenuItem.Name = "ценеToolStripMenuItem";
-            this.ценеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ценеToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.ценеToolStripMenuItem.Text = "Цене";
             this.ценеToolStripMenuItem.Click += new System.EventHandler(this.ценеToolStripMenuItem_Click);
             // 
             // датаToolStripMenuItem
             // 
             this.датаToolStripMenuItem.Name = "датаToolStripMenuItem";
-            this.датаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.датаToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.датаToolStripMenuItem.Text = "Дате";
             this.датаToolStripMenuItem.Click += new System.EventHandler(this.датаToolStripMenuItem_Click);
             // 
             // покупателямToolStripMenuItem
             // 
             this.покупателямToolStripMenuItem.Name = "покупателямToolStripMenuItem";
-            this.покупателямToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.покупателямToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.покупателямToolStripMenuItem.Text = "Покупателям";
             this.покупателямToolStripMenuItem.Click += new System.EventHandler(this.покупателямToolStripMenuItem_Click);
             // 
@@ -193,7 +193,7 @@ namespace Gallery
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "SellWin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SellWin";
             this.Load += new System.EventHandler(this.SellWin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

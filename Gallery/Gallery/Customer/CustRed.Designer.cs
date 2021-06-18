@@ -221,6 +221,7 @@ namespace Gallery
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Name = "CustRed";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CustRed";
             this.Load += new System.EventHandler(this.CustRed_Load);
             this.ResumeLayout(false);
