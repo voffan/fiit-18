@@ -77,14 +77,6 @@ namespace Gallery
             comboBox2.SelectedIndex = (int)st;
         }
 
-        private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == 13)
-            {
-                button1_Click(sender, e);
-            }
-        }
-
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -209,6 +201,16 @@ namespace Gallery
         private void comboBox2_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) e.SuppressKeyPress = true;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

@@ -185,5 +185,10 @@ namespace Gallery
                 SelectNextControl(ActiveControl, true, true, true, true);
             }
         }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

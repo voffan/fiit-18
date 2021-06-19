@@ -65,7 +65,7 @@ namespace Gallery
             this.comboBox2.Size = new System.Drawing.Size(250, 33);
             this.comboBox2.TabIndex = 8;
             this.comboBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
-            this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox2_KeyPress);
+            this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             this.comboBox2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyUp);
             // 
             // comboBox1
@@ -83,7 +83,9 @@ namespace Gallery
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(250, 33);
             this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown);
+            this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             this.comboBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyUp);
             // 
             // button2
@@ -288,6 +290,7 @@ namespace Gallery
             this.comboBox3.Size = new System.Drawing.Size(250, 33);
             this.comboBox3.TabIndex = 7;
             this.comboBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox3_KeyDown);
+            this.comboBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             this.comboBox3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox3_KeyUp);
             // 
             // EmpRed
