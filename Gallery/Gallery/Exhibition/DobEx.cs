@@ -69,5 +69,24 @@ namespace Gallery
         {
             Close();
         }
+
+        private void textBox1_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                SelectNextControl(ActiveControl, true, true, true, true);
+            }
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) e.SuppressKeyPress = true;
+        }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

@@ -78,5 +78,10 @@ namespace Gallery
         {
 
         }
+
+        private void dateTimePicker1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

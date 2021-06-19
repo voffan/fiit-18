@@ -60,6 +60,8 @@ namespace Gallery
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(434, 31);
             this.textBox1.TabIndex = 0;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp_1);
             // 
             // label2
             // 
@@ -111,6 +113,8 @@ namespace Gallery
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(434, 31);
             this.textBox3.TabIndex = 2;
+            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBox3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp_1);
             // 
             // textBox4
             // 
@@ -120,6 +124,8 @@ namespace Gallery
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(434, 31);
             this.textBox4.TabIndex = 3;
+            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBox4.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp_1);
             // 
             // comboBox1
             // 
@@ -131,6 +137,9 @@ namespace Gallery
             this.comboBox1.Size = new System.Drawing.Size(434, 33);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            this.comboBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp_1);
             // 
             // button2
             // 

@@ -61,7 +61,7 @@ namespace Gallery
             this.Controls.Add(this.dataGridView1);
             this.Name = "JournalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "JournalForm";
+            this.Text = "pdate";
             this.Load += new System.EventHandler(this.JournalForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalBindingSource)).EndInit();

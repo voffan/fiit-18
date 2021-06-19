@@ -22,6 +22,15 @@ namespace Gallery
         {
             
             dataGridView1.DataSource = Db.Journals.ToList();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[2].HeaderText = "ФИО сотрудника";
+            dataGridView1.Columns[3].HeaderText = "Дата";
+            dataGridView1.Columns[4].HeaderText = "Статус картины";
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[6].HeaderText = "Название выставки";
+            dataGridView1.Columns[7].Visible = false;
+            dataGridView1.Columns[8].HeaderText = "Название картины";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -56,7 +56,7 @@ namespace Gallery
             try
             {
                 PaintLogic.SaveEditPaint(Db, (int)comboBox1.SelectedValue, (int)comboBox4.SelectedValue, textBox2.Text, (int)comboBox2.SelectedValue, (PaintingStatus)comboBox3.SelectedIndex, id);
-
+                JournalLogic.JournalAdd(Db);
                 MessageBox.Show("Запись отредактирована");
                 Close();
             }

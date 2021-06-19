@@ -83,5 +83,10 @@ namespace Gallery
         {
             if (e.KeyCode == Keys.Enter) e.SuppressKeyPress = true;
         }
+
+        private void dateTimePicker1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }
