@@ -43,7 +43,6 @@ namespace Gallery
             this.фамилииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отделуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.статусуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.должностиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +59,8 @@ namespace Gallery
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(158, 117);
             this.textBox1.Name = "textBox1";
@@ -68,6 +69,7 @@ namespace Gallery
             // 
             // button5
             // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.Location = new System.Drawing.Point(364, 115);
             this.button5.Name = "button5";
@@ -75,6 +77,7 @@ namespace Gallery
             this.button5.TabIndex = 12;
             this.button5.Text = "Найти";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button1
             // 
@@ -85,10 +88,11 @@ namespace Gallery
             this.button1.TabIndex = 13;
             this.button1.Text = "Сбросить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(632, 115);
             this.button4.Name = "button4";
@@ -100,7 +104,7 @@ namespace Gallery
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(632, 81);
             this.button3.Name = "button3";
@@ -112,7 +116,7 @@ namespace Gallery
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(632, 47);
             this.button2.Name = "button2";
@@ -153,8 +157,7 @@ namespace Gallery
             this.имениToolStripMenuItem,
             this.фамилииToolStripMenuItem,
             this.отделуToolStripMenuItem,
-            this.статусуToolStripMenuItem,
-            this.должностиToolStripMenuItem});
+            this.статусуToolStripMenuItem});
             this.сортировкаПоToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.сортировкаПоToolStripMenuItem.Name = "сортировкаПоToolStripMenuItem";
             this.сортировкаПоToolStripMenuItem.Size = new System.Drawing.Size(120, 21);
@@ -163,32 +166,30 @@ namespace Gallery
             // имениToolStripMenuItem
             // 
             this.имениToolStripMenuItem.Name = "имениToolStripMenuItem";
-            this.имениToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.имениToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.имениToolStripMenuItem.Text = "Имени";
+            this.имениToolStripMenuItem.Click += new System.EventHandler(this.имениToolStripMenuItem_Click);
             // 
             // фамилииToolStripMenuItem
             // 
             this.фамилииToolStripMenuItem.Name = "фамилииToolStripMenuItem";
-            this.фамилииToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.фамилииToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.фамилииToolStripMenuItem.Text = "Фамилии";
+            this.фамилииToolStripMenuItem.Click += new System.EventHandler(this.фамилииToolStripMenuItem_Click);
             // 
             // отделуToolStripMenuItem
             // 
             this.отделуToolStripMenuItem.Name = "отделуToolStripMenuItem";
-            this.отделуToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.отделуToolStripMenuItem.Text = "Отделу";
+            this.отделуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.отделуToolStripMenuItem.Text = "Дате смерти";
+            this.отделуToolStripMenuItem.Click += new System.EventHandler(this.отделуToolStripMenuItem_Click);
             // 
             // статусуToolStripMenuItem
             // 
             this.статусуToolStripMenuItem.Name = "статусуToolStripMenuItem";
-            this.статусуToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.статусуToolStripMenuItem.Text = "Статусу";
-            // 
-            // должностиToolStripMenuItem
-            // 
-            this.должностиToolStripMenuItem.Name = "должностиToolStripMenuItem";
-            this.должностиToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.должностиToolStripMenuItem.Text = "Должности";
+            this.статусуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.статусуToolStripMenuItem.Text = "Дате рождения";
+            this.статусуToolStripMenuItem.Click += new System.EventHandler(this.статусуToolStripMenuItem_Click);
             // 
             // ArtistWin
             // 
@@ -232,6 +233,5 @@ namespace Gallery
         private System.Windows.Forms.ToolStripMenuItem фамилииToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отделуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem статусуToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem должностиToolStripMenuItem;
     }
 }

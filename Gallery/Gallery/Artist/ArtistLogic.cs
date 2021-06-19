@@ -51,17 +51,21 @@ namespace Gallery
             db.SaveChanges();
         }
 
-        public static List<Artist> GetOrderedEmployeesName(Context Db)
+        public static List<Artist> GetOrderedArtistName(Context Db)
         {
             return Db.Artists.OrderBy(e => e.Name).ToList();
         }
-        public static List<Artist> GetOrderedEmployeesMiddleName(Context Db)
-        {
-            return Db.Artists.OrderBy(e => e.Middle_Name).ToList();
-        }
-        public static List<Artist> GetOrderedEmployeesSurname(Context Db)
+        public static List<Artist> GetOrderedArtistSurname(Context Db)
         {
             return Db.Artists.OrderBy(e => e.Surname).ToList();
+        }
+        public static List<Artist> GetOrderedArtistDeathYear(Context Db)
+        {
+            return Db.Artists.OrderBy(e => e.DeathYear).ToList();
+        }
+        public static List<Artist> GetOrderedArtistBirthYear(Context Db)
+        {
+            return Db.Artists.OrderBy(e => e.BirthYear).ToList();
         }
     }
 }

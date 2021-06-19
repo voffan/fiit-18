@@ -85,5 +85,46 @@ namespace Gallery
             }
             dataGridView1.DataSource = Db.Artists.ToList();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Db.Artists.ToList();
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+                        {
+                            dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.Red;
+                            dataGridView1.Rows[i].Selected = true;
+                        }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Db.Artists.ToList();
+        }
+
+        private void имениToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ArtistLogic.GetOrderedArtistName(Db);
+        }
+
+        private void фамилииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ArtistLogic.GetOrderedArtistSurname(Db);
+        }
+
+        private void отделуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ArtistLogic.GetOrderedArtistDeathYear(Db);
+        }
+
+        private void статусуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ArtistLogic.GetOrderedArtistBirthYear(Db);
+        }
     }
 }
