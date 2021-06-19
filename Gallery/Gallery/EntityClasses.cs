@@ -145,7 +145,7 @@ namespace Gallery
         public string FName => $"{Surname} {Name} {Middle_Name}";
         public override string ToString()
         {
-            return Name;
+            return FName;
         }
 
     }

@@ -36,5 +36,19 @@ namespace Gallery
             }
             Close();
         }
+
+        private void button1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) e.SuppressKeyPress = true;
+        }
+
+        private void button1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                SelectNextControl(ActiveControl, true, true, true, true);
+            }
+        }
     }
 }

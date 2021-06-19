@@ -65,7 +65,7 @@ namespace Gallery
             {
 
             }
-            dataGridView1.DataSource = Db.Countries.ToList();
+            dataGridView1.DataSource = Db.Departaments.ToList();
         }
     }
 }
