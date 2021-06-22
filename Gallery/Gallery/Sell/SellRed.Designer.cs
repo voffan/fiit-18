@@ -144,6 +144,7 @@ namespace Gallery
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(303, 33);
             this.comboBox2.TabIndex = 4;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             this.comboBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dateTimePicker1_KeyPress);
             this.comboBox2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp_1);

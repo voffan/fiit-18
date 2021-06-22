@@ -118,10 +118,10 @@ namespace Gallery
 
         private void button11_Click(object sender, EventArgs e)
         {
-            ArtistWin ar = new ArtistWin();
-            ar.Db = Db1;
+            SPWin pWin = new SPWin();
+            pWin.Db = Db1;
             this.Hide();
-            ar.ShowDialog();
+            pWin.ShowDialog();
             this.Show();
         }
 

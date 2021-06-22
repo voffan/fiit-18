@@ -43,6 +43,7 @@ namespace Gallery
             this.button11 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -192,7 +193,7 @@ namespace Gallery
             this.button11.Name = "button11";
             this.button11.Padding = new System.Windows.Forms.Padding(3);
             this.button11.Size = new System.Drawing.Size(200, 40);
-            this.button11.TabIndex = 11;
+            this.button11.TabIndex = 10;
             this.button11.Text = "Художник";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
@@ -214,6 +215,20 @@ namespace Gallery
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 16;
             // 
+            // button12
+            // 
+            this.button12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button12.Location = new System.Drawing.Point(12, 365);
+            this.button12.Name = "button12";
+            this.button12.Padding = new System.Windows.Forms.Padding(3);
+            this.button12.Size = new System.Drawing.Size(200, 65);
+            this.button12.TabIndex = 11;
+            this.button12.Text = "Картины на продажу";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button11_Click);
+            // 
             // AuthAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,6 +237,7 @@ namespace Gallery
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
@@ -260,6 +276,7 @@ namespace Gallery
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button12;
     }
 }
 

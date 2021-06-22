@@ -78,8 +78,10 @@ namespace Gallery
         public DateTime Date { get; set; }
         public StatusSell Status { get; set; }
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
-        public virtual List<SellPainting> Paintings { get; set; }
+        [ForeignKey("CustomerId")]
+        public virtual Customer Customer { get; set; }
+      
+    
     }
     public class Exhibition
     {
@@ -153,13 +155,11 @@ namespace Gallery
     {
         [Key]
         public int Id { get; set; }
-        public int SellId { get; set; }
-        [ForeignKey("SellId")]
-        public virtual Sell Sell { get; set; }
         public int PaintingId { get; set; }
         [ForeignKey("PaintingId")]
         public virtual Painting Painting { get; set; }
         public int Cost { get; set; }
+        public virtual List<Sell> Sells { get; set; }
     }
     public class Painting
     {

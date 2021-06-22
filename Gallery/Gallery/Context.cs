@@ -23,7 +23,7 @@ namespace Gallery
         public virtual DbSet<Auth> Auths { get; set; }
         public virtual DbSet<Journal> Journals { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
-
+        public virtual DbSet<SellPainting> SellPaintings{ get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

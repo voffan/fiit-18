@@ -10,39 +10,28 @@ using System.Windows.Forms;
 
 namespace Gallery
 {
-    public partial class SellWin : Form
+    public partial class SPWin : Form
     {
         public Context Db { get; set; }
-        public SellWin()
+        public SPWin()
         {
             InitializeComponent();
         }
 
-        private void SellWin_Load(object sender, EventArgs e)
+        private void SPWin_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Db.Sells.ToList();
-            /*dataGridView1.Columns[0].HeaderText = "Номер продажи";
-            dataGridView1.Columns[1].HeaderText = "Цена";
-            dataGridView1.Columns[2].HeaderText = "Дата продажи";
-            dataGridView1.Columns[3].HeaderText = "Статус";
-            dataGridView1.Columns[4].Visible = false;*/
+            dataGridView1.DataSource = Db.SellPaintings.ToList();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            SellAdd sellAdd = new SellAdd();
-            sellAdd.Db = this.Db;
-            sellAdd.ShowDialog();
+            SPAdd sPAdd = new SPAdd();
+            sPAdd.Db = this.Db;
+            sPAdd.ShowDialog();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 int index = dataGridView1.SelectedRows[0].Index;
@@ -50,14 +39,14 @@ namespace Gallery
                 bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
                 if (converted == false)
                     return;
-                Sell ex = SellLogic.GetSellById(Db, id);
+                SellPainting ex = SPLogic.GetSellById(Db, id);
 
-                SellRed form = new SellRed(id, ex.Price, ex.Date, ex.Status, ex.CustomerId);
+                SPRed form = new SPRed(id, ex.Cost, ex.PaintingId);
                 form.Db = this.Db;
                 form.ShowDialog();
             }
             dataGridView1.Refresh();
-            dataGridView1.DataSource = Db.Sells.ToList();
+            dataGridView1.DataSource = Db.SellPaintings.ToList();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -75,7 +64,7 @@ namespace Gallery
                         if (converted == false)
                             return;
 
-                        SellLogic.DelSell(Db, id);
+                        SPLogic.DelSellPainting(Db, id);
 
                         MessageBox.Show("Запись удалена");
                     }
@@ -89,27 +78,12 @@ namespace Gallery
             {
 
             }
-            dataGridView1.DataSource = Db.Sells.ToList();
+            dataGridView1.DataSource = Db.SellPaintings.ToList();
         }
 
-        private void ценеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = SellLogic.GetOrderedSellPrice(Db);
-        }
-
-        private void датаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = SellLogic.GetOrderedSellDate(Db);
-        }
-
-        private void покупателямToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = SellLogic.GetOrderedSellCust(Db);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = Db.Sells.ToList();
+            dataGridView1.DataSource = Db.SellPaintings.ToList();
             for (int i = 0; i < dataGridView1.RowCount; i++)
             {
 
@@ -123,9 +97,9 @@ namespace Gallery
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Db.Sells.ToList();
+            dataGridView1.DataSource = Db.SellPaintings.ToList();
         }
     }
 }

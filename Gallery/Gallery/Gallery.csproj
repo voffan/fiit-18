@@ -241,6 +241,14 @@
     <Compile Include="Migrations\202106180659135_paintingst.designer.cs">
       <DependentUpon>202106180659135_paintingst.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106221050325_SellPainting.cs" />
+    <Compile Include="Migrations\202106221050325_SellPainting.designer.cs">
+      <DependentUpon>202106221050325_SellPainting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106221113491_SellPaintingList.cs" />
+    <Compile Include="Migrations\202106221113491_SellPaintingList.designer.cs">
+      <DependentUpon>202106221113491_SellPaintingList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Painting\PaintAdd.cs">
       <SubType>Form</SubType>
@@ -293,6 +301,25 @@
     </Compile>
     <Compile Include="Sell\SellWin.Designer.cs">
       <DependentUpon>SellWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPAdd.Designer.cs">
+      <DependentUpon>SPAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPLogic.cs" />
+    <Compile Include="SPRed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPRed.Designer.cs">
+      <DependentUpon>SPRed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPWin.Designer.cs">
+      <DependentUpon>SPWin.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin\AdminAuthAdd.resx">
       <DependentUpon>AdminAuthAdd.cs</DependentUpon>
@@ -375,6 +402,12 @@
     <EmbeddedResource Include="Migrations\202106180659135_paintingst.resx">
       <DependentUpon>202106180659135_paintingst.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106221050325_SellPainting.resx">
+      <DependentUpon>202106221050325_SellPainting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106221113491_SellPaintingList.resx">
+      <DependentUpon>202106221113491_SellPaintingList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Painting\PaintAdd.resx">
       <DependentUpon>PaintAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -407,6 +440,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sell\SellWin.resx">
       <DependentUpon>SellWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPAdd.resx">
+      <DependentUpon>SPAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPRed.resx">
+      <DependentUpon>SPRed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPWin.resx">
+      <DependentUpon>SPWin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
