@@ -23,7 +23,7 @@ namespace Gallery
         {
             try
             {
-                SellLogic.AddSell(Db,Convert.ToInt64(textBox1.Text), dateTimePicker1.Value,(StatusSell)comboBox1.SelectedIndex,Convert.ToInt32(comboBox2.Text));
+                SellLogic.AddSell(Db,Convert.ToInt64(textBox1.Text), DateTime.Now,(StatusSell)comboBox1.SelectedIndex,Convert.ToInt32(comboBox2.SelectedValue),(int)comboBox3.SelectedValue);
                 Close();
             }
             catch (Exception er)
@@ -44,6 +44,9 @@ namespace Gallery
             comboBox2.DataSource = Db.Customers.ToList();
             comboBox2.DisplayMember = "FName";
             comboBox2.ValueMember = "Id";
+            comboBox3.DataSource = Db.SellPaintings.ToList();
+            comboBox3.DisplayMember = "Painting";
+            comboBox3.ValueMember = "Id";
         }
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)

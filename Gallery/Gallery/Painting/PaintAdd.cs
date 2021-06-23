@@ -16,10 +16,9 @@ namespace Gallery
         public PaintAdd()
         {
             InitializeComponent();
-            comboBox3.DataSource = Enum.GetValues(typeof(Gallery.PaintingStatus));
-           
-
-           
+            comboBox3.Items.Add(Gallery.PaintingStatus.Хранилище);
+            comboBox3.Items.Add(Gallery.PaintingStatus.Выставка);
+            comboBox3.Items.Add(Gallery.PaintingStatus.Рестоврация);         
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -48,10 +47,12 @@ namespace Gallery
         {
             
             try
-            {
-                
+            {             
                 PaintLogic.AddPaint(Db, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(comboBox4.SelectedValue), textBox2.Text, Convert.ToInt32(comboBox2.SelectedValue), comboBox2.SelectedIndex);
+                
                 JournalLogic.JournalAdd(Db);
+                
+                
                 Close();
                 
             }

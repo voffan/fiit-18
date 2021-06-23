@@ -249,6 +249,14 @@
     <Compile Include="Migrations\202106221113491_SellPaintingList.designer.cs">
       <DependentUpon>202106221113491_SellPaintingList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106230559528_kovid19.cs" />
+    <Compile Include="Migrations\202106230559528_kovid19.designer.cs">
+      <DependentUpon>202106230559528_kovid19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106230601365_kovid20.cs" />
+    <Compile Include="Migrations\202106230601365_kovid20.designer.cs">
+      <DependentUpon>202106230601365_kovid20.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Painting\PaintAdd.cs">
       <SubType>Form</SubType>
@@ -407,6 +415,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106221113491_SellPaintingList.resx">
       <DependentUpon>202106221113491_SellPaintingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106230559528_kovid19.resx">
+      <DependentUpon>202106230559528_kovid19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106230601365_kovid20.resx">
+      <DependentUpon>202106230601365_kovid20.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Painting\PaintAdd.resx">
       <DependentUpon>PaintAdd.cs</DependentUpon>

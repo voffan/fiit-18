@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Gallery
 {
-    public enum StatusSell { Продана, Отменено, Ожидание}
+    public enum StatusSell { Ожидание, Отменено, Продано}
     public enum Status {Работает, Отпуск}
-    public enum PaintingStatus { Хранилище, Выставка, Рестоврация}
+    public enum PaintingStatus { Хранилище, Выставка, Рестоврация, Продажа}
     public enum Position { 
          Администратор, 
          Рестовратор, 
@@ -80,8 +80,11 @@ namespace Gallery
         public int CustomerId { get; set; }
         [ForeignKey("CustomerId")]
         public virtual Customer Customer { get; set; }
-      
-    
+        public int SPId { get; set; }
+        [ForeignKey("SPId")]
+        public virtual SellPainting SPaintig { get; set; }
+        
+
     }
     public class Exhibition
     {
@@ -159,7 +162,11 @@ namespace Gallery
         [ForeignKey("PaintingId")]
         public virtual Painting Painting { get; set; }
         public int Cost { get; set; }
-        public virtual List<Sell> Sells { get; set; }
+        public override string ToString()
+        {
+            return Painting.NamePainting;
+        }
+
     }
     public class Painting
     {

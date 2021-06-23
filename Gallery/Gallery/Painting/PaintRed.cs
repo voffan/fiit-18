@@ -16,7 +16,9 @@ namespace Gallery
         public PaintRed(int id, int genre_id, int? ex_id, string name_paint, int art_id, PaintingStatus paint_status)
         {
             InitializeComponent();
-            comboBox3.DataSource = Enum.GetValues(typeof(Gallery.PaintingStatus));
+            comboBox3.Items.Add(Gallery.PaintingStatus.Хранилище);
+            comboBox3.Items.Add(Gallery.PaintingStatus.Выставка);
+            comboBox3.Items.Add(Gallery.PaintingStatus.Рестоврация);
             this.id = id;
             this.genre_id = genre_id;
             this.ex_id = ex_id;
@@ -40,14 +42,22 @@ namespace Gallery
             comboBox2.DataSource = Db.Artists.ToList();
             comboBox2.DisplayMember = "FName";
             comboBox2.ValueMember = "Id";
-            comboBox2.SelectedValue = art_id;
-           
-            comboBox3.SelectedIndex = (int)paint_status;
+            comboBox2.SelectedValue = art_id;      
             comboBox4.DataSource = Db.Exhibitions.ToList();
             comboBox4.DisplayMember = "NameExhibition";
             comboBox4.ValueMember = "Id";
             comboBox4.SelectedValue = ex_id;
             textBox2.Text = name_paint;
+            if((int)paint_status==3)
+            {
+                comboBox3.Items.Add(Gallery.PaintingStatus.Продажа);
+                comboBox3.SelectedIndex = (int)paint_status;
+                comboBox3.Enabled = false;
+            }else
+            {
+               comboBox3.SelectedIndex = (int)paint_status;
+            }
+           
 
         }
 
@@ -56,7 +66,7 @@ namespace Gallery
             try
             {
                 PaintLogic.SaveEditPaint(Db, (int)comboBox1.SelectedValue, (int)comboBox4.SelectedValue, textBox2.Text, (int)comboBox2.SelectedValue, (PaintingStatus)comboBox3.SelectedIndex, id);
-                JournalLogic.JournalAdd(Db);
+                JournalLogic.JournalRed(Db, (PaintingStatus)comboBox3.SelectedIndex, (int)comboBox4.SelectedValue, id);
                 MessageBox.Show("Запись отредактирована");
                 Close();
             }

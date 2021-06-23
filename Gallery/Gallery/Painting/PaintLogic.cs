@@ -68,5 +68,17 @@ namespace Gallery
         {
             return Db.Paintings.OrderBy(e => e.ExhibitionId).ToList();
         }
+        public static void SaveEditPaintSell(Context db,  PaintingStatus paint_status, int id)
+        {
+
+            Painting p = GetPaintById(db, id);
+
+            
+            p.PaintingStatus = paint_status;
+
+            db.Entry(p).State = System.Data.Entity.EntityState.Modified;
+
+            db.SaveChanges();
+        }
     }
 }

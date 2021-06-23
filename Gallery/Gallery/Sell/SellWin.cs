@@ -21,11 +21,17 @@ namespace Gallery
         private void SellWin_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Sells.ToList();
-            /*dataGridView1.Columns[0].HeaderText = "Номер продажи";
+            dataGridView1.Columns[0].HeaderText = "Номер продажи";
             dataGridView1.Columns[1].HeaderText = "Цена";
-            dataGridView1.Columns[2].HeaderText = "Дата продажи";
+            dataGridView1.Columns[2].HeaderText = "Время изменения";
             dataGridView1.Columns[3].HeaderText = "Статус";
-            dataGridView1.Columns[4].Visible = false;*/
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[5].HeaderText = "Покупатель";
+            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[7].HeaderText = "Картина";
+            
+            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,6 +39,7 @@ namespace Gallery
             SellAdd sellAdd = new SellAdd();
             sellAdd.Db = this.Db;
             sellAdd.ShowDialog();
+            dataGridView1.DataSource = Db.Sells.ToList();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -52,7 +59,7 @@ namespace Gallery
                     return;
                 Sell ex = SellLogic.GetSellById(Db, id);
 
-                SellRed form = new SellRed(id, ex.Price, ex.Date, ex.Status, ex.CustomerId);
+                SellRed form = new SellRed(id, ex.Price, ex.Date, ex.Status, ex.CustomerId, ex.SPId);
                 form.Db = this.Db;
                 form.ShowDialog();
             }

@@ -28,8 +28,9 @@ namespace Gallery
         {
             try
             {
+                
                 SPLogic.SaveEditEx(Db, Convert.ToInt32(textBox1.Text), (int)comboBox1.SelectedValue, id);
-
+                JournalLogic.SaveJournal(Db, (int)comboBox1.SelectedValue);
                 MessageBox.Show("Запись отредактирована");
                 Close();
             }

@@ -38,6 +38,7 @@ namespace Gallery
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.сортироватьПоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ценеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +48,7 @@ namespace Gallery
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 149);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(760, 300);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -119,15 +121,25 @@ namespace Gallery
             this.сортироватьПоToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 29);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // сортироватьПоToolStripMenuItem
             // 
+            this.сортироватьПоToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ценеToolStripMenuItem});
+            this.сортироватьПоToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.сортироватьПоToolStripMenuItem.Name = "сортироватьПоToolStripMenuItem";
-            this.сортироватьПоToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.сортироватьПоToolStripMenuItem.Size = new System.Drawing.Size(140, 25);
             this.сортироватьПоToolStripMenuItem.Text = "Сортировать по:";
+            // 
+            // ценеToolStripMenuItem
+            // 
+            this.ценеToolStripMenuItem.Name = "ценеToolStripMenuItem";
+            this.ценеToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.ценеToolStripMenuItem.Text = "Цене";
+            this.ценеToolStripMenuItem.Click += new System.EventHandler(this.ценеToolStripMenuItem_Click);
             // 
             // SPWin
             // 
@@ -165,5 +177,6 @@ namespace Gallery
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem сортироватьПоToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ценеToolStripMenuItem;
     }
 }

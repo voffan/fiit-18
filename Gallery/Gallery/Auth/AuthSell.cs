@@ -30,7 +30,7 @@ namespace Gallery
 
         private void button2_Click(object sender, EventArgs e)
         {
-            JournalForm jform = new JournalForm();
+            SPWin jform = new SPWin();
             this.Hide();
             jform.Db = Db1;
             jform.ShowDialog();

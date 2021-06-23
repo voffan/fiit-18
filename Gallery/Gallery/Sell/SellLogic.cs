@@ -12,7 +12,7 @@ namespace Gallery
 {
     class SellLogic
     {
-        public static void AddSell(Context db, long price, DateTime date, StatusSell status, int customer_id)
+        public static void AddSell(Context db, long price, DateTime date, StatusSell status, int customer_id, int spId)
         {
 
             Sell emp = new Sell
@@ -20,7 +20,9 @@ namespace Gallery
                 Price = price,
                 Date = date,
                 Status = status,
-                CustomerId = customer_id
+                CustomerId = customer_id,
+                SPId = spId
+                
             };
             db.Sells.Add(emp);
             db.SaveChanges();
@@ -38,14 +40,16 @@ namespace Gallery
             Sell ex = db.Sells.Find(ident);
             return ex;
         }
-        public static void SaveEditEx(Context db, long price, DateTime date, int status, int customer_id, int id)
+        public static void SaveEditEx(Context db, long price, DateTime date, int status, int customer_id,int spId,  int id)
         {
 
             Sell ex = GetSellById(db, id);
+            
             ex.Price = price;
             ex.Date = date;
             ex.Status = (StatusSell)status;
             ex.CustomerId = customer_id;
+            ex.SPId = spId;
             db.Entry(ex).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
         }

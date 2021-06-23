@@ -41,17 +41,10 @@ namespace Gallery
             db.Entry(ex).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
         }
-        public static List<Sell> GetOrderedSellPrice(Context Db)
+        public static List<SellPainting> GetOrderedSellPrice(Context Db)
         {
-            return Db.Sells.OrderBy(e => e.Price).ToList();
+            return Db.SellPaintings.OrderBy(e => e.Cost).ToList();
         }
-        public static List<Sell> GetOrderedSellDate(Context Db)
-        {
-            return Db.Sells.OrderBy(e => e.Date).ToList();
-        }
-        public static List<Sell> GetOrderedSellCust(Context Db)
-        {
-            return Db.Sells.OrderBy(e => e.CustomerId).ToList();
-        }
+       
     }
 }

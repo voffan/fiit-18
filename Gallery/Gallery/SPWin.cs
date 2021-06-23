@@ -28,6 +28,7 @@ namespace Gallery
             SPAdd sPAdd = new SPAdd();
             sPAdd.Db = this.Db;
             sPAdd.ShowDialog();
+            dataGridView1.DataSource = Db.SellPaintings.ToList();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -47,11 +48,13 @@ namespace Gallery
             }
             dataGridView1.Refresh();
             dataGridView1.DataSource = Db.SellPaintings.ToList();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Вы уверены?", "Предупреждение", MessageBoxButtons.YesNo);
+
             if (result == DialogResult.Yes)
             {
                 try
@@ -63,7 +66,8 @@ namespace Gallery
                         bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
                         if (converted == false)
                             return;
-
+                        PaintLogic.SaveEditPaintSell(Db, PaintingStatus.Хранилище, (int)dataGridView1[1,index].Value);
+                        JournalLogic.SaveJournaldel(Db, (int)dataGridView1[1, index].Value);
                         SPLogic.DelSellPainting(Db, id);
 
                         MessageBox.Show("Запись удалена");
@@ -100,6 +104,11 @@ namespace Gallery
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.SellPaintings.ToList();
+        }
+
+        private void ценеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = SPLogic.GetOrderedSellPrice(Db);
         }
     }
 }

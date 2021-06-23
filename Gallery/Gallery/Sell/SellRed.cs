@@ -13,7 +13,7 @@ namespace Gallery
     public partial class SellRed : Form
     {
         public Context Db { get; set; }
-        public SellRed(int id, long price, DateTime date, StatusSell status, int customer_id)
+        public SellRed(int id, long price, DateTime date, StatusSell status, int customer_id, int sellpId)
         {
             InitializeComponent();
             comboBox1.DataSource = Enum.GetValues(typeof(Gallery.StatusSell));
@@ -22,29 +22,34 @@ namespace Gallery
             this.date = date;
             status1 = status;
             this.customer_id = customer_id;
+            this.SPid = sellpId; 
         }
         int id;
         long price;
         DateTime date;
         StatusSell status1;
         int customer_id;
-
+        int SPid;
         private void SellRed_Load(object sender, EventArgs e)
         {
             comboBox2.DataSource = Db.Customers.ToList();
             comboBox2.DisplayMember = "FName";
             comboBox2.ValueMember = "Id";
             textBox1.Text = Convert.ToString(price);
-            comboBox2.SelectedValue = (int)customer_id;
-            dateTimePicker1.Value = date;
-            comboBox1.SelectedIndex = (int)status1; 
+            comboBox2.SelectedValue = (int)customer_id;      
+            comboBox1.SelectedIndex = (int)status1;
+            comboBox3.DataSource = Db.SellPaintings.ToList();
+            comboBox3.DisplayMember = "Painting";
+            comboBox3.ValueMember = "Id";
+            comboBox3.SelectedValue = SPid; 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                SellLogic.SaveEditEx(Db, Convert.ToInt32(textBox1.Text), dateTimePicker1.Value, comboBox1.SelectedIndex, Convert.ToInt32(comboBox2.SelectedValue), id);
+                SellLogic.SaveEditEx(Db, Convert.ToInt32(textBox1.Text), DateTime.Now, comboBox1.SelectedIndex, Convert.ToInt32(comboBox2.SelectedValue), (int)comboBox3.SelectedValue, id);
+
 
                 MessageBox.Show("Запись отредактирована");
                 Close();

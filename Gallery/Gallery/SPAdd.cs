@@ -34,7 +34,10 @@ namespace Gallery
         {
             try
             {
+                
                 SPLogic.AddSellPainting(Db, Convert.ToInt32(textBox1.Text), (int)comboBox1.SelectedValue);
+                JournalLogic.SaveJournal(Db, (int)comboBox1.SelectedValue);
+                PaintLogic.SaveEditPaintSell(Db, PaintingStatus.Продажа, (int)comboBox1.SelectedValue);
                 Close();
             }
             catch (Exception er)
