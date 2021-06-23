@@ -133,5 +133,14 @@ namespace Gallery
             ge.ShowDialog();
             this.Show();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            RestWin re = new RestWin();
+            re.Db = Db1;
+            this.Hide();
+            re.ShowDialog();
+            this.Show();
+        }
     }
 }

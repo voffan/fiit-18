@@ -202,17 +202,17 @@
     <Compile Include="Exhibition\RedEx.Designer.cs">
       <DependentUpon>RedEx.cs</DependentUpon>
     </Compile>
-    <Compile Include="GenreAdd.cs">
+    <Compile Include="Gerne\GenreAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GenreAdd.Designer.cs">
+    <Compile Include="Gerne\GenreAdd.Designer.cs">
       <DependentUpon>GenreAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="GenreLogic.cs" />
-    <Compile Include="GenreWin.cs">
+    <Compile Include="Gerne\GenreLogic.cs" />
+    <Compile Include="Gerne\GenreWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GenreWin.Designer.cs">
+    <Compile Include="Gerne\GenreWin.Designer.cs">
       <DependentUpon>GenreWin.cs</DependentUpon>
     </Compile>
     <Compile Include="JournalForm.cs">
@@ -290,6 +290,13 @@
     </Compile>
     <Compile Include="Auth\AuthSell.Designer.cs">
       <DependentUpon>AuthSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rest\RestLogic.cs" />
+    <Compile Include="Rest\RestWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rest\RestWin.Designer.cs">
+      <DependentUpon>RestWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Sell\SellAdd.cs">
       <SubType>Form</SubType>
@@ -389,10 +396,10 @@
     <EmbeddedResource Include="Exhibition\RedEx.resx">
       <DependentUpon>RedEx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GenreAdd.resx">
+    <EmbeddedResource Include="Gerne\GenreAdd.resx">
       <DependentUpon>GenreAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GenreWin.resx">
+    <EmbeddedResource Include="Gerne\GenreWin.resx">
       <DependentUpon>GenreWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JournalForm.resx">
@@ -445,6 +452,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Auth\AuthSell.resx">
       <DependentUpon>AuthSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rest\RestWin.resx">
+      <DependentUpon>RestWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sell\SellAdd.resx">
       <DependentUpon>SellAdd.cs</DependentUpon>

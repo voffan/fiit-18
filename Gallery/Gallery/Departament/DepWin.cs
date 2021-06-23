@@ -26,6 +26,8 @@ namespace Gallery
         private void DepWin_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Departaments.ToList();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Название";
         }
 
         private void button1_Click(object sender, EventArgs e)
