@@ -44,6 +44,7 @@ namespace Gallery
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -229,12 +230,27 @@ namespace Gallery
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button11_Click);
             // 
+            // button13
+            // 
+            this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button13.Location = new System.Drawing.Point(372, 319);
+            this.button13.Name = "button13";
+            this.button13.Padding = new System.Windows.Forms.Padding(3);
+            this.button13.Size = new System.Drawing.Size(200, 65);
+            this.button13.TabIndex = 17;
+            this.button13.Text = "Картины на реставрации";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
             // AuthAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.button13);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button12);
@@ -277,6 +293,7 @@ namespace Gallery
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
     }
 }
 

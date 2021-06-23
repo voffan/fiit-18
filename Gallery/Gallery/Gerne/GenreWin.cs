@@ -10,19 +10,32 @@ using System.Windows.Forms;
 
 namespace Gallery
 {
-    public partial class CountryWin : Form
+    public partial class GenreWin : Form
     {
         public Context Db { get; set; }
-        public CountryWin()
+        public GenreWin()
         {
             InitializeComponent();
         }
 
-        private void CountryWin_Load(object sender, EventArgs e)
+        private void GenreWin_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Db.Countries.ToList();
+            dataGridView1.DataSource = Db.Genres.ToList();
             dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].HeaderText = "Страна";
+            dataGridView1.Columns[0].HeaderText = "Жанр";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GenreAdd ge = new GenreAdd();
+            ge.Db = Db;
+            ge.ShowDialog();
+            dataGridView1.DataSource = Db.Genres.ToList();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,7 +53,7 @@ namespace Gallery
                         if (converted == false)
                             return;
 
-                        CountryLogic.DelCountry(Db, id);
+                        GenreLogic.DelGenre(Db, id);
 
                         MessageBox.Show("Запись удалена");
                     }
@@ -54,20 +67,7 @@ namespace Gallery
             {
 
             }
-            dataGridView1.DataSource = Db.Countries.ToList();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            GenreAdd ad = new GenreAdd();
-            ad.Db = Db;
-            ad.ShowDialog();
             dataGridView1.DataSource = Db.Genres.ToList();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

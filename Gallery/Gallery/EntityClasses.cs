@@ -14,10 +14,10 @@ namespace Gallery
 {
     public enum StatusSell { Продана, Отменено, Ожидание}
     public enum Status {Работает, Отпуск}
-    public enum PaintingStatus { Хранилище, Выставка, Рестоврация}
+    public enum PaintingStatus { Хранилище, Выставка, Реставрация}
     public enum Position { 
          Администратор, 
-         Рестовратор, 
+         Реставратор, 
          Менеджер, 
          Сотрудник
     }
