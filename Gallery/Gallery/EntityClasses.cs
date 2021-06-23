@@ -14,7 +14,8 @@ namespace Gallery
 {
     public enum StatusSell { Ожидание, Отменено, Продано}
     public enum Status {Работает, Отпуск}
-    public enum PaintingStatus { Хранилище, Выставка, Рестоврация}
+    public enum PaintingStatus { Хранилище, Выставка, Рестоврация, Продажа}
+
     public enum Position { 
          Администратор, 
          Реставратор, 

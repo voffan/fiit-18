@@ -63,7 +63,7 @@ namespace Gallery
                 PaintingId = paintingId,
                 EmpId = Idempsda,
                 Date = DateTime.Now,
-                paintingStatus = PaintingStatus.Выставка,
+                paintingStatus = PaintingStatus.Хранилище,
                 ExhId = p.ExhibitionId
             };
             db.Journals.Add(j);

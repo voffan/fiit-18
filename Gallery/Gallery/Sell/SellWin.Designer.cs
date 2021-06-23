@@ -94,9 +94,9 @@ namespace Gallery
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(13, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 31);
+            this.label1.Size = new System.Drawing.Size(121, 31);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Картины на продажу";
+            this.label1.Text = "Аукцион";
             // 
             // textBox1
             // 
