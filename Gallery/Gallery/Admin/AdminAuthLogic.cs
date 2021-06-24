@@ -53,5 +53,14 @@ namespace Gallery
         {
             return Db.Auths.OrderBy(e => e.EmployeeId).ToList();
         }
+        
+        public static bool Proverka(Context db, string login)
+        {
+            if (db.Auths.Where(a => a.Login == login).Any())
+            {
+                return false;
+            }
+            else return true;
+        }
     }
 }

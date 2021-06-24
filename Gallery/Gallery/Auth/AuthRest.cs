@@ -46,5 +46,14 @@ namespace Gallery
         {
             label3.Text = label;
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            RestWin rest = new RestWin();
+            this.Hide();
+            rest.Db = Db1;
+            rest.ShowDialog();
+            this.Show();
+        }
     }
 }

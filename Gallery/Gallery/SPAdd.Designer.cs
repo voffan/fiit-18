@@ -7,7 +7,7 @@ namespace Gallery
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        // Ковид уон то5ус
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -44,6 +44,8 @@ namespace Gallery
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(300, 31);
             this.textBox1.TabIndex = 0;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // comboBox1
             // 
@@ -54,6 +56,9 @@ namespace Gallery
             this.comboBox1.Size = new System.Drawing.Size(300, 33);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            this.comboBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // label1
             // 

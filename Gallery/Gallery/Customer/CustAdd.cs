@@ -21,7 +21,7 @@ namespace Gallery
         private void CustAdd_Load(object sender, EventArgs e)
         {
             comboBox1.DataSource = Db.Sells.ToList();
-            comboBox1.DisplayMember = "Status";
+            comboBox1.DisplayMember = "Id";
             comboBox1.ValueMember = "Id";
         }
 

@@ -86,6 +86,15 @@ namespace Gallery
         private void CustWin_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Db.Customers.ToList();
+            dataGridView1.Columns[0].HeaderText = "Номер продажи";
+            dataGridView1.Columns[1].Visible= false;
+            dataGridView1.Columns[2].HeaderText = "Фамилия";
+            dataGridView1.Columns[3].HeaderText = "Имя";
+            dataGridView1.Columns[4].HeaderText = "Отчество";
+            dataGridView1.Columns[5].HeaderText = "Серия паспорта";
+            dataGridView1.Columns[6].HeaderText = "Номер паспорта";
+            dataGridView1.Columns[7].HeaderText = "Телефон";
+            dataGridView1.Columns[8].Visible = false;
         }
 
         private void button5_Click(object sender, EventArgs e)

@@ -34,14 +34,20 @@ namespace Gallery
         {
             try
             {
-                AdminAuthLogic.AddAuth(Db, textBox1.Text, textBox2.Text, Convert.ToInt32(comboBox1.SelectedValue));
-                Close();
+                if (AdminAuthLogic.Proverka(Db, textBox1.Text))
+                {
+                    AdminAuthLogic.AddAuth(Db, textBox1.Text, textBox2.Text, Convert.ToInt32(comboBox1.SelectedValue));
+                    Close();
+                }
+                else MessageBox.Show("Такой логин существует!");
+               
             }
             catch (Exception er)
             {
                 MessageBox.Show("Запись не выполнена: \n" + er.ToString());
+                Close();
             }
-            Close();
+           
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
