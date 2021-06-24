@@ -50,5 +50,14 @@ namespace Grades
         {
             this.Close();
         }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("Запись изменена");
+            AcademicYearLogic.EditAcademicYear(Convert.ToInt32(dataGridView1.CurrentCell.OwningRow.Cells[0].Value),
+                dataGridView1.CurrentCell.OwningRow.Cells[1].Value.ToString(),
+                dataGridView1.CurrentCell.OwningRow.Cells[2].Value.ToString(),
+                Db);
+        }
     }
 }

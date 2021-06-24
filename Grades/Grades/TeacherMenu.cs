@@ -23,7 +23,7 @@ namespace Grades
             var courses = db.Courses
                     .Where(c => c.Employee.UserId == Authorization.User.Id)
                     .OrderBy(c => c.Employee.UserId)
-                    .Select(c => c.Subject.Name)
+                    .Select(c => c.Subject.Id)
                     .ToList();
             comboBox1.DataSource = courses;
             //var classes = db.TeacherSubjects
@@ -54,7 +54,7 @@ namespace Grades
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var table = 
+            //var table = 
         }
     }
 }

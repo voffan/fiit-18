@@ -40,19 +40,22 @@ namespace Grades
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(168, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(224, 15);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(214, 187);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(285, 230);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             // 
             // Button1
             // 
-            this.Button1.Location = new System.Drawing.Point(12, 12);
-            this.Button1.MaximumSize = new System.Drawing.Size(122, 34);
-            this.Button1.MinimumSize = new System.Drawing.Size(122, 34);
+            this.Button1.Location = new System.Drawing.Point(16, 15);
+            this.Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Button1.MaximumSize = new System.Drawing.Size(163, 42);
+            this.Button1.MinimumSize = new System.Drawing.Size(163, 42);
             this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(122, 34);
+            this.Button1.Size = new System.Drawing.Size(163, 42);
             this.Button1.TabIndex = 1;
             this.Button1.Text = "Добавить";
             this.Button1.UseVisualStyleBackColor = true;
@@ -60,11 +63,12 @@ namespace Grades
             // 
             // Button2
             // 
-            this.Button2.Location = new System.Drawing.Point(12, 64);
-            this.Button2.MaximumSize = new System.Drawing.Size(122, 34);
-            this.Button2.MinimumSize = new System.Drawing.Size(122, 34);
+            this.Button2.Location = new System.Drawing.Point(16, 79);
+            this.Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Button2.MaximumSize = new System.Drawing.Size(163, 42);
+            this.Button2.MinimumSize = new System.Drawing.Size(163, 42);
             this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(122, 34);
+            this.Button2.Size = new System.Drawing.Size(163, 42);
             this.Button2.TabIndex = 2;
             this.Button2.Text = "Редактировать";
             this.Button2.UseVisualStyleBackColor = true;
@@ -72,11 +76,12 @@ namespace Grades
             // 
             // Button3
             // 
-            this.Button3.Location = new System.Drawing.Point(12, 165);
-            this.Button3.MaximumSize = new System.Drawing.Size(122, 34);
-            this.Button3.MinimumSize = new System.Drawing.Size(122, 34);
+            this.Button3.Location = new System.Drawing.Point(16, 203);
+            this.Button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Button3.MaximumSize = new System.Drawing.Size(163, 42);
+            this.Button3.MinimumSize = new System.Drawing.Size(163, 42);
             this.Button3.Name = "Button3";
-            this.Button3.Size = new System.Drawing.Size(122, 34);
+            this.Button3.Size = new System.Drawing.Size(163, 42);
             this.Button3.TabIndex = 3;
             this.Button3.Text = "Закрыть";
             this.Button3.UseVisualStyleBackColor = true;
@@ -84,11 +89,12 @@ namespace Grades
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 115);
-            this.button4.MaximumSize = new System.Drawing.Size(122, 34);
-            this.button4.MinimumSize = new System.Drawing.Size(122, 34);
+            this.button4.Location = new System.Drawing.Point(16, 142);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.MaximumSize = new System.Drawing.Size(163, 42);
+            this.button4.MinimumSize = new System.Drawing.Size(163, 42);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 34);
+            this.button4.Size = new System.Drawing.Size(163, 42);
             this.button4.TabIndex = 4;
             this.button4.Text = "Удалить";
             this.button4.UseVisualStyleBackColor = true;
@@ -96,16 +102,17 @@ namespace Grades
             // 
             // ChekPoints
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 213);
+            this.ClientSize = new System.Drawing.Size(529, 252);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.Button3);
             this.Controls.Add(this.Button2);
             this.Controls.Add(this.Button1);
             this.Controls.Add(this.dataGridView1);
-            this.MaximumSize = new System.Drawing.Size(415, 252);
-            this.MinimumSize = new System.Drawing.Size(415, 252);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(547, 299);
+            this.MinimumSize = new System.Drawing.Size(547, 299);
             this.Name = "ChekPoints";
             this.Text = "ChekPoints";
             this.Load += new System.EventHandler(this.ChekPoints_Load);

@@ -49,5 +49,13 @@ namespace Grades
             CheckPointLogic.DeleteCheckPoint(Db, Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value));
             dataGridView1.DataSource = Db.CheckPoints.ToList();
         }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("Запись изменена");
+            CheckPointLogic.EditCheckPoint(Convert.ToInt32(dataGridView1.CurrentCell.OwningRow.Cells[0].Value),
+                dataGridView1.CurrentCell.OwningRow.Cells[1].Value.ToString(),
+                Db);
+        }
     }
 }
